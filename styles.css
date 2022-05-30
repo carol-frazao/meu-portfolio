@@ -106,8 +106,8 @@ section.view1 {
     font-family: 'Play', sans-serif;
     display: flex;
     justify-content: space-around;
-    height: 80vh;
-    padding: 3rem;
+    height: 85vh;
+    padding: 4rem;
 }
 
 .apresentacao {
@@ -116,11 +116,13 @@ section.view1 {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    padding-left: 2rem;
 }
 
-.vetores {
+.vetores-container {
     width: 50%;
 }
+
 
 .front_container {
     background-color: #BBF2A1;
@@ -130,14 +132,14 @@ section.view1 {
 }
 
 .front_container p {
-    padding: 10px;
+    padding: 8px;
     font-weight: bold;
     text-align: center;
     cursor: default;
 }
 
 #text_h1 {
-    font-size: 45px;
+    font-size: 40px;
     color: #ffff;
     margin-bottom: 1rem;
     cursor: default;
@@ -190,30 +192,104 @@ section.view1 {
 }
 
 
-#girl_image {
+.vetores-img {
     position: relative;
-    top: 7rem;
-    left: 6rem;
-    opacity: 0;
-    transition: .8s;
-    width: 500px;
+    bottom: -2rem;
 }
 
-#react_gif {
-    position: relative;
+
+#art-vetor {
+    position: absolute;
+    left: 9em;
+    top: 4em;
     opacity: 0;
     transition: .8s;
-    width: 100px;
-    right: 55%;
+    width: 430px;
+}
+
+#code_symbol {
+    position: absolute;
+    opacity: 0;
+    transition: .8s;
+    height: auto;
+    width: 90px;
+    left: 19.5em;
+    top: -2.4em;
+    animation: rotate-symbol 1.3s infinite alternate ease-in 2.7s;
+}
+
+@keyframes rotate-symbol {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1)
+    }
 }
 
 #css_vetor {
-    position: relative;
+    position: absolute;
     opacity: 0;
     transition: .8s;
-    width: 100px;
-    right: 40%;
-    top: -40%;
+    width: 80px;
+    left: 10em;
+    animation: css-move 1.2s infinite alternate-reverse ease-in 2.7s;
 }
 
+@keyframes css-move {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#react_gif {
+    position: absolute;
+    opacity: 0;
+    transition: .8s;
+    width: 80px;
+    top: 10em;
+    left: 9em;
+}
+
+#fumaca-gif {
+    position: absolute;
+    opacity: 0;
+    transition: .8s;
+    width: auto;
+    height: 90px;
+    left: 30em;
+    top: 17.5em;
+}
+
+
+#js_vetor {
+    position: absolute;
+    opacity: 0;
+    transition: .8s;
+    width: 80px;
+    left: 30em;
+    animation: js-move 1.3s ease-in 2.7s infinite alternate-reverse;
+}
+
+@keyframes js-move {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#html {
+    transition: .8s;
+    position: absolute;
+    opacity: 0;
+    width: auto;
+    height: 90px;
+    top: 10em;
+    left: 30.5em;
+}
 
