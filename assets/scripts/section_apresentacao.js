@@ -7,7 +7,7 @@ function typeWhiter(text) {
     textArray.forEach((letra, indice) => {
         setTimeout(function () {
             text.innerText += letra;
-        }, 45 * indice)
+        }, 46 * indice)
     })
 }
 
@@ -37,20 +37,20 @@ setTimeout( function() {
     vetores.art_vetor.style.opacity = '1'
     vetores.fumaca_gif.style.opacity = '1'
     vetores.code_vetor.style.opacity = '1'
-}, 20)
+}, 10)
 
 setTimeout( function() {
     vetores.css_vetor.style.opacity = '1'
-},300)
+},600)
 
 setTimeout( function() {
     vetores.js_vetor.style.opacity = '1'
-},900)
+},1200)
 
 setTimeout( function() {
     vetores.react_gif.style.opacity = '1'
-},1500)
+},1800)
 
 setTimeout( function() {
     vetores.html_vetor.style.opacity = '1'
-},2100)
+},2400)

@@ -151,18 +151,6 @@ section.view1 {
     animation: pisca .7s infinite;
 }
 
-#text_h2 {
-    font-size: 45px;
-    color: #ffff;
-    margin-bottom: 1rem;
-}
-
-#text_h2::after {
-    content: '|';
-    opacity: 1;
-    animation: pisca .7s infinite;
-}
-
 @keyframes pisca {
     0%, 100% {
         opacity: 1;
@@ -175,7 +163,7 @@ section.view1 {
 .descricao {
     color: #ffffff7b;
     opacity: 0;
-    transition: .3s;
+    transition: .7s;
     font-size: 17px;
     text-align: justify;
     max-width: 90%;
@@ -185,6 +173,7 @@ section.view1 {
 .link_descricao {
     text-decoration: none;
     color: #bbf2a18d;
+    transition: .1s all;
 }
 
 .link_descricao:hover {
@@ -212,10 +201,10 @@ section.view1 {
     opacity: 0;
     transition: .8s;
     height: auto;
-    width: 90px;
+    width: 80px;
     left: 19.5em;
-    top: -2.4em;
-    animation: rotate-symbol 1.3s infinite alternate ease-in 2.7s;
+    top: -2em;
+    animation: rotate-symbol 1.3s infinite alternate ease-in 2.5s;
 }
 
 @keyframes rotate-symbol {
@@ -231,8 +220,8 @@ section.view1 {
     position: absolute;
     opacity: 0;
     transition: .8s;
-    width: 80px;
-    left: 10em;
+    width: 70px;
+    left: 11em;
     animation: css-move 1.2s infinite alternate-reverse ease-in 2.7s;
 }
 
@@ -249,9 +238,9 @@ section.view1 {
     position: absolute;
     opacity: 0;
     transition: .8s;
-    width: 80px;
+    width: 70px;
     top: 10em;
-    left: 9em;
+    left: 10em;
 }
 
 #fumaca-gif {
@@ -269,8 +258,8 @@ section.view1 {
     position: absolute;
     opacity: 0;
     transition: .8s;
-    width: 80px;
-    left: 30em;
+    width: 70px;
+    left: 28em;
     animation: js-move 1.3s ease-in 2.7s infinite alternate-reverse;
 }
 
@@ -288,8 +277,8 @@ section.view1 {
     position: absolute;
     opacity: 0;
     width: auto;
-    height: 90px;
+    height: 80px;
     top: 10em;
-    left: 30.5em;
+    left: 30em;
 }
 
