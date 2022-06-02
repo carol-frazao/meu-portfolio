@@ -5,9 +5,7 @@
 }
 
 
-
-
-
+/* HEADER */
 header {
     height: 4.5rem;
     line-height: 4.5rem;
@@ -81,7 +79,7 @@ header {
     padding-right: 5px;
 }
 
-.network_others a:hover {
+.network a:hover {
     color: #BBF2A1;
 }
 
@@ -100,7 +98,7 @@ header {
 }
 
 
-
+/* SESSÃO DE APRESENTAÇÃO */
 section.view1 {
     background-color: #353535;
     font-family: 'Play', sans-serif;
@@ -117,6 +115,7 @@ section.view1 {
     flex-direction: column;
     justify-content: start;
     padding-left: 2rem;
+    gap: 2rem;
 }
 
 .vetores-container {
@@ -128,7 +127,6 @@ section.view1 {
     background-color: #BBF2A1;
     width: 30%;
     border-radius: 10px;
-    margin-bottom: 2rem;
 }
 
 .front_container p {
@@ -180,7 +178,69 @@ section.view1 {
     color: #bbf2a1c8;
 }
 
+.btn-iniciar {
+    padding-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    transition: .3s all;
+    display: none;
+}
 
+.btn-iniciar span {
+    color: rgba(255, 255, 255, 0.593);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-iniciar a {
+    cursor: default;
+}
+
+#img-start {
+    height: auto;
+    width: 120px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#cursor_click {
+    width: 25px;
+    position: relative;
+    opacity: 0;
+}
+
+.animacao_cursor { 
+    animation: cursor_animation .8s;
+}
+
+.scale_btn {
+    animation: scale 1s;
+    animation-delay: .62s;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes cursor_animation {
+    from {
+        top: 5rem;
+        left: 3rem;
+        opacity: 0;
+    }
+    to {
+       top: 10px;
+       left: -4rem;
+       opacity: 1;
+    }
+}
+
+/* -- Vetores -- */
 .vetores-img {
     position: relative;
     bottom: -2rem;
@@ -204,10 +264,10 @@ section.view1 {
     width: 80px;
     left: 19.5em;
     top: -2em;
-    animation: rotate-symbol 1.3s infinite alternate ease-in 2.5s;
+    animation: code-scale 1.3s infinite alternate ease-in 2.5s;
 }
 
-@keyframes rotate-symbol {
+@keyframes code-scale {
     from {
         transform: scale(1);
     }
@@ -281,4 +341,35 @@ section.view1 {
     top: 10em;
     left: 30em;
 }
+
+
+/* CONTATO WHATSAPP */
+.whatsapp-container{
+    position: fixed;
+    z-index: 1;
+    bottom: 1.5rem;
+    right: 2rem;
+    transition: .1s all;
+}
+
+#whatsapp-icon {
+    width: 50px;
+    animation: whatsapp-move .5s infinite alternate;
+    transition: .2s;
+}
+
+@keyframes whatsapp-move {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#whatsapp-icon:hover {
+    animation: none;
+    transform: scale(1.1);
+}
+
 
