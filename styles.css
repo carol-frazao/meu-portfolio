@@ -10,7 +10,7 @@ header {
     height: 4.5rem;
     line-height: 4.5rem;
     font-family: 'Catamaran', sans-serif;
-    background-color: #353535;
+    background-color: #2c2c2c;
 }
 
 .header_container {
@@ -60,9 +60,17 @@ header {
     background-color: rgba(136, 136, 136, 0.158);
 }
 
+/* organização */
+.networks_container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* networks */
 .networks nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .link_network {
@@ -97,10 +105,65 @@ header {
     color: #ffff;
 }
 
+/* Dark mode button */
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch--shadow + label {
+    padding: 2px;
+    width: 50px;
+    height: 25px;
+    background-color: #c0c0c0;
+    border-radius: 60px
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f17a;
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+
+.switch--shadow + label:after {
+  width: 23px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch--shadow:checked + label:before {
+    background-color: #8fd370;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(25px);
+}
+
 
 /* SESSÃO DE APRESENTAÇÃO */
 section.view1 {
-    background-color: #353535;
+    background-color: #2c2c2c;
     font-family: 'Play', sans-serif;
     display: flex;
     justify-content: space-around;
@@ -122,9 +185,8 @@ section.view1 {
     width: 50%;
 }
 
-
 .front_container {
-    background-color: #BBF2A1;
+    background-color: #afef92;
     width: 30%;
     border-radius: 10px;
 }
@@ -161,7 +223,7 @@ section.view1 {
 .descricao {
     color: #ffffff7b;
     opacity: 0;
-    transition: .7s;
+    transition: .4s;
     font-size: 17px;
     text-align: justify;
     max-width: 90%;
@@ -182,8 +244,9 @@ section.view1 {
     padding-top: 2rem;
     align-items: center;
     gap: 1rem;
-    transition: .3s all;
-    display: none;
+    transition: .4s all;
+    opacity: 0;
+    display: flex;
 }
 
 .btn-iniciar span {
@@ -200,7 +263,6 @@ section.view1 {
     height: auto;
     width: 120px;
     cursor: pointer;
-    transition: .2s;
 }
 
 #cursor_click {
@@ -210,12 +272,12 @@ section.view1 {
 }
 
 .animacao_cursor { 
-    animation: cursor_animation .8s;
+    animation: cursor_animation 1s;
 }
 
 .scale_btn {
     animation: scale 1s;
-    animation-delay: .62s;
+    animation-delay: .75s;
 }
 
 @keyframes scale {
@@ -246,20 +308,19 @@ section.view1 {
     bottom: -2rem;
 }
 
-
 #art-vetor {
     position: absolute;
     left: 9em;
     top: 4em;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     width: 430px;
 }
 
 #code_symbol {
     position: absolute;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     height: auto;
     width: 80px;
     left: 19.5em;
@@ -279,7 +340,7 @@ section.view1 {
 #css_vetor {
     position: absolute;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     width: 70px;
     left: 11em;
     animation: css-move 1.2s infinite alternate-reverse ease-in 2.7s;
@@ -297,7 +358,7 @@ section.view1 {
 #react_gif {
     position: absolute;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     width: 70px;
     top: 10em;
     left: 10em;
@@ -306,7 +367,7 @@ section.view1 {
 #fumaca-gif {
     position: absolute;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     width: auto;
     height: 90px;
     left: 30em;
@@ -317,7 +378,7 @@ section.view1 {
 #js_vetor {
     position: absolute;
     opacity: 0;
-    transition: .8s;
+    transition: .6s;
     width: 70px;
     left: 28em;
     animation: js-move 1.3s ease-in 2.7s infinite alternate-reverse;
