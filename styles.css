@@ -4,6 +4,35 @@
     box-sizing: border-box;
 }
 
+/* CONTATO WHATSAPP */
+.whatsapp-container{
+    position: fixed;
+    z-index: 1;
+    bottom: 1.5rem;
+    right: 2rem;
+    transition: .1s all;
+}
+
+#whatsapp-icon {
+    width: 50px;
+    animation: whatsapp-move .5s infinite alternate;
+    transition: .2s;
+}
+
+@keyframes whatsapp-move {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#whatsapp-icon:hover {
+    animation: none;
+    transform: scale(1.1);
+}
+
 
 /* HEADER */
 header {
@@ -161,18 +190,18 @@ header {
 }
 
 
-/* SESSÃO DE APRESENTAÇÃO */
+/* ----------- VIEW 1 (Apresentação) ----------- */
 section.view1 {
     background-color: #2c2c2c;
     font-family: 'Play', sans-serif;
     display: flex;
     justify-content: space-around;
-    height: 85vh;
-    padding: 4rem;
+    height: 100vh;
+    padding: 5rem 4rem 4rem 4rem;
 }
 
 .apresentacao {
-    padding-top: 2rem;
+    padding-top: 2em;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -181,12 +210,8 @@ section.view1 {
     gap: 2rem;
 }
 
-.vetores-container {
-    width: 50%;
-}
-
 .front_container {
-    background-color: #afef92;
+    background-color: #abed8d;
     width: 30%;
     border-radius: 10px;
 }
@@ -230,18 +255,8 @@ section.view1 {
     cursor: default;
 }
 
-.link_descricao {
-    text-decoration: none;
-    color: #bbf2a18d;
-    transition: .1s all;
-}
-
-.link_descricao:hover {
-    color: #bbf2a1c8;
-}
-
 .btn-iniciar {
-    padding-top: 2rem;
+    padding-top: 1rem;
     align-items: center;
     gap: 1rem;
     transition: .4s all;
@@ -302,7 +317,24 @@ section.view1 {
     }
 }
 
-/* -- Vetores -- */
+.arrowStart {
+    position: relative;
+}
+
+.arrowStart > img {
+    position: absolute;
+    right: 22px;
+    top: 10px;
+    opacity: 80%;
+}
+
+
+/* ------ Vetores container ------- */
+
+.vetores-container {
+    width: 50%;
+}
+
 .vetores-img {
     position: relative;
     bottom: -2rem;
@@ -404,33 +436,84 @@ section.view1 {
 }
 
 
-/* CONTATO WHATSAPP */
-.whatsapp-container{
-    position: fixed;
-    z-index: 1;
-    bottom: 1.5rem;
-    right: 2rem;
-    transition: .1s all;
+/* --------------- VIEW 2 (Sobre mim) --------------------*/
+
+.view2 {
+    background-color: #242424;
+    height: 100vh;
+    font-family: 'Catamaran', sans-serif;
 }
 
-#whatsapp-icon {
-    width: 50px;
-    animation: whatsapp-move .5s infinite alternate;
-    transition: .2s;
+.sobre_container {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@keyframes whatsapp-move {
+.photo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Carol {
+    border: #8fd3708a 3px solid;
+    border-radius: 50%;
+}
+
+.sobreMim {
+    width: 70%;
+    text-align: justify;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre_title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35px;
+    color: #85c766
+}
+
+.sobre_text {
+    color: #c0c0c0e5;
+    font-size: 18px;
+}
+
+.img-curriculo {
+    padding-top: 1rem;
+}
+
+.img-curriculo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.974);
+    border-radius: 10px;
+    border: solid 2px rgb(88, 197, 88);
+}
+
+#arrowclick {
+    position: relative;
+    left: 80%;
+    animation: arrow-move .5s infinite alternate;
+}
+
+@keyframes arrow-move {
     from {
-        transform: scale(1);
+        transform: skew(10deg)
     }
     to {
-        transform: scale(1.1);
+        transform: skew(0deg)
     }
 }
-
-#whatsapp-icon:hover {
-    animation: none;
-    transform: scale(1.1);
-}
-
-
