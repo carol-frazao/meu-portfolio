@@ -1,6 +1,8 @@
 # meu-portfolio
 
 Este é meu portfólio profissional.
-Nele estarão disposíveis meus projetos desenvolvidos, informações sobre skills, redes sociais, um pouco sobre mim, além das minhas informações de contato.
+Nele estarão disposíveis meus projetos desenvolvidos, algumas informações, minhas redes sociais, um pouco sobre mim, além das minhas informações de contato.
 
-Obs: Em desenvolvimento.
+Um dos meus objetivos no desenvolvimento deste projeto é trabalhar com todas as tecnologias front-end das quais tenho conhecimento.
+
+Acompanhe meu projeto: https://carol-frazao.github.io/meu-portfolio/
