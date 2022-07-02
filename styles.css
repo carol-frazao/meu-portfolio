@@ -14,7 +14,7 @@
 }
 
 #whatsapp-icon {
-    width: 50px;
+    width: 40px;
     animation: whatsapp-move .5s infinite alternate;
     transition: .2s;
 }
@@ -194,6 +194,9 @@ header {
     transform: translateX(25px);
 }
 
+/*----- Responsividade do Header -------*/
+
+
 
 /* ----------- VIEW 1 (Apresentação) ----------- */
 .view1 {
@@ -203,12 +206,18 @@ header {
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    /* padding: 0rem 4rem 4rem 4rem; */
+}
+
+.clearMode_view1 {
+    background-color: #ffff;
+    color: #242424;
 }
 
 .apresentacao {
-    padding: 3.5rem 0rem 3rem 4rem;
-    width: 60%;
+    padding-left: 4rem;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -221,9 +230,9 @@ header {
 }
 
 .front_container p {
-    padding: 8px;
+    padding: 6px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     cursor: default;
 }
@@ -331,7 +340,7 @@ header {
     right: 22px;
     top: 10px;
     opacity: 80%;
-    animation: move-arrow .2s infinite alternate;
+    animation: move-arrow .3s infinite alternate;
 }
 
 @keyframes move-arrow {
@@ -347,34 +356,33 @@ header {
 /* ----------------------- Vetores container ------------------------ */
 
 .vetores {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
 }
 
 .vetores_container {
     position: relative;
-    left: 1rem;
-    top: 1rem;
     width: 100%;
     height: 100%;
-    margin-right: 3rem;
+    transition: .4s all;
 }
 
 #art-vetor {
+    position: absolute;
     opacity: 0;
     transition: .6s;
     width: 410px;
-    position: absolute;
-    bottom: 9em;
-    left: 4.5em;
+    top: 16em;
+    left: 5em;
 }
 
 #code_symbol {
     position: absolute;
-    top: 9em;
-    left: 15em;
+    top: 10em;
+    left: 15.2em;
     transition: .6s;
     height: auto;
     width: 68px;
@@ -392,11 +400,11 @@ header {
 
 #css_vetor {
     position: absolute;
-    top: 10.3em;
+    top: 11em;
     left: 7em;
     opacity: 0;
     transition: .6s;
-    width: 55px;
+    width: 57px;
     animation: css-move 1.2s infinite alternate-reverse ease-in 2.7s;
 }
 
@@ -411,8 +419,8 @@ header {
 
 #js_vetor {
     position: absolute;
-    width: 55px;
-    top: 10.3em;
+    width: 57px;
+    top: 11em;
     left: 24.2em;
     opacity: 0;
     transition: .6s;
@@ -433,31 +441,21 @@ header {
     opacity: 0;
     transition: .6s;
     width: 58px;
-    top: 20em;
+    top: 22em;
     left: 5em;
-}
-
-#fumaca-gif {
-    position: absolute;
-    opacity: 0;
-    transition: .6s;
-    width: auto;
-    height: 70px;
-    top: 27.4em;
-    left: 24.6em;
 }
 
 #html {
     transition: .6s;
     position: absolute;
-    top: 20em;
+    top: 22em;
     left: 26em;
     opacity: 0;
     width: auto;
     height: 61px;
 }
 
-/*---------- VIEW 1 RESPONSIVE ---------*/
+/*---------- Responsividade da view 1 ---------*/
 
 
 
@@ -474,8 +472,9 @@ header {
     height: 100%;
     padding: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: 2em;
 }
 
 .photo {
@@ -521,24 +520,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 55px;
+    height: 50px;
     width: 230px;
     background-color: rgba(255, 255, 255, 0.974);
     border-radius: 10px;
-    border: solid 2px rgb(88, 197, 88);
+    border: solid 2px rgb(129, 172, 48);
 }
 
-#arrowclick {
+
+#arrow_download {
     position: relative;
-    left: 80%;
-    animation: arrow-move .5s infinite alternate;
+    left: 107%;
+    bottom: 2.7em;
+    animation: arrow-move .7s infinite alternate;
 }
 
 @keyframes arrow-move {
     from {
-        transform: skew(10deg)
+        transform: translateY(10px)
     }
     to {
-        transform: skew(0deg)
+        transform: translateY(0)
     }
 }
