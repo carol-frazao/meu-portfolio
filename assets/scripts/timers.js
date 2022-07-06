@@ -13,24 +13,8 @@ function typeWhiter(text) {
 typeWhiter(text_h1)
 
 
-//Tempo para exibir a descrição na sessão de apresentação
-const descricao = document.querySelector('.descricao')
-
-setTimeout( function() {
-    descricao.style.opacity = '1'
-}, 2500)
-
-
-//Tempo para a exibição do botão Start
-const start = document.getElementById('start')
-
-setTimeout(() => {
-    start.style.opacity = "1"
-}, 2500);
-
-
 //Tempo para exibir os vetores
-const vetores = {
+const vetor = {
     art_vetor: document.getElementById('art-vetor'),
     react_gif: document.getElementById('react_gif'),
     css_vetor: document.getElementById('css_vetor'),
@@ -41,22 +25,22 @@ const vetores = {
 }
 
 setTimeout( function() {
-    vetores.art_vetor.style.opacity = '1'
-    vetores.code_vetor.style.opacity = '1'
+    vetor.art_vetor.style.opacity = '1'
+    vetor.code_vetor.style.opacity = '1'
 }, 10)
 
 setTimeout( function() {
-    vetores.css_vetor.style.opacity = '1'
+    vetor.css_vetor.style.opacity = '1'
 },600)
 
 setTimeout( function() {
-    vetores.js_vetor.style.opacity = '1'
+    vetor.js_vetor.style.opacity = '1'
 },1200)
 
 setTimeout( function() {
-    vetores.react_gif.style.opacity = '1'
+    vetor.react_gif.style.opacity = '1'
 },1800)
 
 setTimeout( function() {
-    vetores.html_vetor.style.opacity = '1'
+    vetor.html_vetor.style.opacity = '1'
 },2400)

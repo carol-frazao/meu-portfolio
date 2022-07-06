@@ -20,7 +20,7 @@
 
     <header>
 
-        <!------ Index ------>
+        <!------ Atalho index ------>
         <div class="header_container">
             <div class="name_home">
                 <a href="index.html">
@@ -82,16 +82,16 @@
                     </nav>
                 </div>
 
-                <!------ Alterar tema da página ------>
-                <div class="switch__container" onclick="lightTheme()">
+                <!--- Alterar tema da página 
+
+                <<div class="switch__container" onclick="lightTheme()">
                     <input id="switch-shadow" class="switch switch--shadow" type="checkbox" checked>
                     <label for="switch-shadow"></label>
-                </div>
+                </div> -->
 
             </div>
         </div>
     </header>
-
 
     <main>
 
@@ -113,13 +113,13 @@
                     <p> Front-End Developer </p>
                 </div>
 
-                <div class="text_apresentacao">
+                <div class="text_apresentacao" id="text_apresentacao">
                     <h1 id="text_h1">
                         Olá, meu nome é Carol. <br>
                         Bem-vindo(a) ao meu portfólio!
                     </h1>
 
-                    <p class="descricao">
+                    <p class="descricao" id="descricao">
                         Aqui você poderá saber um pouco sobre mim, visualizar alguns dos meus projetos,
                         além de acesso às minhas informações de contato (caso queira
                         bater aquele papo profissional). <br>
@@ -127,10 +127,16 @@
                     </p>
                 </div>
 
+                <script>
+                    const descricao = document.getElementById('descricao')
+                    descricao.style.opacity = "0";
+                    setTimeout(() => descricao.style.opacity = '1', 2500)
+                </script>
+
                 <!-- Navegar p/ sessão Sobre Mim --->
                 <div class="btn-iniciar" id="start">
                     <span>Vamos lá?</span>
-                    <a href="#" onclick="clickStart()">
+                    <a href="" onclick="clickStart()">
                         <img src="assets/img/icons/press-start.png" alt="Start" id="img-start">
                         <img src="assets/img/icons/cursor_click.png" alt="cursor" id="cursor_click"
                             style="max-height: 25px">
@@ -139,20 +145,37 @@
                         <img src="assets/img/icons/arrowclick.png" alt="Click" style="max-width: 40px;">
                     </div>
                 </div>
+
+                <script>
+                    const startBtn = document.getElementById('start')
+                    startBtn.style.opacity = "0";
+                    setTimeout(() => startBtn.style.opacity = "1", 2500);
+                </script>
+
             </section>
 
             <!---- Imagens e animações---->
             <section class="vetores">
                 <div class="vetores_container">
                     <img src="assets/img/create-vetor/art-vetor2.png" alt="Vetor imagem" style="max-width: 600px"
-                        id="art-vetor">
-                    <img src="assets/img/create-vetor/cod.png" style="max-width: 100px;" alt="Coding" id="code_symbol">
-                    <img src="assets/img/create-vetor/css-vetor.png" alt="CSS" style="max-height: 100px" id="css_vetor">
-                    <img src="assets/img/gifs/react.gif" alt="React" style="max-width: 100px" id="react_gif">
+                        id="art-vetor" class="image_vetor">
+                    <img src="assets/img/create-vetor/cod.png" style="max-width: 100px;" alt="Coding" id="code_symbol"
+                        class="image_vetor">
+                    <img src="assets/img/create-vetor/css-vetor.png" alt="CSS" style="max-height: 100px" id="css_vetor"
+                        class="image_vetor">
+                    <img src="assets/img/gifs/react.gif" alt="React" style="max-width: 100px" id="react_gif"
+                        class="image_vetor">
                     <img src="assets/img/create-vetor/js-vetor.png" alt="Javascript" style="max-height: 100px"
-                        id="js_vetor">
-                    <img src="assets/img/gifs/html.gif" alt="HTML" style="max-height: 100px" id="html">
+                        id="js_vetor" class="image_vetor">
+                    <img src="assets/img/gifs/html.gif" alt="HTML" style="max-height: 100px" id="html"
+                        class="image_vetor">
                 </div>
+
+                <script>
+                    const vetores = document.querySelectorAll('.image_vetor')
+                    vetores.forEach((obj) => obj.style.opacity = "0")
+                </script>
+
             </section>
 
         </section>
@@ -183,7 +206,7 @@
 
                     <!---- Arquivo currículo ---->
                     <div class="img-curriculo">
-                        <a href="assets/arquivos/curriculoCarol.pdf" target="_blank">
+                        <a href="assets/arquivos/curriculo-carol.pdf" target="_blank">
                             <img src="assets/img/curriculo-preview.png" alt="Meu currículo" style="max-width: 180px">
                         </a>
                         <img src="assets/img/icons/arrow-download.png" alt="Download" style="max-width: 30px;"
@@ -212,25 +235,30 @@
                     <div class="card1 card_projeto">
 
                         <div class="titulo_projeto">
-                            <span> DH Games </span>
+                            <span> Meu portfólio </span>
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="assets/img/Projetos/dh-devices.png" alt="" style="max-width: 250px">
+                            <img src="assets/img/Projetos/portfolio/porfolio_devices.png" alt="Meu portólio"
+                                style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
                             <p>
-                                O DH Games é um e-commerce de jogos. Neste projeto desenvolvi o front e o backend utilizando tecnologias como: EJS, CSS,
-                                Javascript, Node.js (rotas, express, sequelize), CRUD de produtos
-                                com mySQL, além de algumas bibliotecas bem legais.
+                                Este é meu porfólio profissional, onde disponibilizo meus projetos e algumas informações
+                                pessoais. No seu desenvolvimento utilizei tecnologias como: HTML, CSS, Javascript, e
+                                Figma para prototipá-lo.
                             </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="https://github.com/carol-frazao/dh-games" class="repositorio" target="_blank">
-                                Repositório </a>
-                            <a href="https://dh-games.herokuapp.com/" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="https://github.com/carol-frazao/meu-portfolio" class="repositorio" target="_blank">
+                                Repositório
+                            </a>
+
+                            <a href="index.html" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>
@@ -239,21 +267,29 @@
                     <div class="card2 card_projeto">
 
                         <div class="titulo_projeto">
-                            <span> Título do projeto </span>
+                            <span> DH Games </span>
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="https://via.placeholder.com/150" alt="">
+                            <img src="assets/img/Projetos/dh-games/dh_devices.png" alt="DH Games"
+                                style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
-                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                            <p>
+                                DH Games propõe um e-commerce de jogos. Neste projeto desenvolvi o front e o backend
+                                utilizando tecnologias como: EJS, CSS,
+                                Javascript, Node.js (rotas, express, sequelize), CRUD de produtos
+                                com mySQL, além de algumas bibliotecas bem legais.
+                            </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="" class="repositorio" target="_blank"> Repositório </a>
-                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="https://github.com/carol-frazao/dh-games" class="repositorio" target="_blank">
+                                Repositório </a>
+                            <a href="https://dhgames.herokuapp.com/" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>
@@ -266,17 +302,25 @@
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="https://via.placeholder.com/150" alt="">
+                            <img src="assets/img/Projetos/devices_modelo.png" alt="" style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
-                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur minima
+                                facilis delectus adipisci pariatur veniam laboriosam voluptates dicta magnam animi
+                                quidem natus veritatis sequi illo cupiditate, quas quam molestias?
+                            </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="" class="repositorio" target="_blank"> Repositório </a>
-                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="" class="repositorio" target="_blank">
+                                Repositório
+                            </a>
+
+                            <a href="" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>
@@ -289,17 +333,25 @@
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="https://via.placeholder.com/150" alt="">
+                            <img src="assets/img/Projetos/devices_modelo.png" alt="" style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
-                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur minima
+                                facilis delectus adipisci pariatur veniam laboriosam voluptates dicta magnam animi
+                                quidem natus veritatis sequi illo cupiditate, quas quam molestias?
+                            </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="" class="repositorio" target="_blank"> Repositório </a>
-                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="" class="repositorio" target="_blank">
+                                Repositório
+                            </a>
+
+                            <a href="" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>
@@ -312,17 +364,25 @@
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="https://via.placeholder.com/150" alt="">
+                            <img src="assets/img/Projetos/devices_modelo.png" alt="" style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
-                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur minima
+                                facilis delectus adipisci pariatur veniam laboriosam voluptates dicta magnam animi
+                                quidem natus veritatis sequi illo cupiditate, quas quam molestias?
+                            </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="" class="repositorio" target="_blank"> Repositório </a>
-                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="" class="repositorio" target="_blank">
+                                Repositório
+                            </a>
+
+                            <a href="" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>
@@ -335,17 +395,25 @@
                         </div>
 
                         <div class="imagem_projeto">
-                            <img src="https://via.placeholder.com/150" alt="">
+                            <img src="assets/img/Projetos/devices_modelo.png" alt="" style="max-width: 250px">
                         </div>
 
                         <div class="descricao_projeto">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
-                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur minima
+                                facilis delectus adipisci pariatur veniam laboriosam voluptates dicta magnam animi
+                                quidem natus veritatis sequi illo cupiditate, quas quam molestias?
+                            </p>
                         </div>
 
                         <div class='links_projeto'>
-                            <a href="" class="repositorio" target="_blank"> Repositório </a>
-                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                            <a href="" class="repositorio" target="_blank">
+                                Repositório
+                            </a>
+
+                            <a href="" class="acessarProjeto" target="_blank">
+                                Aplicação
+                            </a>
                         </div>
 
                     </div>

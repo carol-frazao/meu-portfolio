@@ -17,6 +17,9 @@
     --font-family-play: 'Play', sans-serif;
 }
 
+.body-lightMode {
+    background-color: #f1f1f17a;
+}
 
 /* -- Ícone whatsapp fixo -- */
 .whatsapp-container{
@@ -55,6 +58,7 @@ header {
     font-family: var(--font-family-catamaran);
     background-color: var(--bg-color-1);
     position: fixed;
+    top: 0;
     z-index: 1;
     width: 100%;
 }
@@ -146,14 +150,14 @@ header {
 }
 
 .send_email a > i {
-    color: var(--font-color-1);
+    color: var(--font-green-1);
 }
 
 .send_email a:hover > i {
     color: #ffff;
 }
 
-/* Light theme button */
+/* Light theme button 
 .switch {
     position: absolute;
     margin-left: -9999px;
@@ -203,13 +207,13 @@ header {
 
 .switch--shadow:checked + label:before {
     background-color: #8fd370;
-  }
-  .switch--shadow:checked + label:after {
-    transform: translateX(25px);
-}
+  } 
 
+.switch--shadow:checked + label:after { 
+    transform: translateX (25px ) ;  
+}  
+*/
 
-/*-- Responsividade do Header ---*/
 
 
 
@@ -276,7 +280,6 @@ header {
 
 .descricao {
     color: #ffffff7b;
-    opacity: 0;
     transition: .4s;
     font-size: 17px;
     text-align: justify;
@@ -290,7 +293,6 @@ header {
     align-items: center;
     gap: 1rem;
     transition: .4s all;
-    opacity: 0;
 }
 
 .btn-iniciar span {
@@ -387,7 +389,6 @@ header {
 
 #art-vetor {
     position: absolute;
-    opacity: 0;
     transition: .6s;
     width: 410px;
     top: 16em;
@@ -417,7 +418,6 @@ header {
     position: absolute;
     top: 11em;
     left: 7em;
-    opacity: 0;
     transition: .6s;
     width: 57px;
     animation: css-move 1.2s infinite alternate-reverse ease-in 2.7s;
@@ -437,7 +437,6 @@ header {
     width: 57px;
     top: 11em;
     left: 24.2em;
-    opacity: 0;
     transition: .6s;
     animation: js-move 1.3s ease-in 2.7s infinite alternate-reverse;
 }
@@ -453,7 +452,6 @@ header {
 
 #react_gif {
     position: absolute;
-    opacity: 0;
     transition: .6s;
     width: 58px;
     top: 22em;
@@ -465,7 +463,6 @@ header {
     position: absolute;
     top: 22em;
     left: 26em;
-    opacity: 0;
     width: auto;
     height: 61px;
 }
@@ -622,6 +619,7 @@ header {
 .links_projeto {
     display: flex;
     gap: 15px;
+    padding: 7px 0 7px 0;
 }
 
 .links_projeto a {
