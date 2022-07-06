@@ -42,7 +42,6 @@ const vetores = {
 
 setTimeout( function() {
     vetores.art_vetor.style.opacity = '1'
-    vetores.fumaca_gif.style.opacity = '1'
     vetores.code_vetor.style.opacity = '1'
 }, 10)
 

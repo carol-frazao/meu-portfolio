@@ -20,6 +20,7 @@
 
     <header>
 
+        <!------ Index ------>
         <div class="header_container">
             <div class="name_home">
                 <a href="index.html">
@@ -27,6 +28,7 @@
                 </a>
             </div>
 
+            <!---- Navegar entre as sessões da página ---->
             <div class="nav_views">
                 <nav>
                     <ul>
@@ -53,6 +55,7 @@
 
             <div class="networks_container">
 
+                <!---- Minhas redes ---->
                 <div class="networks">
                     <nav>
                         <ul>
@@ -75,24 +78,24 @@
                                     <i class="fa-regular fa-envelope"></i>
                                 </a>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
 
-                <div class="switch__container" onclick="darkMode()">
+                <!------ Alterar tema da página ------>
+                <div class="switch__container" onclick="lightTheme()">
                     <input id="switch-shadow" class="switch switch--shadow" type="checkbox" checked>
                     <label for="switch-shadow"></label>
                 </div>
 
             </div>
-
         </div>
-
     </header>
+
 
     <main>
 
+        <!---- Ícone Whatsapp fixo ----->
         <div class="whatsapp-container">
             <div class="wpp">
                 <a href="https://wa.me/5511976070718" target="_blank">
@@ -101,6 +104,7 @@
             </div>
         </div>
 
+        <!---- sessão de Apresentação ----->
         <section class="view1" id="view1">
 
             <section class="apresentacao" id="apresentacao">
@@ -109,13 +113,13 @@
                     <p> Front-End Developer </p>
                 </div>
 
-                <div class="text_apresentacão" id="text_apresentacao">
-                    <h1 id="text_h1" class="text_h1">
+                <div class="text_apresentacao">
+                    <h1 id="text_h1">
                         Olá, meu nome é Carol. <br>
                         Bem-vindo(a) ao meu portfólio!
                     </h1>
 
-                    <p class="descricao" id="descricao">
+                    <p class="descricao">
                         Aqui você poderá saber um pouco sobre mim, visualizar alguns dos meus projetos,
                         além de acesso às minhas informações de contato (caso queira
                         bater aquele papo profissional). <br>
@@ -123,6 +127,7 @@
                     </p>
                 </div>
 
+                <!-- Navegar p/ sessão Sobre Mim --->
                 <div class="btn-iniciar" id="start">
                     <span>Vamos lá?</span>
                     <a href="#" onclick="clickStart()">
@@ -136,6 +141,7 @@
                 </div>
             </section>
 
+            <!---- Imagens e animações---->
             <section class="vetores">
                 <div class="vetores_container">
                     <img src="assets/img/create-vetor/art-vetor2.png" alt="Vetor imagem" style="max-width: 600px"
@@ -151,6 +157,7 @@
 
         </section>
 
+        <!------ sessão Sobre Mim ------->
         <section class="view2" id="view2">
             <div class="sobre_container">
 
@@ -160,7 +167,7 @@
 
                 <div class="sobreMim">
 
-                    <h2 class="sobre_title"> Sobre mim </h2>
+                    <h2 class="title_section"> Sobre mim </h2>
 
                     <p class="sobre_text">
 
@@ -168,12 +175,13 @@
                         Acredito que podemos mudar o mundo através dela e meu desejo é fazer parte dessa mudança. Para
                         isso, mergulhei na programação, iniciei um curso de Desenvolvimento Web Full Stack e me
                         encontrei no Front-end, um match perfeito com meu lado criativo e meu objetivo em entregar
-                        soluções e boas experiências aos usuários. <br> <br>
-
+                        soluções e boas experiências aos usuários.
+                        <br> <br>
                         Atualmente estou focada nos meus estudos, desenvolvendo alguns projetos pessoais e buscando
                         minha primeira oportunidade como desenvolvedora.
                     </p>
 
+                    <!---- Arquivo currículo ---->
                     <div class="img-curriculo">
                         <a href="assets/arquivos/curriculoCarol.pdf" target="_blank">
                             <img src="assets/img/curriculo-preview.png" alt="Meu currículo" style="max-width: 180px">
@@ -187,12 +195,173 @@
             </div>
         </section>
 
+        <!--- Meus projetos --->
+        <section class="meusProjetos view3">
+
+            <div class="projetos_container">
+
+                <div>
+                    <h3 class="title_section">
+                        Meus projetos
+                    </h3>
+                </div>
+
+                <div class="cards">
+
+                    <!-- Card 1 -->
+                    <div class="card1 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> DH Games </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="assets/img/Projetos/dh-devices.png" alt="" style="max-width: 250px">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p>
+                                O DH Games é um e-commerce de jogos. Neste projeto desenvolvi o front e o backend utilizando tecnologias como: EJS, CSS,
+                                Javascript, Node.js (rotas, express, sequelize), CRUD de produtos
+                                com mySQL, além de algumas bibliotecas bem legais.
+                            </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="https://github.com/carol-frazao/dh-games" class="repositorio" target="_blank">
+                                Repositório </a>
+                            <a href="https://dh-games.herokuapp.com/" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card2 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> Título do projeto </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="https://via.placeholder.com/150" alt="">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
+                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="" class="repositorio" target="_blank"> Repositório </a>
+                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card3 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> Título do projeto </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="https://via.placeholder.com/150" alt="">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
+                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="" class="repositorio" target="_blank"> Repositório </a>
+                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card4 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> Título do projeto </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="https://via.placeholder.com/150" alt="">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
+                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="" class="repositorio" target="_blank"> Repositório </a>
+                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card5 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> Título do projeto </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="https://via.placeholder.com/150" alt="">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
+                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="" class="repositorio" target="_blank"> Repositório </a>
+                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card6 card_projeto">
+
+                        <div class="titulo_projeto">
+                            <span> Título do projeto </span>
+                        </div>
+
+                        <div class="imagem_projeto">
+                            <img src="https://via.placeholder.com/150" alt="">
+                        </div>
+
+                        <div class="descricao_projeto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, animi quibusdam
+                                necessitatibus, sequi in esse quisquam, quaerat quas beatae incidunt sint. </p>
+                        </div>
+
+                        <div class='links_projeto'>
+                            <a href="" class="repositorio" target="_blank"> Repositório </a>
+                            <a href="" class="acessarProjeto" target="_blank"> Acessar </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 </body>
 
-<script type="text/javascript" src="assets/scripts/timersView1.js"></script>
-<script type="text/javascript" src="assets/scripts/darkMode.js"></script>
+<script type="text/javascript" src="assets/scripts/timers.js"></script>
+<script type="text/javascript" src="assets/scripts/lightTheme.js"></script>
 <script type="text/javascript" src="assets/scripts/cursorAnimation.js"></script>
 
 </html>
