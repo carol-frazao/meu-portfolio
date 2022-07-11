@@ -556,11 +556,48 @@ header {
     }
 }
 
-
-/* ----- Terceira View: Meus projetos -----*/
+/* ----- Terceira View: Skills -----*/
 
 .view3 {
     background-color: var(--bg-color-1);
+    font-family: var(--font-family-catamaran);
+    height: 100vh;
+}
+
+.conhecimentos_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 3rem 5rem 3rem;
+    gap: 2rem;
+}
+
+.skills_list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.skills_list ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffff;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.skills_list ul li img {
+    width: 100px;
+}
+
+/* ----- Quarta View: Meus projetos -----*/
+
+.view4 {
+    background-color: var(--bg-color-2);
     font-family: var(--font-family-catamaran);
 }
 
@@ -638,3 +675,4 @@ header {
     background-color: var(--font-green-2);
     color: #242424;
 }
+

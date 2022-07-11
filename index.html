@@ -33,19 +33,25 @@
                 <nav>
                     <ul>
                         <li class="option_view option_projetos">
-                            <a href="">
+                            <a>
                                 < Meus projetos />
                             </a>
                         </li>
 
                         <li class="option_view option_others">
-                            <a href="">
+                            <a>
                                 Sobre mim
                             </a>
                         </li>
 
                         <li class="option_view option_others">
-                            <a href="">
+                            <a>
+                               Skills
+                            </a>
+                        </li>
+
+                        <li class="option_view option_others">
+                            <a>
                                 Contato
                             </a>
                         </li>
@@ -135,15 +141,19 @@
 
                 <!-- Navegar p/ sessão Sobre Mim --->
                 <div class="btn-iniciar" id="start">
+
                     <span>Vamos lá?</span>
-                    <a onclick="return clickStart()">
+
+                    <a onclick="clickStart()" id="start">
                         <img src="assets/img/icons/press-start.png" alt="Start" id="img-start">
                         <img src="assets/img/icons/cursor_click.png" alt="cursor" id="cursor_click"
                             style="max-height: 25px">
                     </a>
+
                     <div class="arrowStart" id="arrowStart">
                         <img src="assets/img/icons/arrowclick.png" alt="Click" style="max-width: 40px;">
                     </div>
+
                 </div>
 
                 <script>
@@ -218,15 +228,80 @@
             </div>
         </section>
 
+        <section class="conhecimentos view3">
+
+            <div class="conhecimentos_container">
+
+                <div>
+                    <h3 class="title_section">
+                        Conhecimentos
+                    </h3>
+                </div>
+                
+                <div class="skills_list">
+                    <ul>
+                        <li class="skill">
+                            HTML
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                alt="HTML">
+                        </li>
+
+                        <li class="skill">
+                            CSS
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                                alt="CSS">
+                        </li>
+
+                        <li class="skill">
+                            Javascript
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                alt="Javascript">
+                        </li>
+
+                        <li class="skill">
+                            React.js
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                                alt="ReactJS">
+                        </li>
+
+                        <li class="skill">
+                            Node.js
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                                alt="NodeJS">
+                        </li>
+
+                        <li class="skill">
+                            Git
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                                alt="Git">
+                        </li>
+
+                        <li class="skill">
+                            Github
+                            <img src="assets/img/icons/github-256.png" alt="Github">
+                        </li>
+
+                        <li class="skill">
+                            Figma
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
+                                alt="Figma">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
         <!--- Meus projetos --->
-        <section class="meusProjetos view3">
+        <section class="meusProjetos view4">
 
             <div class="projetos_container">
 
                 <div>
-                    <h3 class="title_section">
+                    <h4 class="title_section">
                         Meus projetos
-                    </h3>
+                    </h4>
                 </div>
 
                 <div class="cards">
@@ -246,7 +321,8 @@
                         <div class="descricao_projeto">
                             <p>
                                 Este é meu porfólio profissional, onde disponibilizo meus projetos e algumas informações
-                                pessoais. Estou atuando no seu desenvolvimento utilizando, até então, tecnologias como HTML, CSS, Javascript, e
+                                pessoais. Estou atuando no seu desenvolvimento utilizando, até então, tecnologias como
+                                HTML, CSS, Javascript, e
                                 Figma para prototipá-lo.
                             </p>
                         </div>
@@ -430,7 +506,6 @@
 </body>
 
 <script type="text/javascript" src="assets/scripts/timers.js"></script>
-<script type="text/javascript" src="assets/scripts/lightTheme.js"></script>
 <script type="text/javascript" src="assets/scripts/cursorAnimation.js"></script>
 
 </html>

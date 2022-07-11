@@ -18,7 +18,6 @@ const vetor = {
     art_vetor: document.getElementById('art-vetor'),
     react_gif: document.getElementById('react_gif'),
     css_vetor: document.getElementById('css_vetor'),
-    fumaca_gif: document.getElementById('fumaca-gif'),
     code_vetor: document.getElementById('code_symbol'),
     html_vetor: document.getElementById('html'),
     js_vetor: document.getElementById('js_vetor'),
