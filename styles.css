@@ -571,28 +571,108 @@ header {
     justify-content: center;
     padding: 5rem 3rem 5rem 3rem;
     gap: 2rem;
+    width: 100%;
 }
 
-.skills_list ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+.container-carrossel {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.skills_list ul li {
-    list-style: none;
+.nav-skills {
+    overflow: hidden;
+    background: transparent;
+    width: 80%;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    text-align: center;
+    transition: all .4s;
+}
+
+.skill {
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #ffff;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.skills_list ul li img {
-    width: 100px;
+.skill > img {
+    width: 100px
 }
+
+.arrow {
+    font-size: 40px;
+    color: #ffff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem 0 2rem;
+}
+
+.arrow-left {
+    float: left;
+}
+
+.arrow-right {
+    float: right;
+}
+
+.animation-left {
+    animation: move .5s alternate linear;
+}
+.animation-right {
+    animation: move .5s reverse linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .carrossel {
+        width: 500%
+    }
+}
+
+@media (max-width: 900) {
+    .img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    .carrossel {
+        width: 1000%;
+        gap: 1rem;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .arrow {
+        font-size: 25px;
+        padding: 0 20px 0 20px;
+    }
+}
+
 
 /* ----- Quarta View: Meus projetos -----*/
 

@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;600;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ea0daed6c9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7fde04edb1.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 
                         <li class="option_view option_others">
                             <a>
-                               Skills
+                                Skills
                             </a>
                         </li>
 
@@ -238,56 +239,72 @@
                         Conhecimentos
                     </h3>
                 </div>
-                
-                <div class="skills_list">
-                    <ul>
-                        <li class="skill">
-                            HTML
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                                alt="HTML">
-                        </li>
 
-                        <li class="skill">
-                            CSS
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                                alt="CSS">
-                        </li>
+                <div class="container-carrossel">
 
-                        <li class="skill">
-                            Javascript
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                                alt="Javascript">
-                        </li>
+                    <div>
+                        <i class="fa-solid fa-arrow-left arrow arrow-left" id="left" onclick="navCarrossel()"></i>
+                    </div>
 
-                        <li class="skill">
-                            React.js
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-                                alt="ReactJS">
-                        </li>
+                    <div class="nav-skills">
 
-                        <li class="skill">
-                            Node.js
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
-                                alt="NodeJS">
-                        </li>
+                        <div class="carrossel">
 
-                        <li class="skill">
-                            Git
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-                                alt="Git">
-                        </li>
+                            <div class="skill">
+                                HTML
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                    alt="HTML">
+                            </div>
 
-                        <li class="skill">
-                            Github
-                            <img src="assets/img/icons/github-256.png" alt="Github">
-                        </li>
+                            <div class="skill">
+                                CSS
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                                    alt="CSS">
+                            </div>
 
-                        <li class="skill">
-                            Figma
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
-                                alt="Figma">
-                        </li>
-                    </ul>
+                            <div class="skill">
+                                Javascript
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                    alt="Javascript">
+                            </div>
+
+                            <div class="skill">
+                                React.js
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                                    alt="ReactJS">
+                            </div>
+
+                            <div class="skill">
+                                Node.js
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                                    alt="NodeJS">
+                            </div>
+
+                            <div class="skill">
+                                Git
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                                    alt="Git">
+                            </div>
+
+                            <div class="skill">
+                                Github
+                                <img src="assets/img/icons/github-256.png" alt="Github">
+                            </div>
+
+                            <div class="skill">
+                                Figma
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
+                                    alt="Figma">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-arrow-right arrow arrow-right" id="right" onclick="navCarrossel()"></i>
+                    </div>
+
                 </div>
 
             </div>
@@ -508,5 +525,6 @@
 
 <script type="text/javascript" src="assets/scripts/timers.js"></script>
 <script type="text/javascript" src="assets/scripts/cursorAnimation.js"></script>
+<script type="text/javascript" src="assets/scripts/carrossel.js"></script>
 
 </html>
