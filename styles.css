@@ -24,7 +24,7 @@
 /* -- Ícone whatsapp fixo -- */
 .whatsapp-container{
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     bottom: 1.5rem;
     right: 2rem;
     transition: .1s all;
@@ -317,13 +317,9 @@ header {
     opacity: 0;
 }
 
-.animacao_cursor { 
-    animation: cursor_animation 1s;
-}
 
 .scale_btn {
     animation: scale 1s;
-    animation-delay: .75s;
 }
 
 @keyframes scale {
@@ -335,27 +331,14 @@ header {
     }
 }
 
-@keyframes cursor_animation {
-    from {
-        top: 5rem;
-        left: 3rem;
-        opacity: 0;
-    }
-    to {
-       top: 10px;
-       left: -4rem;
-       opacity: 1;
-    }
-}
-
 .arrowStart {
     position: relative;
 }
 
 .arrowStart > img {
     position: absolute;
-    right: 22px;
-    top: 10px;
+    right: 10px;
+    top: 12px;
     opacity: 80%;
     animation: move-arrow .3s infinite alternate;
 }
@@ -568,109 +551,41 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 5rem 3rem 5rem 3rem;
     gap: 2rem;
     width: 100%;
+    height: 70%;
 }
 
-.container-carrossel {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-skills {
-    overflow: hidden;
-    background: transparent;
+.swiper {
     width: 80%;
+    height: auto;
 }
 
-.carrossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200%;
-    text-align: center;
-    transition: all .4s;
-}
-
-.skill {
-    width: 30%;
+.swiper-slide {
+    background: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    color: #ffff;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
     font-weight: bold;
 }
 
-.skill > img {
-    width: 100px
+.skill-img {
+    width: 110px;
+    height: auto;
+    object-fit: cover;
 }
 
-.arrow {
-    font-size: 40px;
-    color: #ffff;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    padding: 0 2rem 0 2rem;
+div.swiper-button-prev, div.swiper-button-next {
+    color: #fff;
 }
 
-.arrow-left {
-    float: left;
-}
-
-.arrow-right {
-    float: right;
-}
-
-.animation-left {
-    animation: move .5s alternate linear;
-}
-.animation-right {
-    animation: move .5s reverse linear;
-}
-
-@keyframes move {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-
-@media (max-width: 1200px) {
-    .carrossel {
-        width: 500%
-    }
-}
-
-@media (max-width: 900) {
-    .img {
-        width: 90%;
-    }
-}
-
-@media (max-width: 700px) {
-    .carrossel {
-        width: 1000%;
-        gap: 1rem;
-    }
-
-    .img {
-        width: 100%;
-    }
-
-    .arrow {
-        font-size: 25px;
-        padding: 0 20px 0 20px;
-    }
+div.swiper-button-prev:hover, div.swiper-button-next:hover {
+    color: var(--font-green-2);
 }
 
 

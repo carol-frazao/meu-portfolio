@@ -23,23 +23,23 @@ const vetor = {
     js_vetor: document.getElementById('js_vetor'),
 }
 
-setTimeout( function() {
-    vetor.art_vetor.style.opacity = '1'
-    vetor.code_vetor.style.opacity = '1'
+setTimeout( () => {
+    vetor.art_vetor.style.opacity = '1';
+    vetor.code_vetor.style.opacity = '1';
 }, 10)
 
-setTimeout( function() {
+setTimeout( () => {
     vetor.css_vetor.style.opacity = '1'
 },600)
 
-setTimeout( function() {
+setTimeout( () => {
     vetor.js_vetor.style.opacity = '1'
 },1200)
 
-setTimeout( function() {
+setTimeout( () => {
     vetor.react_gif.style.opacity = '1'
 },1800)
 
-setTimeout( function() {
+setTimeout( () => {
     vetor.html_vetor.style.opacity = '1'
 },2400)
