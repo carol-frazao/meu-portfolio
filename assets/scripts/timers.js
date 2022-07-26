@@ -1,4 +1,4 @@
-// Type write no h1 da sessão de apresentação
+// Type write no título da introdução
 const text_h1 = document.getElementById('text_h1');
 
 function typeWhiter(text) {
