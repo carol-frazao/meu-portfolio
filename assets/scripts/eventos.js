@@ -14,8 +14,8 @@ function transformSkill() {
 
     imgSkills.forEach((skill) => {
         skill.addEventListener("click", () => {
-            skill.style.animation = "";
             setTimeout(() => skill.style.animation = "rotate-img-slide 1s", 0)
+            setTimeout(() => skill.style.animation = "", 1000)
         })
 
     })
