@@ -268,8 +268,8 @@
 
                             <div class="swiper-slide skill" id="skill-js">
                                 <strong> JAVASCRIPT </strong>
-                                <img src="assets/img/icons/js-vetor.png"
-                                    alt="Javascript" class="skill-img" onclick="transformSkill()">
+                                <img src="assets/img/icons/js-vetor.png" alt="Javascript" class="skill-img"
+                                    onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-reactjs">
@@ -284,7 +284,7 @@
                                     alt="NodeJS" class="skill-img" onclick="transformSkill()">
                             </div>
 
-                            <div class="swiper-slide skill"  id="skill-git">
+                            <div class="swiper-slide skill" id="skill-git">
                                 <strong> GIT </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
                                     alt="Git" class="skill-img" onclick="transformSkill()">
@@ -542,19 +542,79 @@
             <!-- Quinta section: Contato -->
             <section class="section5 contato" id="contact">
 
+                <div class="contato-container">
+
+                    <div class="title-section">
+                        <h4> Contato </h4>
+                        <img src="assets/img/gifs/seta-gif.gif" id="image-icon-projects">
+                    </div>
+
+                    <div class="contact-display">
+
+                        <div class="first-display-contact">
+                            <span> Entre em contato </span>
+
+                            <ul>
+                                <li class="wpp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    (11) 95964-7208
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    anacf04@outlook.com
+                                </li>
+
+                                <li>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    Carol Frazão
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="second-display-contact">
+                            <form action="" method="post" id="form" name="form">
+                                <label for="nome"> Nome </label>
+                                <input type="text" name="nome" id="nome">
+
+                                <label for="email"> E-mail </label>
+                                <input type="email" name="email" id="email">
+
+                                <label for="assunto"> Assunto </label>
+                                <input type="text" name="assunto" id="assunto">
+
+                                <label for="mensagem"> Mensagem </label>
+                                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </section>
 
         </section>
 
     </main>
 
+    <script type="module" src="assets/scripts/swiper.js"></script>
+    <script type="text/javascript" src="assets/scripts/timers.js"></script>
+    <script type="text/javascript" src="assets/scripts/eventos.js"></script>
+    <script type="text/javascript">
+        document.getElementById('header').style.position = "fixed"
+    </script>
+
 </body>
 
-<script type="module" src="assets/scripts/swiper.js"></script>
-<script type="text/javascript" src="assets/scripts/timers.js"></script>
-<script type="text/javascript" src="assets/scripts/eventos.js"></script>
-<script type="text/javascript">
-    document.getElementById('header').style.position = "fixed"
-</script>
+<footer style="height: 3rem">
+    <div class="rodape">
+        <p>
+            Desenvolvido por Carol Frazão
+        </p>
+    </div>
+</footer>
 
 </html>

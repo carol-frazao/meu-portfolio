@@ -708,5 +708,21 @@ div.swiper-button-prev:hover, div.swiper-button-next:hover {
 /* --- Quinta section: Contato --- */
 .section5 {
     background-color: var(--bg-color-1);
-    height: 100vh;
+    font-family: var(--font-family-catamaran);
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-display {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.second-display-contact form {
+    display: flex;
+    flex-direction: column;
 }
