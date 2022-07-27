@@ -9,19 +9,17 @@ function clickStart() {
 }
 
 // Animação nas skills
-function transformSkill() {
+function transformSkill(technology) {
     const imgSkills = document.querySelectorAll('.skill-img')
 
     imgSkills.forEach((skill) => {
         skill.addEventListener("click", () => {
-            setTimeout(() => skill.style.animation = "rotate-img-slide 1s", 0)
-            setTimeout(() => skill.style.animation = "", 1000)
+            setTimeout(() => skill.style.animation = "rotate-img-slide 1s", 0);
+            setTimeout(() => skill.style.animation = "", 1000);
         })
-
     })
 }
 transformSkill()
-
 
 // light theme
 function addEventos() {
