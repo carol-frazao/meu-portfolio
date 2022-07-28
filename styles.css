@@ -20,37 +20,6 @@ html {
     --font-family-play: 'Play', sans-serif;
 }
 
-/* -- Ícone whatsapp fixo -- */
-.whatsapp-container{
-    position: fixed;
-    z-index: 5;
-    bottom: 1.5rem;
-    right: 2rem;
-    transition: .1s all;
-}
-
-#whatsapp-icon {
-    width: 40px;
-    animation: whatsapp-move .5s infinite alternate;
-    transition: .2s;
-}
-
-@keyframes whatsapp-move {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
-
-#whatsapp-icon:hover {
-    animation: none;
-    transform: scale(1.1);
-}
-
-
-/* ---- Header ---- */
 header {
     font-family: var(--font-family-catamaran);
     background-color: var(--bg-color-1);
@@ -452,12 +421,7 @@ header {
     left: 107%;
     bottom: 2.7em;
     animation: arrow-move .7s infinite alternate;
-    opacity: 0;
     transition: .2s;
-}
-
-.img-curriculo:hover > #arrow_download {
-    opacity: 1;
 }
 
 @keyframes arrow-move {
@@ -523,7 +487,7 @@ header {
 }
 
 .skill-img {
-    width: 105px;
+    width: 110px;
     height: auto;
     object-fit: cover;
     animation: move-img-slide 1s infinite alternate;
@@ -561,7 +525,7 @@ div.swiper-button-prev:hover, div.swiper-button-next:hover {
     height: 8px;
     width: 60px;
     border-radius: 50%;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 #skill-html::after {
@@ -622,7 +586,7 @@ div.swiper-button-prev:hover, div.swiper-button-next:hover {
 }
 
 .section4:target {
-    scroll-margin-top: 3rem;
+    scroll-margin-top: 2rem;
 }
 
 #image-icon-projects {
@@ -709,20 +673,129 @@ div.swiper-button-prev:hover, div.swiper-button-next:hover {
 .section5 {
     background-color: var(--bg-color-1);
     font-family: var(--font-family-catamaran);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.contato-container {
+.section5:target {
+    scroll-margin-top: 2rem;
+}
+
+#baby-yoda {
+    max-width: 50px;
+    max-height: 45px;
+    padding-top: 3px;
+}
+
+.contact > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.infos-contact {
+    width: 40%;
+    float: left;
+    padding-left: 4rem;
+}
+
+.infos-contact span {
+    color: var(--font-color-options);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.infos-contact li, .infos-contact a {
+    list-style: none;
+    color: #d4d3d3;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.infos-contact i {
+    padding-right: 5px;
+}
+
+.infos-contact li:hover a {
+    color: #eee;
+}
+
+#info-wpp i {
+    color: #85c766;
+}
+
+#info-linkedin i {
+    color: #4e98de;
+}
+
+#info-mail i {
+    color: #bdbbbb;
+}
+
+.send-message {
+    width: 40%;
+}
+.send-message form {
     display: flex;
     flex-direction: column;
 }
 
-.contact-display {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+.send-message form label {
+    color: var(--font-color-options);
 }
 
-.second-display-contact form {
-    display: flex;
-    flex-direction: column;
+input, textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: solid 3px rgb(39, 187, 39);
+    background-color: #ffff;
+}
+
+.input-form {
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+textarea {
+    padding: 7px;
+    resize: none;
+}
+
+#btn-submit {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--font-green-2);
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--font-color-options);
+    text-transform: uppercase;
+    margin-top: 8px;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px;
+    transition: .4s;
+}
+
+@keyframes scaleSubmit {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -38,7 +38,7 @@
                 <ul>
 
                     <li class="section-page">
-                        <a href="#intro">
+                        <a href="#inicio">
                             Início
                         </a>
                     </li>
@@ -103,20 +103,14 @@
         </div>
     </header>
 
+    <script type="text/javascript">
+        document.getElementById('header').style.position = "fixed"
+    </script>
+
     <main>
-        <!---- Ícone Whatsapp fixo ----->
-        <div class="whatsapp-container">
-            <div class="wpp">
-                <a href="https://wa.me/5511976070718" target="_blank">
-                    <img src="assets/img/whatsapp-icon.png" alt="Contato por whatsapp" id="whatsapp-icon">
-                </a>
-            </div>
-        </div>
-
         <section class="sections">
-
             <!---- Primeira sessão: Apresentação ----->
-            <section class="section1" id="intro">
+            <section class="section1" id="inicio">
 
                 <section class="apresentacao" id="apresentacao">
 
@@ -540,53 +534,68 @@
             </section>
 
             <!-- Quinta section: Contato -->
-            <section class="section5 contato" id="contact">
+            <section class="section5 contact" id="contact">
 
-                <div class="contato-container">
-
+                <div>
                     <div class="title-section">
                         <h4> Contato </h4>
-                        <img src="assets/img/gifs/seta-gif.gif" id="image-icon-projects">
+                        <img src="assets/img/gifs/contact.gif" id="baby-yoda">
                     </div>
 
-                    <div class="contact-display">
+                    <div class="contact-container">
 
-                        <div class="first-display-contact">
+                        <div class="infos-contact">
                             <span> Entre em contato </span>
 
+                            <p>
+                            </p>
+
                             <ul>
-                                <li class="wpp">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                    (11) 95964-7208
+                                <li id="info-wpp">
+                                    <a href="https://wa.me/5511976070718" target="_blank">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        (11) 95964-7208
+                                    </a>
+
                                 </li>
 
-                                <li>
-                                    <i class="fa-solid fa-envelope"></i>
-                                    anacf04@outlook.com
+                                <li id="info-linkedin">
+                                    <a href="https://www.linkedin.com/in/carol-frazao/" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        Carol Frazão
+                                    </a>
+
                                 </li>
 
-                                <li>
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    Carol Frazão
+                                <li id="info-mail">
+                                    <a href="mailto:anacf04@outlook.com" target="_blank">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        anacf04@outlook.com
+                                    </a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="second-display-contact">
+                        <div class="send-message">
                             <form action="" method="post" id="form" name="form">
                                 <label for="nome"> Nome </label>
-                                <input type="text" name="nome" id="nome">
+                                <input type="text" name="nome" id="nome" placeholder="Digite seu nome"
+                                    class="input-form">
 
                                 <label for="email"> E-mail </label>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" placeholder="Digite seu e-mail"
+                                    class="input-form">
 
                                 <label for="assunto"> Assunto </label>
-                                <input type="text" name="assunto" id="assunto">
+                                <input type="text" name="assunto" id="assunto" placeholder="Sobre o que quer falar?"
+                                    class="input-form">
 
                                 <label for="mensagem"> Mensagem </label>
-                                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                                <textarea name="mensagem" id="mensagem" cols="30" rows="10"
+                                    placeholder="Digite sua mensagem"></textarea>
 
-                                <input type="submit" value="Enviar">
+                                <input type="submit" value="Enviar" id="btn-submit" onclick="submitAnimation()">
+
                             </form>
                         </div>
 
@@ -599,14 +608,6 @@
         </section>
 
     </main>
-
-    <script type="module" src="assets/scripts/swiper.js"></script>
-    <script type="text/javascript" src="assets/scripts/timers.js"></script>
-    <script type="text/javascript" src="assets/scripts/eventos.js"></script>
-    <script type="text/javascript">
-        document.getElementById('header').style.position = "fixed"
-    </script>
-
 </body>
 
 <footer style="height: 3rem">
@@ -616,5 +617,9 @@
         </p>
     </div>
 </footer>
+
+<script type="module" src="assets/scripts/swiper.js"></script>
+<script type="text/javascript" src="assets/scripts/timers.js"></script>
+<script type="text/javascript" src="assets/scripts/eventos.js"></script>
 
 </html>

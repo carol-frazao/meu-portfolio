@@ -9,7 +9,7 @@ function clickStart() {
 }
 
 // Animação nas skills
-function transformSkill(technology) {
+function transformSkill() {
     const imgSkills = document.querySelectorAll('.skill-img')
 
     imgSkills.forEach((skill) => {
@@ -21,13 +21,13 @@ function transformSkill(technology) {
 }
 transformSkill()
 
-// light theme
-function addEventos() {
-    const btn = document.getElementById('switch-shadow');
-    const view1 = document.getElementById('view1');
-    
-    btn.addEventListener('change', (e) => {
-        view1.classList.toggle('colorView1_lightTheme', e.target.unchecked);
+// animação no botão enviar mensagem
+function submitAnimation() {
+    const submit = document.getElementById('btn-submit')
+
+    submit.addEventListener('click', (e) => {
+        submit.style.animation = "";
+        setTimeout(() => submit.style.animation = "scaleSubmit .5s", 0);
     })
 }
-addEventos()
+
