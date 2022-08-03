@@ -19,9 +19,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
-
-</head>
-
 <body>
 
     <header id="header">
@@ -102,10 +99,6 @@
             </div>
         </div>
     </header>
-
-    <script type="text/javascript">
-        document.getElementById('header').style.position = "fixed"
-    </script>
 
     <main>
         <section class="sections">
@@ -235,7 +228,7 @@
             </section>
 
             <!-- Terceira sessão: Skills -->
-            <section class="conhecimentos section3" id="skills">
+            <section class="conhecimentos section3" id="skills" onclick="defaultBackground()">
 
                 <div class="conhecimentos_container">
 
@@ -251,49 +244,49 @@
                             <div class="swiper-slide skill" id="skill-html">
                                 <strong> HTML </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                                    alt="HTML" class="skill-img" onclick="transformSkill()">
+                                    alt="HTML" class="skill-img" id="html-img" onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-css">
                                 <strong> CSS </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                                    alt="CSS" class="skill-img" onclick="transformSkill()">
+                                    alt="CSS" class="skill-img" id="css-img" onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-js">
                                 <strong> JAVASCRIPT </strong>
-                                <img src="assets/img/icons/js-vetor.png" alt="Javascript" class="skill-img"
+                                <img src="assets/img/icons/js-vetor.png" alt="Javascript" class="skill-img" id="js-img"
                                     onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-reactjs">
                                 <strong> REACT.JS </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-                                    alt="ReactJS" class="skill-img" onclick="transformSkill()">
+                                    alt="ReactJS" class="skill-img" id="react-img" onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-nodejs">
                                 <strong> NODE.JS </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
-                                    alt="NodeJS" class="skill-img" onclick="transformSkill()">
+                                    alt="NodeJS" class="skill-img" id="node-img" onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-git">
                                 <strong> GIT </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-                                    alt="Git" class="skill-img" onclick="transformSkill()">
+                                    alt="Git" class="skill-img" id="git-img" onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-github">
                                 <strong> GITHUB </strong>
-                                <img src="assets/img/icons/github-256.png" alt="Github" class="skill-img"
+                                <img src="assets/img/icons/github-256.png" alt="Github" class="skill-img" id="github-img"
                                     onclick="transformSkill()">
                             </div>
 
                             <div class="swiper-slide skill" id="skill-figma">
                                 <strong> FIGMA </strong>
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
-                                    alt="Figma" class="skill-img" onclick="transformSkill()">
+                                    alt="Figma" class="skill-img" id="figma-img" onclick="transformSkill()">
                             </div>
 
                         </div>
@@ -538,7 +531,7 @@
 
                 <div>
                     <div class="title-section">
-                        <h4> Contato </h4>
+                        <h5> Contato </h5>
                         <img src="assets/img/gifs/contact.gif" id="baby-yoda">
                     </div>
 
@@ -610,7 +603,7 @@
     </main>
 </body>
 
-<footer style="height: 3rem">
+<footer>
     <div class="rodape">
         <p>
             Desenvolvido por Carol Frazão

@@ -23,6 +23,7 @@ html {
 header {
     font-family: var(--font-family-catamaran);
     background-color: var(--bg-color-1);
+    position: fixed;
     top: 0;
     z-index: 5;
     padding: 0 3rem 0 3rem;
@@ -134,10 +135,6 @@ header {
     height: 100vh;
 }
 
-.colorView1_lightTheme {
-    background-color: rgb(255, 255, 255);
-}
-
 .apresentacao {
     padding-left: 4rem;
     width: 50%;
@@ -216,7 +213,7 @@ header {
     height: auto;
     width: 120px;
     cursor: pointer;
-    animation: scale 1s infinite alternate-reverse;
+    animation: scale .6s infinite alternate-reverse;
 }
 
 #cursor_click {
@@ -340,7 +337,7 @@ header {
     gap: 15px;
 }
 
-.title_section h1, h2, h3, h4 {
+.title_section h1, h2, h3, h4, h5 {
     text-transform: uppercase;
     text-align: center;
     font-size: 35px;
@@ -759,7 +756,7 @@ input, textarea {
     width: 100%;
     margin-bottom: 1em;
     border-radius: 5px;
-    border: solid 3px rgb(39, 187, 39);
+    border: solid 3px var(--font-green-2);
     background-color: #ffff;
 }
 
@@ -798,4 +795,11 @@ textarea {
     100% {
         transform: scale(1);
     }
+}
+
+footer {
+    background-image: url('assets/img/wallpaper-html.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 5rem;
 }
