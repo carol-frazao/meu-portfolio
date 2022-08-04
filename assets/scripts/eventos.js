@@ -1,28 +1,34 @@
+const $ = (id) => document.getElementById(id);
+
+
 //Animação do cursor no botão "Start"
 function clickStart() {
-    const btn_start = document.getElementById('img-start')
+    const btn_start = $('img-start')
 
     btn_start.addEventListener("click", (e) => {
-        btn_start.classList.add('scale_btn');
-        setTimeout( () => btn_start.classList.remove('scale_btn'), 1000);
+        this.classList.add('scale_btn');
+        setTimeout( () => this.classList.remove('scale_btn'), 1000);
     })
 }
 
-// Animação nas skills e background conforme click
-function transformSkill() {
-    const imgSkills = document.querySelectorAll('.skill-img')
-    const container = document.getElementById('skills')
-    const skills = {
-        html: document.getElementById('html-img'),
-        css: document.getElementById('css-img'),
-        js: document.getElementById('js-img'),
-        react: document.getElementById('react-img'),
-        node: document.getElementById('node-img'),
-        git: document.getElementById('git-img'),
-        github: document.getElementById('github-img'),
-        figma: document.getElementById('figma-img')
-    }
 
+// Eventos ao clicar nas skills: animações e backgrounds
+function skillEvents() {
+
+    const container = $('skills');
+    const backgroundCover = () => container.style.backgroundSize = 'cover';
+    const background = (image) => container.style.background = "url(" + image + ") center";
+    const imgSkills = document.querySelectorAll('.skill-img');
+    const skills = {
+        html: $('html-img'),
+        css: $('css-img'),
+        js: $('js-img'),
+        react: $('react-img'),
+        node: $('node-img'),
+        git: $('git-img'),
+        github: $('github-img'),
+        figma: $('figma-img')
+    }
 
     imgSkills.forEach((skill) => {
         skill.addEventListener("click", () => {
@@ -31,70 +37,52 @@ function transformSkill() {
         })
     })
 
-    skills.html.addEventListener("click", () => {
-        setTimeout(() => {
-        container.style.backgroundImage = "url('assets/img/skills-wallpaper/html-wallpaper.jpg')",
-        container.style.backgroundSize = "cover",
-        0 })
+    skills.html.addEventListener("click", (e) => {
+        background('assets/img/skills-wallpaper/html-wallpaper.jpg');
+        backgroundCover();
     })
 
-    skills.css.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/css-wallpaper.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+    skills.css.addEventListener("click", (e) => {
+        background('assets/img/skills-wallpaper/css-wallpaper.jpg');
+        backgroundCover();
     })
 
     skills.js.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/js-wallpaper.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/js-wallpaper.jpg');
+        backgroundCover();
     })
 
     skills.react.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/react-background.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/react-background.jpg');
+        backgroundCover();
     })
 
     skills.node.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/node-background.png') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/node-background.png');
+        backgroundCover();
     })
 
     skills.git.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/git-background.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/git-background.jpg');
+        backgroundCover();
     })
 
     skills.github.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/github-background.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/github-background.jpg');
+        backgroundCover();
     })
 
     skills.figma.addEventListener("click", () => {
-        setTimeout(() => { container.style.background = "url('assets/img/skills-wallpaper/figma-background.jpg') center",
-        container.style.backgroundSize = "cover",
-        0 })
+        background('assets/img/skills-wallpaper/figma-background.jpg');
+        backgroundCover();
     })
 }
-transformSkill()
+skillEvents()
 
 
-function defaultBackground() {
-    const container = document.getElementById('skills')
-    container.addEventListener("click", () => {
-            container.style.background = "var(--bg-color-1)"
-    })
-}
-defaultBackground()
-
-
-// animação no botão enviar mensagem
+// animação no botão de enviar mensagem
 function submitAnimation() {
-    const submit = document.getElementById('btn-submit')
+    const submit = $('btn-submit')
 
     submit.addEventListener('click', (e) => {
         submit.style.animation = "";

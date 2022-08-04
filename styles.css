@@ -435,6 +435,7 @@ header {
     background-color: var(--bg-color-1);
     font-family: var(--font-family-catamaran);
     height: 90vh;
+    width: 100%;
 }
 
 .section3:target {
@@ -573,7 +574,6 @@ div.swiper-button-prev:hover, div.swiper-button-next:hover {
     border-top: solid 2px rgba(211, 204, 211, 0.445);
     border-bottom: solid 3px rgb(193, 166, 196);
 }
-
 
 /* ----- Quarta View: Meus projetos -----*/
 
