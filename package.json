@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Este é meu portfólio profissional.\r Nele estarão disponíveis meus projetos desenvolvidos, algumas informações sobre mim, minhas competências, e formas de contato.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -watch -include-path scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carol-frazao/meu-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carol-frazao/meu-portfolio/issues"
+  },
+  "homepage": "https://github.com/carol-frazao/meu-portfolio#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

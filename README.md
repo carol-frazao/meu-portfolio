@@ -1,6 +1,6 @@
 # meu-portfolio
 
 Este é meu portfólio profissional.
-Nele estarão disponíveis meus projetos desenvolvidos, minhas redes sociais, algumas informações sobre mim, entre outros detalhes.
+Nele estarão disponíveis meus projetos desenvolvidos, algumas informações sobre mim, minhas competências, e formas de contato.
 
 Acesse a aplicação: https://carol-frazao.vercel.app/
