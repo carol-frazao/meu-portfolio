@@ -1,17 +1,5 @@
 const $ = (id) => document.getElementById(id);
 
-
-//Animação do cursor no botão "Start"
-function clickStart() {
-    const btn_start = $('img-start')
-
-    btn_start.addEventListener("click", (e) => {
-        this.classList.add('scale_btn');
-        setTimeout( () => this.classList.remove('scale_btn'), 1000);
-    })
-}
-
-
 // Eventos ao clicar nas skills: animações e backgrounds
 function skillEvents() {
 
@@ -24,6 +12,7 @@ function skillEvents() {
         html: $('html-img'),
         css: $('css-img'),
         js: $('js-img'),
+        sass: $('sass-img'),
         react: $('react-img'),
         node: $('node-img'),
         git: $('git-img'),
@@ -56,6 +45,13 @@ function skillEvents() {
 
     skills.js.addEventListener("click", () => {
         background('assets/img/skills-wallpaper/js-wallpaper.jpg');
+        backgroundCover();
+        displayResetBG();
+        btnResetBg.style.cursor = "pointer";
+    })
+
+    skills.sass.addEventListener("click", () => {
+        background('assets/img/skills-wallpaper/sass-background.png');
         backgroundCover();
         displayResetBG();
         btnResetBg.style.cursor = "pointer";
@@ -97,7 +93,7 @@ function skillEvents() {
     })
     
     btnResetBg.addEventListener("click", () => {
-        container.style.background = "var(--bg-color-1)";
+        container.style.background = "#2c2c2c";
         btnResetBg.style.opacity = "0";
         btnResetBg.style.cursor = "default";
     })
@@ -109,7 +105,7 @@ skillEvents()
 function submitAnimation() {
     const submit = $('btn-submit')
 
-    submit.addEventListener('click', (e) => {
+    submit.addEventListener('click', () => {
         submit.style.animation = "";
         setTimeout(() => submit.style.animation = "scaleSubmit .5s", 0);
     })
