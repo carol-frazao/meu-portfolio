@@ -34,32 +34,34 @@
 
         <!-- Navegar entre as sessões da página -->
         <nav class="nav-sections">
-            <ul>
-                <li class="section-page">
+            <ul id="nav-list">
+                <i class="fa-solid fa-xmark close-menu" id="close-nav" onclick="responsiveNavbar()"></i>
+
+                <li class="section-page close-menu" onclick="responsiveNavbar()">
                     <a href="#inicio">
                         Início
                     </a>
                 </li>
 
-                <li class="section-page">
+                <li class="section-page close-menu" onclick="responsiveNavbar()">
                     <a href="#about">
                         Sobre mim
                     </a>
                 </li>
 
-                <li class="section-page">
+                <li class="section-page close-menu" onclick="responsiveNavbar()">
                     <a href="#skills">
                         Skills
                     </a>
                 </li>
 
-                <li class="section-page">
+                <li class="section-page close-menu" onclick="responsiveNavbar()">
                     <a href="#projects" id="my-projects">
                         < Meus projetos />
                     </a>
                 </li>
 
-                <li class="section-page">
+                <li class="section-page close-menu" onclick="responsiveNavbar()">
                     <a href="#contact">
                         Contato
                     </a>
@@ -73,14 +75,14 @@
                 <li class="network">
                     <a href="https://www.linkedin.com/in/carol-frazao/" target="_blank">
                         <i class="fa-brands fa-linkedin i_network"></i>
-                        Linkedin
+                        <span>Linkedin</span> 
                     </a>
                 </li>
 
                 <li class="network">
                     <a href="https://github.com/carol-frazao" target="_blank">
                         <i class="fa-brands fa-github i_network"></i>
-                        Github
+                        <span>Github</span>
                     </a>
                 </li>
 
@@ -91,6 +93,9 @@
                 </li>
             </ul>
         </nav>
+
+        <i class="fa-solid fa-bars-staggered" id="btn-menu" onclick="responsiveNavbar()"></i>
+        
     </header>
 
     <main class="sections">
@@ -597,6 +602,7 @@
                     </div>
             </section>
     </main>
+
 </body>
 
 <footer>

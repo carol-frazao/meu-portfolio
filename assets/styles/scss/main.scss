@@ -24,7 +24,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 999;
-    padding: 0 3rem 0;
+    padding: 0 3rem;
     @include displayFlex(center, space-between, row);
     @include userSelectNone();
 
@@ -45,14 +45,14 @@ header {
         height: 100%;
 
         ul {
-            @include displayFlex(center, space-between, row);
+            @include displayFlex(null, space-between, row);
+            transition: all .1s;
             // flex-flow: row nowrap;
 
             li {
                 list-style: none;
                 cursor: pointer;
                 text-align: center;
-                padding: 0 1rem 0;
                 transition: all .3s;
 
                 &:hover {
@@ -72,6 +72,16 @@ header {
                 }
             }
         }
+
+        #close-nav {
+            display: none;
+            cursor: pointer;
+
+            &:hover {
+                color: #ba226b;
+            }
+        }
+
     }
 
     nav.networks {
@@ -98,6 +108,114 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    #btn-menu {
+        display: none;
+        color: $text-opaque-2;
+        font-size: 30px;
+        cursor: pointer;
+
+        &:hover {
+            color: $text-green-light;
+        }
+    }
+
+    @include for-phone-only {
+        .home a {
+            font-size: 25px;
+        }
+
+        nav.nav-sections {
+            @include nav-sections-responsive(100vw, 28px);
+
+            #close-nav {
+                font-size: 50px;
+                padding: 15px;
+            }
+        }
+
+        .networks {
+            display: none;
+        }
+
+        #btn-menu {
+            display: block;
+        }
+    }
+
+    @include for-tablet-portrait {
+        nav.nav-sections {
+            @include nav-sections-responsive(70vw, 25px);
+
+            #close-nav {
+                font-size: 50px;
+                padding: 15px;
+            }
+        }
+
+        nav.networks {
+            .network {
+                i {
+                    font-size: 20px;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            #send-email a {
+                i {
+                    color: $text-opaque-2;
+                    font-size: 20px;
+                }
+
+                &:hover>i {
+                    color: $text-green-light;
+                }
+            }
+
+        }
+
+        #btn-menu {
+            display: block;
+        }
+    }
+
+    @include for-tablet-landscape {
+        header {
+            padding: 0 2rem;
+        }
+
+        .home a {
+            font-size: 20px;
+        }
+
+        nav.nav-sections ul {
+            @include displayFlex(center, space-between, row);
+            background-color: inherit;
+            height: auto;
+            width: 100%;
+
+            li {
+                padding: 0 10px;
+
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        nav.networks {
+            ul {
+                gap: 15px;
+
+                li {
+                    font-size: 14px;
+                }
+            }
 
             #send-email a {
                 i {
@@ -105,7 +223,6 @@ header {
                     background-color: rgba(#eee, 0.1);
                     border-radius: 50%;
                     padding: 12px;
-
                 }
 
                 &:hover>i {
@@ -113,6 +230,36 @@ header {
                 }
             }
         }
+    }
+
+    @include for-desktop-up {
+        .home a {
+            font-size: 25px;
+        }
+
+        nav.nav-sections {
+            ul {
+                li {
+                    padding: 0 1rem;
+
+                    a {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        nav.networks ul {
+            li {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    header {
+        padding: 0 2rem;
     }
 }
 
@@ -391,7 +538,6 @@ section.skills {
             width: 60px;
             border-radius: 50%;
             margin-top: 20px;
-            background: red;
         }
 
         #skill-html::after {

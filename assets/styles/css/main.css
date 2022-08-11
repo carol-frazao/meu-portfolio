@@ -176,7 +176,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 999;
-  padding: 0 3rem 0;
+  padding: 0 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -201,15 +201,14 @@ header nav.nav-sections {
 }
 header nav.nav-sections ul {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  transition: all 0.1s;
 }
 header nav.nav-sections ul li {
   list-style: none;
   cursor: pointer;
   text-align: center;
-  padding: 0 1rem 0;
   transition: all 0.3s;
 }
 header nav.nav-sections ul li:hover {
@@ -224,6 +223,13 @@ header nav.nav-sections ul li a {
 }
 header nav.nav-sections ul li #my-projects {
   color: #BBF2A1;
+}
+header nav.nav-sections #close-nav {
+  display: none;
+  cursor: pointer;
+}
+header nav.nav-sections #close-nav:hover {
+  color: #ba226b;
 }
 header nav.networks {
   height: 100%;
@@ -249,16 +255,184 @@ header nav.networks ul li a:hover {
 header nav.networks ul li a i {
   padding-right: 5px;
 }
-header nav.networks ul #send-email a i {
-  color: #BBF2A1;
-  background-color: rgba(238, 238, 238, 0.1);
-  border-radius: 50%;
-  padding: 12px;
+header #btn-menu {
+  display: none;
+  color: rgba(255, 255, 255, 0.881);
+  font-size: 30px;
+  cursor: pointer;
 }
-header nav.networks ul #send-email a:hover > i {
-  color: #fff;
+header #btn-menu:hover {
+  color: #BBF2A1;
+}
+@media (max-width: 599.9px) {
+  header .home a {
+    font-size: 25px;
+  }
+  header nav.nav-sections ul {
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #85c766;
+  }
+  header nav.nav-sections ul #close-nav {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+  header nav.nav-sections ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav.nav-sections ul li a {
+    display: block;
+    width: 100%;
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  header nav.nav-sections ul li #my-projects {
+    color: white;
+  }
+  header nav.nav-sections ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: solid 12px #1c1c1c;
+  }
+  header nav.nav-sections #close-nav {
+    font-size: 50px;
+    padding: 15px;
+  }
+  header .networks {
+    display: none;
+  }
+  header #btn-menu {
+    display: block;
+  }
+}
+@media (min-width: 600px) and (max-width: 899.9px) {
+  header nav.nav-sections ul {
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    height: 100vh;
+    width: 70vw;
+    background-color: #85c766;
+  }
+  header nav.nav-sections ul #close-nav {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+  header nav.nav-sections ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav.nav-sections ul li a {
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  header nav.nav-sections ul li #my-projects {
+    color: white;
+  }
+  header nav.nav-sections ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: solid 12px #1c1c1c;
+  }
+  header nav.nav-sections #close-nav {
+    font-size: 50px;
+    padding: 15px;
+  }
+  header nav.networks .network i {
+    font-size: 20px;
+  }
+  header nav.networks .network span {
+    display: none;
+  }
+  header nav.networks #send-email a i {
+    color: rgba(255, 255, 255, 0.881);
+    font-size: 20px;
+  }
+  header nav.networks #send-email a:hover > i {
+    color: #BBF2A1;
+  }
+  header #btn-menu {
+    display: block;
+  }
+}
+@media (min-width: 900px) {
+  header header {
+    padding: 0 2rem;
+  }
+  header .home a {
+    font-size: 20px;
+  }
+  header nav.nav-sections ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: inherit;
+    height: auto;
+    width: 100%;
+  }
+  header nav.nav-sections ul li {
+    padding: 0 10px;
+  }
+  header nav.nav-sections ul li a {
+    font-size: 15px;
+  }
+  header nav.networks ul {
+    gap: 15px;
+  }
+  header nav.networks ul li {
+    font-size: 14px;
+  }
+  header nav.networks #send-email a i {
+    color: #BBF2A1;
+    background-color: rgba(238, 238, 238, 0.1);
+    border-radius: 50%;
+    padding: 12px;
+  }
+  header nav.networks #send-email a:hover > i {
+    color: #fff;
+  }
+}
+@media (min-width: 1200px) {
+  header .home a {
+    font-size: 25px;
+  }
+  header nav.nav-sections ul li {
+    padding: 0 1rem;
+  }
+  header nav.nav-sections ul li a {
+    font-size: 17px;
+  }
+  header nav.networks ul li {
+    font-size: 17px;
+  }
 }
 
+@media (max-width: 599.9px) {
+  header {
+    padding: 0 2rem;
+  }
+}
 section.inicio {
   display: flex;
   align-items: center;
@@ -540,7 +714,6 @@ section.skills .skillsContainer .skill::after {
   width: 60px;
   border-radius: 50%;
   margin-top: 20px;
-  background: red;
 }
 section.skills .skillsContainer #skill-html::after {
   background-color: rgba(110, 34, 34, 0.775);

@@ -101,13 +101,20 @@ function skillEvents() {
 skillEvents()
 
 
-// animação no botão de enviar mensagem
-function submitAnimation() {
-    const submit = $('btn-submit')
+//Navbar responsivo
+function responsiveNavbar() {
+    const btnMenu = $('btn-menu');
+    const navList = $('nav-list');
+    const btnCloseMenu = document.querySelectorAll('.close-menu');
 
-    submit.addEventListener('click', () => {
-        submit.style.animation = "";
-        setTimeout(() => submit.style.animation = "scaleSubmit .5s", 0);
+    btnMenu.addEventListener("click", () => {
+        navList.style.display = "flex";
+    })
+
+    btnCloseMenu.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            navList.style.display = "";
+        })    
     })
 }
-
+responsiveNavbar()
