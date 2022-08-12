@@ -18,36 +18,28 @@ body {
 section.inicio {
     @include theme($bg-color-01, null, $font-play);
     height: auto;
-
-    @include for-phone-only {}
-
-    @include for-tablet-portrait {}
-
-    @include for-tablet-landscape {
-        @include displayFlex(center, space-around, row);
-        height: 100vh
-    }
+    width: 100%;
 
     .apresentacao {
-        @include displayFlex(flex-start, center, column);
-        padding-left: 4rem;
-        width: 50%;
-        height: 100%;
-        gap: 2rem;
+        @include displayFlex(center, center, column);
+        padding: 7rem 2rem 3rem;
+        width: 100%;
+        gap: 1.5rem;
 
         div.front_container {
             background-color: #abed8d;
-            width: 14rem;
-            border-radius: 11px;
-            padding: 5px;
-            @include textStyle(15px, bold, #000);
+            width: 13rem;
+            border-radius: 8px;
+            padding: 2px;
+            @include textStyle(13px, bold, #000);
             text-align: center;
             cursor: default;
         }
 
         div.text_apresentacao {
             h1 {
-                @include textStyle(34px, bold, #ffff);
+                @include textStyle(22px, bold, #ffff);
+                text-align: center;
                 margin-bottom: 1rem;
                 cursor: default;
 
@@ -59,9 +51,8 @@ section.inicio {
             }
 
             p.descricao {
-                @include textStyle(17px, normal, $text-opaque-1);
+                @include textStyle(16px, normal, $text-opaque-1);
                 transition: .4s;
-                max-width: 90%;
                 text-align: justify;
                 cursor: default;
             }
@@ -72,9 +63,10 @@ section.inicio {
             align-items: center;
             gap: 1rem;
             transition: .4s all;
+            margin-top: -.5rem;
 
             span {
-                @include textStyle(20px, bold, rgba(#eee, 0.55));
+                @include textStyle(18px, bold, rgba(#eee, 0.55));
                 cursor: default;
             }
 
@@ -83,8 +75,93 @@ section.inicio {
 
                 #img-start {
                     height: auto;
-                    width: 120px;
+                    width: 100px;
                     animation: scale .6s infinite alternate-reverse;
+                }
+            }
+        }
+
+        @include for-tablet-portrait {
+            padding: 7rem 3rem 3rem;
+            gap: 1.7rem;
+
+            div.front_container {
+                padding: 4px;
+            }
+
+            div.text_apresentacao {
+                h1 {
+                    font-size: 25px;
+                }
+
+                p.descricao {
+                    font-size: 17px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            div.btn-iniciar {
+                margin-top: 0;
+
+                span {
+                    font-size: 20px
+                }
+            }
+        }
+
+        @include for-tablet-landscape {
+            @include displayFlex(flex-start, center, column);
+            width: 50%;
+            height: 100%;
+            gap: 2rem;
+
+            div.front_container {
+                width: 14rem;
+                padding: 5px;
+            }
+
+            div.text_apresentacao {
+                h1 {
+                    @include textStyle(30px, bold, #ffff);
+                    text-align: start;
+                    margin-bottom: 1rem;
+                    cursor: default;
+
+                    &::after {
+                        content: '|';
+                        opacity: 1;
+                        animation: pisca .7s infinite;
+                    }
+                }
+
+                p.descricao {
+                    @include textStyle(16px, normal, $text-opaque-1);
+                    transition: .4s;
+                    max-width: 90%;
+                    text-align: justify;
+                    cursor: default;
+                }
+            }
+
+            div.btn-iniciar {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                transition: .4s all;
+
+                span {
+                    @include textStyle(20px, bold, rgba(#eee, 0.55));
+                    cursor: default;
+                }
+
+                a {
+                    cursor: pointer;
+
+                    #img-start {
+                        height: auto;
+                        width: 120px;
+                        animation: scale .6s infinite alternate-reverse;
+                    }
                 }
             }
         }
@@ -92,11 +169,12 @@ section.inicio {
 
     .vetores-container {
         @include flexCenter;
-        width: 40%;
-        height: 100%;
+        width: 100%;
+        height: auto;
 
         .vetores {
             position: relative;
+            top: -10rem;
             width: 100%;
             height: 100%;
             transition: .4s all;
@@ -154,6 +232,77 @@ section.inicio {
                 height: 61px;
             }
         }
+
+        @include for-tablet-landscape {
+            @include flexCenter;
+            width: 40%;
+            height: 100%;
+
+            .vetores {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: .4s all;
+
+                #art-vetor {
+                    position: absolute;
+                    transition: .6s;
+                    width: 410px;
+                    top: 16em;
+                    left: 5em;
+                }
+
+                #code_symbol {
+                    position: absolute;
+                    top: 10em;
+                    left: 15.2em;
+                    transition: .6s;
+                    height: auto;
+                    width: 68px;
+                    animation: code-scale 1.3s infinite alternate ease-in 2.5s;
+                }
+
+                #css_vetor {
+                    position: absolute;
+                    top: 11em;
+                    left: 7em;
+                    transition: .6s;
+                    width: 57px;
+                    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+                }
+
+                #js_vetor {
+                    position: absolute;
+                    width: 57px;
+                    top: 11em;
+                    left: 24.2em;
+                    transition: .6s;
+                    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+                }
+
+                #react_gif {
+                    position: absolute;
+                    transition: .6s;
+                    width: 58px;
+                    top: 22em;
+                    left: 5em;
+                }
+
+                #html {
+                    transition: .6s;
+                    position: absolute;
+                    top: 22em;
+                    left: 26em;
+                    width: auto;
+                    height: 61px;
+                }
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        @include displayFlex(center, space-around, row);
+        height: 100vh;
     }
 }
 
