@@ -41,11 +41,11 @@
 @mixin nav-sections-responsive($width, $fontSize) {
     ul {
         display: none;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-direction: column;
         position: absolute;
         right: 0;
-        padding: 0;
+        padding: 0 0 6rem;
         height: 100vh;
         width: $width;
         background-color: $text-green-strong;
@@ -53,6 +53,7 @@
         #close-nav {
             display: inline-flex;
             justify-content: flex-end;
+            margin-bottom: 2rem;
         }
 
         li {
@@ -64,23 +65,30 @@
                 display: block;
                 width: 100%;
                 font-size: $fontSize;
-                color: white;
+                color: #1c1c1c;
                 text-transform: uppercase;
                 font-weight: bold;
             }
 
             #my-projects {
-                color: white;
+                color: #1c1c1c;
             }
 
             &:hover {
                 background-color: rgba(#000, .1);
-                border-left: solid 12px #1c1c1c;
+                border-left: solid 10px #1c1c1c;
+
+                a,
+                #my-projects {
+                    color: #eee;
+                    font-size: 27px;
+
+                    &::before {
+                        content: url('/assets/img/icons/guia.png');
+                        padding-right: 5px;
+                    }
+                }
             }
         }
     }
-}
-
-@function weight($weight-name) {
-    @return map-get($font-weight, $weight-name)
 }

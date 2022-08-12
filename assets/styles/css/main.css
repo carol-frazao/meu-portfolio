@@ -159,24 +159,16 @@ code {
     transform: rotateZ(360deg);
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #1a1a1a;
-}
-
 header {
   width: 100%;
   height: 4.5rem;
   line-height: 4.5rem;
-  font-family: "Catamaran", sans-serif;
-  background-color: #2c2c2c;
   position: fixed;
   top: 0;
   z-index: 999;
   padding: 0 3rem;
+  background: #2c2c2c;
+  font-family: "Catamaran", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,9 +192,6 @@ header nav.nav-sections {
   height: 100%;
 }
 header nav.nav-sections ul {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   transition: all 0.1s;
 }
 header nav.nav-sections ul li {
@@ -227,9 +216,10 @@ header nav.nav-sections ul li #my-projects {
 header nav.nav-sections #close-nav {
   display: none;
   cursor: pointer;
+  color: #1c1c1c;
 }
 header nav.nav-sections #close-nav:hover {
-  color: #ba226b;
+  color: #b0212d;
 }
 header nav.networks {
   height: 100%;
@@ -270,11 +260,11 @@ header #btn-menu:hover {
   }
   header nav.nav-sections ul {
     display: none;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     position: absolute;
     right: 0;
-    padding: 0;
+    padding: 0 0 6rem;
     height: 100vh;
     width: 100vw;
     background-color: #85c766;
@@ -282,6 +272,7 @@ header #btn-menu:hover {
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
     justify-content: flex-end;
+    margin-bottom: 2rem;
   }
   header nav.nav-sections ul li {
     width: 100%;
@@ -293,17 +284,27 @@ header #btn-menu:hover {
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
-    font-size: 28px;
-    color: white;
+    font-size: 25px;
+    color: #1c1c1c;
     text-transform: uppercase;
     font-weight: bold;
   }
   header nav.nav-sections ul li #my-projects {
-    color: white;
+    color: #1c1c1c;
   }
   header nav.nav-sections ul li:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: solid 12px #1c1c1c;
+    border-left: solid 10px #1c1c1c;
+  }
+  header nav.nav-sections ul li:hover a,
+header nav.nav-sections ul li:hover #my-projects {
+    color: #eee;
+    font-size: 27px;
+  }
+  header nav.nav-sections ul li:hover a::before,
+header nav.nav-sections ul li:hover #my-projects::before {
+    content: url("/assets/img/icons/guia.png");
+    padding-right: 5px;
   }
   header nav.nav-sections #close-nav {
     font-size: 50px;
@@ -319,11 +320,11 @@ header #btn-menu:hover {
 @media (min-width: 600px) and (max-width: 899.9px) {
   header nav.nav-sections ul {
     display: none;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     position: absolute;
     right: 0;
-    padding: 0;
+    padding: 0 0 6rem;
     height: 100vh;
     width: 70vw;
     background-color: #85c766;
@@ -331,6 +332,7 @@ header #btn-menu:hover {
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
     justify-content: flex-end;
+    margin-bottom: 2rem;
   }
   header nav.nav-sections ul li {
     width: 100%;
@@ -343,16 +345,26 @@ header #btn-menu:hover {
     display: block;
     width: 100%;
     font-size: 25px;
-    color: white;
+    color: #1c1c1c;
     text-transform: uppercase;
     font-weight: bold;
   }
   header nav.nav-sections ul li #my-projects {
-    color: white;
+    color: #1c1c1c;
   }
   header nav.nav-sections ul li:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: solid 12px #1c1c1c;
+    border-left: solid 10px #1c1c1c;
+  }
+  header nav.nav-sections ul li:hover a,
+header nav.nav-sections ul li:hover #my-projects {
+    color: #eee;
+    font-size: 27px;
+  }
+  header nav.nav-sections ul li:hover a::before,
+header nav.nav-sections ul li:hover #my-projects::before {
+    content: url("/assets/img/icons/guia.png");
+    padding-right: 5px;
   }
   header nav.nav-sections #close-nav {
     font-size: 50px;
@@ -433,13 +445,27 @@ header #btn-menu:hover {
     padding: 0 2rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
 section.inicio {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   background: #2c2c2c;
   font-family: "Play", sans-serif;
-  height: 100vh;
+  height: auto;
+}
+@media (min-width: 900px) {
+  section.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 100vh;
+  }
 }
 section.inicio .apresentacao {
   display: flex;
