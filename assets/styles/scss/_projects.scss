@@ -1,0 +1,77 @@
+//Section 04: Projetos
+section.projects {
+    @include theme($bg-color-02, null, $font-catamaran);
+
+    &:target {
+        scroll-margin-top: 2rem;
+    }
+
+    .projetos_container {
+        @include displayFlex(center, center, column);
+        gap: 4rem;
+        padding: 5rem 3rem;
+
+        #image-title-projects {
+            max-width: 60px;
+            max-height: 45px;
+            margin-top: -20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+            grid-gap: 5rem;
+
+            .card_projeto {
+                @include displayFlex(center, space-between, column);
+                padding: 20px;
+                gap: 10px;
+                border-radius: 15px;
+                width: 300px;
+                height: auto;
+                background-color: rgba(255, 255, 255, 0.062);
+
+                &::before {
+                    content: '';
+                    width: 170px;
+                    height: 7px;
+                    background: #85c766;
+                    border-radius: 20px;
+                    position: relative;
+                    bottom: 20px;
+                }
+
+                .titulo_projeto {
+                    @include textStyle(20px, bold, $text-opaque-2);
+                    text-transform: uppercase;
+                }
+
+                .descricao_projeto {
+                    @include textStyle(14px, normal, $text-opaque-1);
+                    text-align: justify;
+                }
+
+                .links_projeto {
+                    display: flex;
+                    gap: 15px;
+                    padding: 0 0 6px;
+
+                    a {
+                        @include textStyle(15px, bold, $text-opaque-2);
+                        @include theme($bg-color-01, null, $font-play);
+                        text-decoration: none;
+                        border: solid 1px #8fd3708a;
+                        border-radius: 10px;
+                        padding: 9px;
+
+                        &:hover {
+                            background-color: $text-green-strong;
+                            color: #242424;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

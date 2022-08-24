@@ -1,120 +1,117 @@
-const $ = (id) => document.getElementById(id);
-
 // Eventos ao clicar nas skills: animações e backgrounds
 function skillEvents() {
+  const container = getElement("#skills");
+  const backgroundCover = () => (container.style.backgroundSize = "cover");
+  const background = (image) =>
+    (container.style.background = "url(" + image + ") center");
+  const btnResetBg = getElement("#btn-reset-bg");
+  const displayResetBG = () => (btnResetBg.style.opacity = "1");
+  const skills = {
+    html: getElement("#html-img"),
+    css: getElement("#css-img"),
+    js: getElement("#js-img"),
+    sass: getElement("#sass-img"),
+    react: getElement("#react-img"),
+    node: getElement("#node-img"),
+    git: getElement("#git-img"),
+    github: getElement("#github-img"),
+    figma: getElement("#figma-img"),
+  };
 
-    const container = $('skills');
-    const backgroundCover = () => container.style.backgroundSize = 'cover';
-    const background = (image) => container.style.background = "url(" + image + ") center";
-    const btnResetBg = $('btn-reset-bg');
-    const displayResetBG = () => btnResetBg.style.opacity = "1";
-    const skills = {
-        html: $('html-img'),
-        css: $('css-img'),
-        js: $('js-img'),
-        sass: $('sass-img'),
-        react: $('react-img'),
-        node: $('node-img'),
-        git: $('git-img'),
-        github: $('github-img'),
-        figma: $('figma-img')
-    }
+  // set rotate on click
+  document.querySelectorAll(".skill-img").forEach((skill) => {
+    skill.addEventListener("click", () => {
+      setTimeout(() => (skill.style.animation = "rotate-img-slide 1s"), 0);
+      setTimeout(() => (skill.style.animation = ""), 1000);
+    });
+  });
 
-    // set rotate on click
-    document.querySelectorAll('.skill-img').forEach((skill) => {
-        skill.addEventListener("click", () => {
-            setTimeout(() => skill.style.animation = "rotate-img-slide 1s", 0);
-            setTimeout(() => skill.style.animation = "", 1000);
-        })
-    })
+  // set background on click
+  skills.html.addEventListener("click", (e) => {
+    background("assets/img/skills-wallpaper/html-wallpaper.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    // set background on click
-    skills.html.addEventListener("click", (e) => {
-        background('assets/img/skills-wallpaper/html-wallpaper.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.css.addEventListener("click", (e) => {
+    background("assets/img/skills-wallpaper/css-wallpaper.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.css.addEventListener("click", (e) => {
-        background('assets/img/skills-wallpaper/css-wallpaper.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer"
-    })
+  skills.js.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/js-wallpaper.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.js.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/js-wallpaper.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.sass.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/sass-background.png");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.sass.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/sass-background.png');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.react.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/react-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.react.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/react-background.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.node.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/node-background.png");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.node.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/node-background.png');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.git.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/git-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.git.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/git-background.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.github.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/github-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.github.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/github-background.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
+  skills.figma.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/figma-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
 
-    skills.figma.addEventListener("click", () => {
-        background('assets/img/skills-wallpaper/figma-background.jpg');
-        backgroundCover();
-        displayResetBG();
-        btnResetBg.style.cursor = "pointer";
-    })
-    
-    btnResetBg.addEventListener("click", () => {
-        container.style.background = "#2c2c2c";
-        btnResetBg.style.opacity = "0";
-        btnResetBg.style.cursor = "default";
-    })
+  btnResetBg.addEventListener("click", () => {
+    container.style.background = "#2c2c2c";
+    btnResetBg.style.opacity = "0";
+    btnResetBg.style.cursor = "default";
+  });
 }
-skillEvents()
-
+skillEvents();
 
 //Navbar responsivo
 function responsiveNavbar() {
-    const btnMenu = $('btn-menu');
-    const navList = $('nav-list');
-    const btnCloseMenu = document.querySelectorAll('.close-menu');
+  const btnMenu = getElement("#btn-menu");
+  const navList = getElement("#nav-list");
+  const btnCloseMenu = document.querySelectorAll(".close-menu");
 
-    btnMenu.addEventListener("click", () => {
-        navList.style.display = "flex";
-    })
+  btnMenu.onclick = () => {
+    navList.style.display = "flex";
+  };
 
-    btnCloseMenu.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            navList.style.display = "";
-        })    
-    })
+  btnCloseMenu.forEach((btn) => {
+    btn.onclick = () => {
+      navList.style.display = "";
+    };
+  });
 }
-responsiveNavbar()
+responsiveNavbar();

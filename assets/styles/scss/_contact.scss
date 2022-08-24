@@ -1,0 +1,119 @@
+//Section 05: Contato
+section.contact {
+    @include displayFlex(center, center, column);
+    @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
+    height: 100vh;
+    width: 100%;
+
+    &:target {
+        scroll-margin-top: 3rem;
+    }
+
+    #image-title-contact {
+        max-width: 50px;
+        max-height: 45px;
+        padding-top: 3px;
+    }
+
+    .contact-container {
+        @include displayFlex(flex-start, center, row);
+        width: 80%;
+        margin-top: 3rem;
+
+        .infos-contact {
+            width: 50%;
+
+            span {
+                @include textStyle(25px, bold, $text-opaque-2);
+                text-transform: uppercase;
+                cursor: default;
+            }
+
+            p {
+                color: $text-opaque-1;
+
+                img {
+                    width: 25px;
+                    opacity: .6;
+                    padding-left: 4px;
+                }
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        @include textStyle(20px, normal, #d4d3d3);
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                        i {
+                            padding-right: 5px;
+                        }
+                    }
+                }
+
+                #info-wpp i {
+                    color: #85c766;
+                }
+
+                #info-linkedin i {
+                    color: #4e98de;
+                }
+
+                #info-mail i {
+                    color: #bdbbbb;
+                }
+            }
+        }
+
+        .send-message {
+            width: 50%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    width: 100%;
+                    margin-bottom: 1em;
+                    border-radius: 5px;
+                    border: solid 3px $text-green-strong;
+                    background-color: #eee;
+                }
+
+                input {
+                    padding: 4px;
+                }
+
+                textarea {
+                    padding: 7px;
+                    resize: none;
+                    height: 10rem
+                }
+
+                #btn-submit {
+                    @include textStyle(17px, bold, inherit);
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-top: 8px;
+                    cursor: pointer;
+                    padding: 5px;
+                    transition: .2s;
+                    background-color: $text-green-strong;
+
+                    &:hover {
+                        transform: scale(.99);
+                    }
+                }
+            }
+        }
+    }
+}

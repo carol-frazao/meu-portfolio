@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/carol-frazao/meu-portfolio#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "nodemon": "^2.0.19"
   }
 }

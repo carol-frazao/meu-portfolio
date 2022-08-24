@@ -48,7 +48,7 @@
         padding: 0 0 6rem;
         height: 100vh;
         width: $width;
-        background-color: $text-green-strong;
+        background-color: #c7fa73;
 
         #close-nav {
             display: inline-flex;
@@ -91,4 +91,11 @@
             }
         }
     }
+}
+
+@mixin vetorStyle($width) {
+    position: absolute;
+    transition: .6s;
+    width: $width;
+    height: auto;
 }

@@ -1,0 +1,314 @@
+//Section 01: Início
+section.inicio {
+    @include theme($bg-color-01, null, $font-play);
+    height: auto;
+    width: 100%;
+    @include displayFlex(center, center, column);
+
+    .apresentacao {
+        @include displayFlex(center, center, column);
+        padding: 7rem 2rem 3rem;
+        width: 100%;
+        gap: 1.5rem;
+
+        div.front_container {
+            background-color: #abed8d;
+            width: 13rem;
+            border-radius: 8px;
+            padding: 2px;
+            @include textStyle(13px, bold, #000);
+            text-align: center;
+            cursor: default;
+        }
+
+        div.text_apresentacao {
+            h1 {
+                @include textStyle(22px, bold, #ffff);
+                text-align: center;
+                margin-bottom: 1rem;
+                cursor: default;
+
+                &::after {
+                    content: '|';
+                    opacity: 1;
+                    animation: pisca .7s infinite;
+                }
+            }
+
+            p.descricao {
+                @include textStyle(16px, normal, $text-opaque-1);
+                transition: .4s;
+                text-align: justify;
+                cursor: default;
+            }
+        }
+
+        div.btn-iniciar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: .4s all;
+            margin-top: -.5rem;
+
+            span {
+                @include textStyle(18px, bold, rgba(#eee, 0.55));
+                cursor: default;
+            }
+
+            a {
+                cursor: pointer;
+
+                #img-start {
+                    height: auto;
+                    width: 100px;
+                    animation: scale .6s infinite alternate-reverse;
+                }
+            }
+        }
+
+        @include for-tablet-portrait {
+            padding: 7rem 3rem 3rem;
+            gap: 1.7rem;
+
+            div.front_container {
+                padding: 4px;
+            }
+
+            div.text_apresentacao {
+                h1 {
+                    font-size: 25px;
+                }
+
+                p.descricao {
+                    font-size: 17px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            div.btn-iniciar {
+                margin-top: 0;
+
+                span {
+                    font-size: 20px
+                }
+            }
+        }
+
+        @include for-tablet-landscape {
+            @include displayFlex(flex-start, center, column);
+            width: 60%;
+            height: 100%;
+            padding: 3rem 2rem;
+            gap: 2rem;
+
+            div.front_container {
+                width: 14rem;
+                padding: 5px;
+            }
+
+            div.text_apresentacao {
+                h1 {
+                    @include textStyle(27px, bold, #ffff);
+                    text-align: start;
+                    margin-bottom: 1rem;
+                    cursor: default;
+                    transition: .2s;
+
+                    &::after {
+                        content: '|';
+                        opacity: 1;
+                        animation: pisca .7s infinite;
+                    }
+                }
+
+                p.descricao {
+                    @include textStyle(16px, normal, $text-opaque-1);
+                    transition: .4s;
+                    max-width: 90%;
+                    text-align: justify;
+                    cursor: default;
+                }
+            }
+
+            div.btn-iniciar {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                transition: .4s all;
+
+                span {
+                    @include textStyle(20px, bold, rgba(#eee, 0.55));
+                    cursor: default;
+                }
+
+                a {
+                    cursor: pointer;
+
+                    #img-start {
+                        height: auto;
+                        width: 120px;
+                        animation: scale .6s infinite alternate-reverse;
+                    }
+                }
+            }
+        }
+
+        @include for-desktop-up {
+            width: 50%;
+            padding-top: 2rem;
+
+            div.text_apresentacao {
+                h1 {
+                    font-size: 30px;
+                }
+
+                p.descricao {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .vetores-container {
+        width: 100%;
+        height: auto;
+        margin: 2rem 0;
+
+        .vetores {
+            @include flexCenter;
+            transition: .4s;
+
+            #art-vetor {
+                width: 250px;
+            }
+
+            .vetores-sub {
+                position: absolute;
+
+                #code_symbol {
+                    @include vetorStyle(40px);
+                    animation: code-scale 1.3s infinite alternate ease-in 2.5s;
+                    top: -9em;
+                    left: -1.5em;
+                }
+
+                #css_vetor {
+                    @include vetorStyle(38px);
+                    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+                    top: -8em;
+                    left: -6.5em;
+                }
+
+                #js_vetor {
+                    @include vetorStyle(38px);
+                    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+                    top: -8em;
+                    right: -6.2em;
+                }
+
+                #react_gif {
+                    @include vetorStyle(40px);
+                    left: -8em;
+                    top: -1em;
+                }
+
+                #html {
+                    @include vetorStyle(40px);
+                    right: -7.6em;
+                    top: -1em;
+                }
+            }
+        }
+
+        @include for-tablet-landscape {
+            @include flexCenter;
+            width: 50%;
+            height: 100%;
+
+            .vetores {
+                margin-right: 3rem;
+
+                #art-vetor {
+                    width: 350px;
+                }
+
+                .vetores-sub {
+                    #code_symbol {
+                        width: 50px;
+                        top: -11em;
+                        left: -1.8em;
+                    }
+
+                    #css_vetor {
+                        width: 45px;
+                        top: -8.5em;
+                        left: -7.6em;
+                    }
+
+                    #js_vetor {
+                        width: 45px;
+                        top: -8.5em;
+                        right: -7.4em;
+                    }
+
+                    #react_gif {
+                        width: 45px;
+                        left: -9.4em;
+                    }
+
+                    #html {
+                        width: 49px;
+                        right: -9.1em;
+                        top: -1em;
+                    }
+                }
+            }
+        }
+
+        @include for-desktop-up {
+            .vetores {
+                margin-top: 1rem;
+
+                #art-vetor {
+                    width: 400px;
+                }
+
+                .vetores-sub {
+                    #code_symbol {
+                        width: 58px;
+                        top: -13em;
+                        left: -2em;
+                    }
+
+                    #css_vetor {
+                        width: 52px;
+                        top: -9.5em;
+                        left: -9em;
+                    }
+
+                    #js_vetor {
+                        width: 52px;
+                        top: -9.5em;
+                        right: -8.5em;
+                    }
+
+                    #react_gif {
+                        width: 54px;
+                        left: -11.5em;
+                    }
+
+                    #html {
+                        width: 57px;
+                        right: -11em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        @include displayFlex(center, space-evenly, row);
+        height: 100vh;
+        margin: 1rem 3rem;
+    }
+}

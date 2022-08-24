@@ -267,7 +267,7 @@ header #btn-menu:hover {
     padding: 0 0 6rem;
     height: 100vh;
     width: 100vw;
-    background-color: #85c766;
+    background-color: #c7fa73;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -327,7 +327,7 @@ header nav.nav-sections ul li:hover #my-projects::before {
     padding: 0 0 6rem;
     height: 100vh;
     width: 70vw;
-    background-color: #85c766;
+    background-color: #c7fa73;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -416,8 +416,8 @@ header nav.nav-sections ul li:hover #my-projects::before {
     font-size: 14px;
   }
   header nav.networks #send-email a i {
-    color: #BBF2A1;
     background-color: rgba(238, 238, 238, 0.1);
+    color: #BBF2A1;
     border-radius: 50%;
     padding: 12px;
   }
@@ -445,19 +445,15 @@ header nav.nav-sections ul li:hover #my-projects::before {
     padding: 0 2rem;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #1a1a1a;
-}
-
 section.inicio {
   background: #2c2c2c;
   font-family: "Play", sans-serif;
   height: auto;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 section.inicio .apresentacao {
   display: flex;
@@ -550,8 +546,9 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height: 100%;
+    padding: 3rem 2rem;
     gap: 2rem;
   }
   section.inicio .apresentacao div.front_container {
@@ -559,12 +556,13 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     padding: 5px;
   }
   section.inicio .apresentacao div.text_apresentacao h1 {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     color: white;
     text-align: start;
     margin-bottom: 1rem;
     cursor: default;
+    transition: 0.2s;
   }
   section.inicio .apresentacao div.text_apresentacao h1::after {
     content: "|";
@@ -602,158 +600,158 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     animation: scale 0.6s infinite alternate-reverse;
   }
 }
+@media (min-width: 1200px) {
+  section.inicio .apresentacao {
+    width: 50%;
+    padding-top: 2rem;
+  }
+  section.inicio .apresentacao div.text_apresentacao h1 {
+    font-size: 30px;
+  }
+  section.inicio .apresentacao div.text_apresentacao p.descricao {
+    font-size: 18px;
+  }
+}
 section.inicio .vetores-container {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+section.inicio .vetores-container .vetores {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: auto;
-}
-section.inicio .vetores-container .vetores {
-  position: relative;
-  top: -10rem;
-  width: 100%;
-  height: 100%;
-  transition: 0.4s all;
+  transition: 0.4s;
 }
 section.inicio .vetores-container .vetores #art-vetor {
-  position: absolute;
-  transition: 0.6s;
-  width: 410px;
-  top: 16em;
-  left: 5em;
+  width: 250px;
 }
-section.inicio .vetores-container .vetores #code_symbol {
+section.inicio .vetores-container .vetores .vetores-sub {
   position: absolute;
-  top: 10em;
-  left: 15.2em;
+}
+section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
+  position: absolute;
   transition: 0.6s;
+  width: 40px;
   height: auto;
-  width: 68px;
   -webkit-animation: code-scale 1.3s infinite alternate ease-in 2.5s;
           animation: code-scale 1.3s infinite alternate ease-in 2.5s;
+  top: -9em;
+  left: -1.5em;
 }
-section.inicio .vetores-container .vetores #css_vetor {
+section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
   position: absolute;
-  top: 11em;
-  left: 7em;
   transition: 0.6s;
-  width: 57px;
+  width: 38px;
+  height: auto;
   animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+  top: -8em;
+  left: -6.5em;
 }
-section.inicio .vetores-container .vetores #js_vetor {
+section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
   position: absolute;
-  width: 57px;
-  top: 11em;
-  left: 24.2em;
   transition: 0.6s;
+  width: 38px;
+  height: auto;
   animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+  top: -8em;
+  right: -6.2em;
 }
-section.inicio .vetores-container .vetores #react_gif {
+section.inicio .vetores-container .vetores .vetores-sub #react_gif {
   position: absolute;
   transition: 0.6s;
-  width: 58px;
-  top: 22em;
-  left: 5em;
+  width: 40px;
+  height: auto;
+  left: -8em;
+  top: -1em;
 }
-section.inicio .vetores-container .vetores #html {
-  transition: 0.6s;
+section.inicio .vetores-container .vetores .vetores-sub #html {
   position: absolute;
-  top: 22em;
-  left: 26em;
-  width: auto;
-  height: 61px;
+  transition: 0.6s;
+  width: 40px;
+  height: auto;
+  right: -7.6em;
+  top: -1em;
 }
 @media (min-width: 900px) {
   section.inicio .vetores-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     height: 100%;
   }
   section.inicio .vetores-container .vetores {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: 0.4s all;
+    margin-right: 3rem;
   }
   section.inicio .vetores-container .vetores #art-vetor {
-    position: absolute;
-    transition: 0.6s;
-    width: 410px;
-    top: 16em;
-    left: 5em;
+    width: 350px;
   }
-  section.inicio .vetores-container .vetores #code_symbol {
-    position: absolute;
-    top: 10em;
-    left: 15.2em;
-    transition: 0.6s;
-    height: auto;
-    width: 68px;
-    -webkit-animation: code-scale 1.3s infinite alternate ease-in 2.5s;
-            animation: code-scale 1.3s infinite alternate ease-in 2.5s;
+  section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
+    width: 50px;
+    top: -11em;
+    left: -1.8em;
   }
-  section.inicio .vetores-container .vetores #css_vetor {
-    position: absolute;
-    top: 11em;
-    left: 7em;
-    transition: 0.6s;
-    width: 57px;
-    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+  section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
+    width: 45px;
+    top: -8.5em;
+    left: -7.6em;
   }
-  section.inicio .vetores-container .vetores #js_vetor {
-    position: absolute;
-    width: 57px;
-    top: 11em;
-    left: 24.2em;
-    transition: 0.6s;
-    animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
+  section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
+    width: 45px;
+    top: -8.5em;
+    right: -7.4em;
   }
-  section.inicio .vetores-container .vetores #react_gif {
-    position: absolute;
-    transition: 0.6s;
+  section.inicio .vetores-container .vetores .vetores-sub #react_gif {
+    width: 45px;
+    left: -9.4em;
+  }
+  section.inicio .vetores-container .vetores .vetores-sub #html {
+    width: 49px;
+    right: -9.1em;
+    top: -1em;
+  }
+}
+@media (min-width: 1200px) {
+  section.inicio .vetores-container .vetores {
+    margin-top: 1rem;
+  }
+  section.inicio .vetores-container .vetores #art-vetor {
+    width: 400px;
+  }
+  section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
     width: 58px;
-    top: 22em;
-    left: 5em;
+    top: -13em;
+    left: -2em;
   }
-  section.inicio .vetores-container .vetores #html {
-    transition: 0.6s;
-    position: absolute;
-    top: 22em;
-    left: 26em;
-    width: auto;
-    height: 61px;
+  section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
+    width: 52px;
+    top: -9.5em;
+    left: -9em;
+  }
+  section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
+    width: 52px;
+    top: -9.5em;
+    right: -8.5em;
+  }
+  section.inicio .vetores-container .vetores .vetores-sub #react_gif {
+    width: 54px;
+    left: -11.5em;
+  }
+  section.inicio .vetores-container .vetores .vetores-sub #html {
+    width: 57px;
+    right: -11em;
   }
 }
 @media (min-width: 900px) {
   section.inicio {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     height: 100vh;
+    margin: 1rem 3rem;
   }
-}
-
-.title-section {
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
-  cursor: default;
-}
-.title-section h1,
-.title-section h2,
-.title-section h3,
-.title-section h4,
-.title-section h5 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #85c766;
 }
 
 section.about {
@@ -1146,4 +1144,31 @@ section.contact .contact-container .send-message form #btn-submit {
 }
 section.contact .contact-container .send-message form #btn-submit:hover {
   transform: scale(0.99);
-}/*# sourceMappingURL=main.css.map */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+.title-section {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  cursor: default;
+}
+.title-section h1,
+.title-section h2,
+.title-section h3,
+.title-section h4,
+.title-section h5 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #85c766;
+}

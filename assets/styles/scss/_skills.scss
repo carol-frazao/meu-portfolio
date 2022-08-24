@@ -1,0 +1,120 @@
+//Section 03: Skills
+section.skills {
+    @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
+    width: 100%;
+    height: 100vh;
+
+    &:target {
+        scroll-margin-top: 3rem;
+    }
+
+    .skillsContainer {
+        @include displayFlex(center, space-evenly, column);
+        padding: 3rem;
+        width: 100%;
+        height: 100%;
+        gap: 3rem;
+
+        #image-title-skills {
+            max-width: 50px;
+            max-height: 45px;
+            margin-top: -17px;
+        }
+
+        .swiper,
+        .skill-img {
+            width: 90%;
+            height: auto;
+            @include userSelectNone;
+        }
+
+        .skill {
+            background: transparent;
+            @include displayFlex(center, center, column);
+
+            strong {
+                font-size: 17px;
+                padding-bottom: 4px;
+            }
+
+            img {
+                width: 110px;
+                height: auto;
+                object-fit: cover;
+                cursor: pointer;
+                animation: move-img-slide 1s infinite alternate;
+            }
+        }
+
+        .skill::after {
+            content: "";
+            height: 9px;
+            width: 60px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        #skill-html::after {
+            @include skillAfter(rgba(110, 34, 34, 0.775), rgba(238, 184, 184, 0.445), rgb(186, 164, 164))
+        }
+
+        #skill-css::after {
+            @include skillAfter(rgba(34, 64, 110, 0.674), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+        }
+
+        #skill-js::after {
+            @include skillAfter(rgba(129, 113, 34, 0.744), rgba(233, 224, 199, 0.445), rgb(196, 190, 171))
+        }
+
+        #skill-sass::after {
+            @include skillAfter(rgba(161, 75, 89, 0.673), rgba(239, 192, 200, 0.508), rgba(239, 192, 200, 0.81))
+        }
+
+        #skill-reactjs::after {
+            @include skillAfter(rgba(43, 81, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+        }
+
+        #skill-nodejs::after {
+            @include skillAfter(rgba(42, 129, 65, 0.677), rgba(178, 203, 178, 0.445), rgb(189, 214, 193))
+        }
+
+        #skill-git::after {
+            @include skillAfter(rgba(133, 41, 41, 0.775), rgba(232, 168, 168, 0.445), rgb(194, 176, 176))
+        }
+
+        #skill-github::after {
+            @include skillAfter(rgba(122, 122, 122, 0.626), rgba(219, 218, 218, 0.459), rgb(216, 216, 216))
+        }
+
+        #skill-figma::after {
+            @include skillAfter(rgba(140, 36, 135, 0.64), rgba(211, 204, 211, 0.445), rgb(193, 166, 196))
+        }
+
+
+        div.swiper-button-prev,
+        div.swiper-button-next {
+            color: rgba(255, 255, 255, 0.808);
+
+            &:hover {
+                color: $text-green-strong;
+            }
+        }
+
+        #btn-reset-bg {
+            @include theme(#74b457, #fff, inherit);
+            position: relative;
+            right: -48%;
+            bottom: -5em;
+            padding: 3px;
+            font-size: 12px;
+            font-style: normal;
+            border-radius: 5px;
+            border: 2px solid #74b457;
+            opacity: 0;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+    }
+}
