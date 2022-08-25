@@ -58,6 +58,11 @@ section.about {
     @include for-tablet-landscape {
         @include flexCenter;
 
+        #image-icon-about {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
         &:target {
             scroll-margin-top: 2rem;
         }
@@ -95,6 +100,8 @@ section.about {
 
     @include for-desktop-up {
         .about-container {
+            gap: 10px;
+
             .aboutMe {
                 gap: 4rem;
 

@@ -809,6 +809,10 @@ section.about .about-container .curriculo #arrow_download {
     align-items: center;
     justify-content: center;
   }
+  section.about #image-icon-about {
+    max-width: 50px;
+    max-height: 50px;
+  }
   section.about:target {
     scroll-margin-top: 2rem;
   }
@@ -836,6 +840,9 @@ section.about .about-container .curriculo #arrow_download {
   }
 }
 @media (min-width: 1200px) {
+  section.about .about-container {
+    gap: 10px;
+  }
   section.about .about-container .aboutMe {
     gap: 4rem;
   }
@@ -857,11 +864,8 @@ section.skills {
   background: #2c2c2c;
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
-  width: 100%;
+  min-height: 100vh;
   height: 100vh;
-}
-section.skills:target {
-  scroll-margin-top: 3rem;
 }
 section.skills .skillsContainer {
   display: flex;
@@ -874,13 +878,13 @@ section.skills .skillsContainer {
   gap: 3rem;
 }
 section.skills .skillsContainer #image-title-skills {
-  max-width: 50px;
-  max-height: 45px;
+  max-width: 25px;
+  max-height: 30px;
   margin-top: -17px;
 }
 section.skills .skillsContainer .swiper,
 section.skills .skillsContainer .skill-img {
-  width: 90%;
+  width: 100%;
   height: auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -900,7 +904,7 @@ section.skills .skillsContainer .skill strong {
   padding-bottom: 4px;
 }
 section.skills .skillsContainer .skill img {
-  width: 110px;
+  width: 100px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -984,6 +988,14 @@ section.skills .skillsContainer #btn-reset-bg {
 }
 section.skills .skillsContainer #btn-reset-bg:hover {
   background-color: black;
+}
+@media (min-width: 900px) {
+  section.skills:target {
+    scroll-margin-top: 1.5rem;
+  }
+  section.skills .skillsContainer .skill img {
+    width: 110px;
+  }
 }
 
 section.projects {
@@ -1200,7 +1212,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   color: #85c766;
 }

@@ -1,12 +1,8 @@
 //Section 03: Skills
 section.skills {
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
-    width: 100%;
+    min-height: 100vh;
     height: 100vh;
-
-    &:target {
-        scroll-margin-top: 3rem;
-    }
 
     .skillsContainer {
         @include displayFlex(center, space-evenly, column);
@@ -16,14 +12,14 @@ section.skills {
         gap: 3rem;
 
         #image-title-skills {
-            max-width: 50px;
-            max-height: 45px;
+            max-width: 25px;
+            max-height: 30px;
             margin-top: -17px;
         }
 
         .swiper,
         .skill-img {
-            width: 90%;
+            width: 100%;
             height: auto;
             @include userSelectNone;
         }
@@ -38,7 +34,7 @@ section.skills {
             }
 
             img {
-                width: 110px;
+                width: 100px;
                 height: auto;
                 object-fit: cover;
                 cursor: pointer;
@@ -117,4 +113,15 @@ section.skills {
             }
         }
     }
+
+    @include for-tablet-landscape {
+        &:target {
+            scroll-margin-top: 1.5rem;
+        }
+
+        .skillsContainer .skill img {
+            width: 110px;
+        }
+    }
+
 }
