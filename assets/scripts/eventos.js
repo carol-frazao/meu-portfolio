@@ -5,7 +5,8 @@ function skillEvents() {
   const background = (image) =>
     (container.style.background = "url(" + image + ") center");
   const btnResetBg = getElement("#btn-reset-bg");
-  const displayResetBG = () => (btnResetBg.style.opacity = "1");
+  const resetBgContainer = getElement(".resetBg");
+  const displayResetBG = () => (resetBgContainer.style.opacity = "1");
   const skills = {
     html: getElement("#html-img"),
     css: getElement("#css-img"),
@@ -92,7 +93,7 @@ function skillEvents() {
 
   btnResetBg.addEventListener("click", () => {
     container.style.background = "#2c2c2c";
-    btnResetBg.style.opacity = "0";
+    resetBgContainer.style.opacity = "0";
     btnResetBg.style.cursor = "default";
   });
 }
