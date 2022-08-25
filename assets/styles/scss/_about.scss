@@ -4,7 +4,7 @@ section.about {
     min-height: 100vh;
 
     &:target {
-        scroll-margin-top: 3rem;
+        scroll-margin-top: 4rem;
     }
 
     #image-icon-about {
@@ -13,7 +13,7 @@ section.about {
     }
 
     .about-container {
-        @include displayFlex(center, space-around, column);
+        @include displayFlex(center, space-between, column);
         padding: 3rem 0;
 
         .aboutMe {
@@ -21,6 +21,7 @@ section.about {
             padding: 1.5rem 2rem;
             gap: 2em;
             width: 100%;
+            transition: .17s all;
 
             .photo {
                 img {
@@ -50,6 +51,72 @@ section.about {
                 margin-top: 6px;
                 animation: arrow-move .7s infinite alternate;
                 transition: .2s;
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        @include flexCenter;
+
+        &:target {
+            scroll-margin-top: 2rem;
+        }
+
+        .about-container {
+            width: 100%;
+            padding: 0;
+            gap: 1rem;
+
+            .aboutMe {
+                flex-direction: row;
+                width: 95%;
+                gap: 2.5rem;
+
+                .photo {
+                    text-align: center;
+
+                    img {
+                        width: 270px;
+                    }
+                }
+
+                .about_text {
+                    font-size: 17px;
+                }
+            }
+
+            .curriculo {
+                a #curriculo_img {
+                    width: 14rem;
+                }
+            }
+        }
+    }
+
+    @include for-desktop-up {
+        .about-container {
+            .aboutMe {
+                gap: 4rem;
+
+                .photo {
+                    img {
+                        width: 330px;
+                    }
+                }
+
+                .about_text {
+                    font-size: 20px;
+                }
+            }
+
+            .curriculo {
+                a #curriculo_img {
+                    width: 16rem;
+                }
+
+                #arrow_download {
+                    margin-top: 14px;
+                }
             }
         }
     }

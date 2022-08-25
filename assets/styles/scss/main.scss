@@ -37,6 +37,17 @@ body {
     h5 {
         text-transform: uppercase;
         text-align: center;
-        @include textStyle(28px, bold, $text-green-strong)
+        transition: all .2s;
+        @include textStyle(28px, bold, $text-green-strong);
+
+        @include for-tablet-landscape {
+            font-size: 32px
+        }
+
+        @include for-desktop-up {
+            font-size: 35px;
+        }
     }
+
+
 }
