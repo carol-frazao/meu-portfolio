@@ -2,6 +2,7 @@
 
 Este é meu portfólio profissional.
 Nele estarão disponíveis meus projetos desenvolvidos, algumas informações sobre mim, skills, além formas de contato.
+Tecnologias utilizadas: HTML, CSS com Sass e Javascript.
 
 Obs: Estou trabalhando na responsividade da aplicação, portanto a visualização de algumas sessões pode estar indisponível.
 
