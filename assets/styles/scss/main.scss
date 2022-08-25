@@ -37,6 +37,6 @@ body {
     h5 {
         text-transform: uppercase;
         text-align: center;
-        @include textStyle(35px, bold, $text-green-strong)
+        @include textStyle(28px, bold, $text-green-strong)
     }
 }

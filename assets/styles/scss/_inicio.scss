@@ -1,9 +1,9 @@
 //Section 01: Início
+
 section.inicio {
     @include theme($bg-color-01, null, $font-play);
-    height: auto;
-    width: 100%;
     @include displayFlex(center, center, column);
+    min-height: 100vh;
 
     .apresentacao {
         @include displayFlex(center, center, column);
@@ -98,7 +98,7 @@ section.inicio {
             @include displayFlex(flex-start, center, column);
             width: 60%;
             height: 100%;
-            padding: 3rem 2rem;
+            padding-left: 2rem;
             gap: 2rem;
 
             div.front_container {
@@ -124,7 +124,6 @@ section.inicio {
                 p.descricao {
                     @include textStyle(16px, normal, $text-opaque-1);
                     transition: .4s;
-                    max-width: 90%;
                     text-align: justify;
                     cursor: default;
                 }
@@ -155,7 +154,7 @@ section.inicio {
 
         @include for-desktop-up {
             width: 50%;
-            padding-top: 2rem;
+            padding-top: 1rem;
 
             div.text_apresentacao {
                 h1 {
@@ -172,7 +171,7 @@ section.inicio {
     .vetores-container {
         width: 100%;
         height: auto;
-        margin: 2rem 0;
+        margin: 2rem 0 3rem;
 
         .vetores {
             @include flexCenter;
@@ -223,13 +222,15 @@ section.inicio {
         @include for-tablet-landscape {
             @include flexCenter;
             width: 50%;
-            height: 100%;
+            margin-bottom: 2rem;
 
             .vetores {
-                margin-right: 3rem;
+                padding-left: 3rem;
+                padding-top: 2rem;
 
                 #art-vetor {
-                    width: 350px;
+                    width: 330px;
+                    transition: .2s;
                 }
 
                 .vetores-sub {
@@ -267,38 +268,38 @@ section.inicio {
 
         @include for-desktop-up {
             .vetores {
-                margin-top: 1rem;
+                padding-bottom: 1rem;
 
                 #art-vetor {
-                    width: 400px;
+                    width: 380px;
                 }
 
                 .vetores-sub {
                     #code_symbol {
-                        width: 58px;
-                        top: -13em;
+                        width: 55px;
+                        top: -12em;
                         left: -2em;
                     }
 
                     #css_vetor {
-                        width: 52px;
+                        width: 50px;
                         top: -9.5em;
                         left: -9em;
                     }
 
                     #js_vetor {
-                        width: 52px;
+                        width: 50px;
                         top: -9.5em;
                         right: -8.5em;
                     }
 
                     #react_gif {
-                        width: 54px;
+                        width: 51px;
                         left: -11.5em;
                     }
 
                     #html {
-                        width: 57px;
+                        width: 55px;
                         right: -11em;
                     }
                 }

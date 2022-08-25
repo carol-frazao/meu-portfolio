@@ -178,6 +178,7 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: 0.2s all;
 }
 header .home a {
   font-size: 25px;
@@ -192,7 +193,7 @@ header nav.nav-sections {
   height: 100%;
 }
 header nav.nav-sections ul {
-  transition: all 0.1s;
+  transition: all 0.2s;
 }
 header nav.nav-sections ul li {
   list-style: none;
@@ -255,6 +256,10 @@ header #btn-menu:hover {
   color: #BBF2A1;
 }
 @media (max-width: 599.9px) {
+  header {
+    height: 4rem;
+    line-height: 4rem;
+  }
   header .home a {
     font-size: 25px;
   }
@@ -295,11 +300,6 @@ header #btn-menu:hover {
   header nav.nav-sections ul li:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-left: solid 10px #1c1c1c;
-  }
-  header nav.nav-sections ul li:hover a,
-header nav.nav-sections ul li:hover #my-projects {
-    color: #eee;
-    font-size: 27px;
   }
   header nav.nav-sections ul li:hover a::before,
 header nav.nav-sections ul li:hover #my-projects::before {
@@ -355,11 +355,6 @@ header nav.nav-sections ul li:hover #my-projects::before {
   header nav.nav-sections ul li:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-left: solid 10px #1c1c1c;
-  }
-  header nav.nav-sections ul li:hover a,
-header nav.nav-sections ul li:hover #my-projects {
-    color: #eee;
-    font-size: 27px;
   }
   header nav.nav-sections ul li:hover a::before,
 header nav.nav-sections ul li:hover #my-projects::before {
@@ -448,12 +443,11 @@ header nav.nav-sections ul li:hover #my-projects::before {
 section.inicio {
   background: #2c2c2c;
   font-family: "Play", sans-serif;
-  height: auto;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 section.inicio .apresentacao {
   display: flex;
@@ -548,7 +542,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     flex-direction: column;
     width: 60%;
     height: 100%;
-    padding: 3rem 2rem;
+    padding-left: 2rem;
     gap: 2rem;
   }
   section.inicio .apresentacao div.front_container {
@@ -575,7 +569,6 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     font-weight: normal;
     color: rgba(255, 255, 255, 0.4823529412);
     transition: 0.4s;
-    max-width: 90%;
     text-align: justify;
     cursor: default;
   }
@@ -603,7 +596,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
 @media (min-width: 1200px) {
   section.inicio .apresentacao {
     width: 50%;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   section.inicio .apresentacao div.text_apresentacao h1 {
     font-size: 30px;
@@ -615,7 +608,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
 section.inicio .vetores-container {
   width: 100%;
   height: auto;
-  margin: 2rem 0;
+  margin: 2rem 0 3rem;
 }
 section.inicio .vetores-container .vetores {
   display: flex;
@@ -679,13 +672,15 @@ section.inicio .vetores-container .vetores .vetores-sub #html {
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100%;
+    margin-bottom: 2rem;
   }
   section.inicio .vetores-container .vetores {
-    margin-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
   }
   section.inicio .vetores-container .vetores #art-vetor {
-    width: 350px;
+    width: 330px;
+    transition: 0.2s;
   }
   section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
     width: 50px;
@@ -714,32 +709,32 @@ section.inicio .vetores-container .vetores .vetores-sub #html {
 }
 @media (min-width: 1200px) {
   section.inicio .vetores-container .vetores {
-    margin-top: 1rem;
+    padding-bottom: 1rem;
   }
   section.inicio .vetores-container .vetores #art-vetor {
-    width: 400px;
+    width: 380px;
   }
   section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
-    width: 58px;
-    top: -13em;
+    width: 55px;
+    top: -12em;
     left: -2em;
   }
   section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
-    width: 52px;
+    width: 50px;
     top: -9.5em;
     left: -9em;
   }
   section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
-    width: 52px;
+    width: 50px;
     top: -9.5em;
     right: -8.5em;
   }
   section.inicio .vetores-container .vetores .vetores-sub #react_gif {
-    width: 54px;
+    width: 51px;
     left: -11.5em;
   }
   section.inicio .vetores-container .vetores .vetores-sub #html {
-    width: 57px;
+    width: 55px;
     right: -11em;
   }
 }
@@ -758,65 +753,51 @@ section.about {
   background: #242424;
   color: rgba(255, 255, 255, 0.4823529412);
   font-family: "Catamaran", sans-serif;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 section.about:target {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 3rem;
 }
 section.about #image-icon-about {
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 40px;
+  max-height: 40px;
 }
 section.about .about-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
-  gap: 2em;
-}
-section.about .about-container .photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
-}
-section.about .about-container .photo img {
-  border: rgba(143, 211, 112, 0.5411764706) 3px solid;
-  border-radius: 50%;
+  flex-direction: column;
+  padding: 3rem 0;
 }
 section.about .about-container .aboutMe {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 70%;
+  padding: 1.5rem 2rem;
+  gap: 2em;
+  width: 100%;
+}
+section.about .about-container .aboutMe .photo img {
+  border: rgba(143, 211, 112, 0.5411764706) 3px solid;
+  border-radius: 50%;
+  width: 220px;
+}
+section.about .about-container .aboutMe .about_text {
   text-align: justify;
-  padding: 0 2rem;
-  gap: 3rem;
+  font-size: 16px;
 }
-section.about .about-container .aboutMe p {
-  font-size: 18px;
-}
-section.about .about-container .aboutMe .img-curriculo {
-  padding-top: 1rem;
-}
-section.about .about-container .aboutMe .img-curriculo a {
+section.about .about-container .curriculo {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 52px;
-  width: 15rem;
-  background-color: rgba(255, 255, 255, 0.974);
-  border-radius: 10px;
-  border: solid 2px rgb(129, 172, 48);
+  margin-top: -1em;
 }
-section.about .about-container .aboutMe .img-curriculo #arrow_download {
-  position: relative;
-  left: 107%;
-  bottom: 2.75em;
+section.about .about-container .curriculo a #curriculo_img {
+  width: 12rem;
+}
+section.about .about-container .curriculo #arrow_download {
+  width: 30px;
+  height: 30px;
+  margin-top: 6px;
   -webkit-animation: arrow-move 0.7s infinite alternate;
           animation: arrow-move 0.7s infinite alternate;
   transition: 0.2s;
@@ -1168,7 +1149,7 @@ body {
 .title-section h5 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
   color: #85c766;
 }

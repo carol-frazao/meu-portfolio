@@ -9,6 +9,7 @@ header {
     @include theme($bg-color-01, null, $font-catamaran);
     @include displayFlex(center, space-between, row);
     @include userSelectNone();
+    transition: .2s all;
 
     .home {
         a {
@@ -27,7 +28,7 @@ header {
         height: 100%;
 
         ul {
-            transition: all .1s;
+            transition: all .2s;
 
             li {
                 list-style: none;
@@ -104,6 +105,10 @@ header {
     }
 
     @include for-phone-only {
+        height: 4rem;
+        line-height: 4rem;
+
+
         .home a {
             font-size: 25px;
         }

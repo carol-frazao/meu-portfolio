@@ -38,6 +38,8 @@
     border-bottom: solid 3px $border-bottom-color;
 }
 
+
+//mixin para a navbar (header)
 @mixin nav-sections-responsive($width, $fontSize) {
     ul {
         display: none;
@@ -80,9 +82,6 @@
 
                 a,
                 #my-projects {
-                    color: #eee;
-                    font-size: 27px;
-
                     &::before {
                         content: url('/assets/img/icons/guia.png');
                         padding-right: 5px;
