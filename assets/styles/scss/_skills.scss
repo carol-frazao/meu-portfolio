@@ -3,6 +3,11 @@ section.skills {
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
     width: 100%;
     position: relative;
+    height: 80vh;
+
+    &:target {
+        scroll-margin-top: 7rem;
+    }
 
     .skillsContainer {
         @include displayFlex(center, space-evenly, column);
@@ -112,10 +117,10 @@ section.skills {
         }
 
         i {
-            @include theme(#74b457, #fff, inherit);
+            @include theme(#70ae53, #fff, inherit);
             font-size: 12px;
             font-style: normal;
-            border: 2px solid #74b457;
+            border: 2px solid #70ae53;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
             text-align: center;
@@ -128,17 +133,7 @@ section.skills {
         }
     }
 
-    @media (max-width: 899.99px) {
-        height: 70vh;
-
-        &:target {
-            scroll-margin-top: 7rem;
-        }
-    }
-
     @include for-tablet-landscape {
-
-        min-height: 100vh;
         height: 100vh;
 
         .skillsContainer .skill img {

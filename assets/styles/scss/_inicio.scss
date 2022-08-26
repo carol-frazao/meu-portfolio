@@ -3,12 +3,13 @@
 section.inicio {
     @include theme($bg-color-01, null, $font-play);
     @include displayFlex(center, center, column);
-    // min-height: 100vh;
+    height: 100vh;
 
     .apresentacao {
         @include displayFlex(center, space-evenly, column);
         padding: 5rem 2rem 2rem;
         width: 100%;
+        height: 100%;
         gap: 1.5rem;
 
         div.front_container {
