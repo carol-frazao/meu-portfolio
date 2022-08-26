@@ -482,6 +482,7 @@ section.inicio .apresentacao div.text_apresentacao p.descricao {
   color: rgba(255, 255, 255, 0.4823529412);
   transition: 0.4s;
   text-align: justify;
+  line-height: initial;
   cursor: default;
 }
 section.inicio .apresentacao div.btn-iniciar {
