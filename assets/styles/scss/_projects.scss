@@ -10,7 +10,7 @@ section.projects {
     .projetos_container {
         @include displayFlex(center, center, column);
         gap: 2rem;
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
 
         #image-title-projects {
             width: 30px;

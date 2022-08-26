@@ -446,7 +446,7 @@ section.inicio .apresentacao {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  padding: 5rem 2rem 2rem;
+  padding: 4.5rem 2rem 2rem;
   width: 100%;
   height: 100%;
   gap: 1.5rem;
@@ -1027,7 +1027,7 @@ section.projects .projetos_container {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
 }
 section.projects .projetos_container #image-title-projects {
   width: 30px;
