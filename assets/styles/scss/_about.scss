@@ -1,7 +1,6 @@
 //Section 02: Sobre
 section.about {
     @include theme($bg-color-02, $text-opaque-1, $font-catamaran);
-    min-height: 100vh;
 
     &:target {
         scroll-margin-top: 4rem;
@@ -57,6 +56,8 @@ section.about {
 
     @include for-tablet-landscape {
         @include flexCenter;
+        min-height: 100vh;
+        height: 100vh;
 
         #image-icon-about {
             max-width: 50px;

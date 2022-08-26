@@ -447,14 +447,13 @@ section.inicio {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
 }
 section.inicio .apresentacao {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  padding: 7rem 2rem 3rem;
+  padding: 5rem 2rem 2rem;
   width: 100%;
   gap: 1.5rem;
 }
@@ -496,7 +495,7 @@ section.inicio .apresentacao div.btn-iniciar {
   align-items: center;
   gap: 1rem;
   transition: 0.4s all;
-  margin-top: -0.5rem;
+  margin-top: -1rem;
 }
 section.inicio .apresentacao div.btn-iniciar span {
   font-size: 18px;
@@ -753,7 +752,6 @@ section.about {
   background: #242424;
   color: rgba(255, 255, 255, 0.4823529412);
   font-family: "Catamaran", sans-serif;
-  min-height: 100vh;
 }
 section.about:target {
   scroll-margin-top: 4rem;
@@ -808,6 +806,8 @@ section.about .about-container .curriculo #arrow_download {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    height: 100vh;
   }
   section.about #image-icon-about {
     max-width: 50px;
@@ -864,8 +864,6 @@ section.skills {
   background: #2c2c2c;
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
-  min-height: 100vh;
-  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -979,11 +977,13 @@ section.skills .resetBg {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  bottom: 5%;
-  right: 5%;
+  bottom: 4%;
+  right: 4%;
 }
 section.skills .resetBg img {
-  width: 120px;
+  width: 90px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 section.skills .resetBg i {
   background: #74b457;
@@ -992,13 +992,27 @@ section.skills .resetBg i {
   font-size: 12px;
   font-style: normal;
   border: 2px solid #74b457;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   text-align: center;
   cursor: pointer;
 }
 section.skills .resetBg i:hover {
   background-color: black;
 }
+@media (max-width: 899.99px) {
+  section.skills {
+    height: 70vh;
+  }
+  section.skills:target {
+    scroll-margin-top: 7rem;
+  }
+}
 @media (min-width: 900px) {
+  section.skills {
+    min-height: 100vh;
+    height: 100vh;
+  }
   section.skills .skillsContainer .skill img {
     width: 110px;
   }

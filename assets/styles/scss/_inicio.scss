@@ -3,11 +3,11 @@
 section.inicio {
     @include theme($bg-color-01, null, $font-play);
     @include displayFlex(center, center, column);
-    min-height: 100vh;
+    // min-height: 100vh;
 
     .apresentacao {
-        @include displayFlex(center, center, column);
-        padding: 7rem 2rem 3rem;
+        @include displayFlex(center, space-evenly, column);
+        padding: 5rem 2rem 2rem;
         width: 100%;
         gap: 1.5rem;
 
@@ -48,7 +48,7 @@ section.inicio {
             align-items: center;
             gap: 1rem;
             transition: .4s all;
-            margin-top: -.5rem;
+            margin-top: -1rem;
 
             span {
                 @include textStyle(18px, bold, rgba(#eee, 0.55));

@@ -1,8 +1,6 @@
 //Section 03: Skills
 section.skills {
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
-    min-height: 100vh;
-    height: 100vh;
     width: 100%;
     position: relative;
 
@@ -104,12 +102,13 @@ section.skills {
         display: flex;
         flex-direction: column;
         opacity: 0;
-        bottom: 5%;
-        right: 5%;
+        bottom: 4%;
+        right: 4%;
 
         img {
-            width: 120px;
-
+            width: 90px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
         }
 
         i {
@@ -117,6 +116,8 @@ section.skills {
             font-size: 12px;
             font-style: normal;
             border: 2px solid #74b457;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
             text-align: center;
             cursor: pointer;
 
@@ -127,7 +128,18 @@ section.skills {
         }
     }
 
+    @media (max-width: 899.99px) {
+        height: 70vh;
+
+        &:target {
+            scroll-margin-top: 7rem;
+        }
+    }
+
     @include for-tablet-landscape {
+
+        min-height: 100vh;
+        height: 100vh;
 
         .skillsContainer .skill img {
             width: 110px;
