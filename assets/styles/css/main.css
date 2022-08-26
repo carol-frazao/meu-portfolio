@@ -747,10 +747,10 @@ section.about {
   background: #242424;
   color: rgba(255, 255, 255, 0.4823529412);
   font-family: "Catamaran", sans-serif;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 section.about:target {
-  scroll-margin-top: 3rem;
+  scroll-margin-top: 4rem;
 }
 section.about #image-icon-about {
   max-width: 40px;
