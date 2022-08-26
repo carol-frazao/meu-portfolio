@@ -168,9 +168,10 @@ section.projects {
 
         .cards {
             padding-top: 1rem;
+            grid-gap: 3rem;
 
             .card_projeto {
-                width: 400px;
+                width: 370px;
 
                 .descricao_projeto {
                     font-size: 16px;

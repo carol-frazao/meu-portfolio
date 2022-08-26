@@ -1166,9 +1166,10 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a:hover
   }
   section.projects .cards {
     padding-top: 1rem;
+    grid-gap: 3rem;
   }
   section.projects .cards .card_projeto {
-    width: 400px;
+    width: 370px;
   }
   section.projects .cards .card_projeto .descricao_projeto {
     font-size: 16px;
