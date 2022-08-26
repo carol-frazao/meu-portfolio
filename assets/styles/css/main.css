@@ -447,17 +447,17 @@ section.inicio {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 section.inicio .apresentacao {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
   padding: 5rem 2rem 2rem;
   width: 100%;
   height: 100%;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 section.inicio .apresentacao div.front_container {
   background-color: #abed8d;
@@ -609,7 +609,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
 section.inicio .vetores-container {
   width: 100%;
   height: auto;
-  margin: 2rem 0 3rem;
+  margin: 2rem 0 4rem;
 }
 section.inicio .vetores-container .vetores {
   display: flex;
@@ -754,10 +754,10 @@ section.about {
   background: #242424;
   color: rgba(255, 255, 255, 0.4823529412);
   font-family: "Catamaran", sans-serif;
-  height: auto;
+  min-height: 80vh;
 }
 section.about:target {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 3rem;
 }
 section.about #image-icon-about {
   max-width: 40px;
@@ -792,6 +792,7 @@ section.about .about-container .aboutMe .about_text {
 section.about .about-container .curriculo {
   display: flex;
   margin-top: -1em;
+  margin-bottom: 2rem;
 }
 section.about .about-container .curriculo a #curriculo_img {
   width: 12rem;
@@ -868,10 +869,11 @@ section.skills {
   font-family: "Catamaran", sans-serif;
   width: 100%;
   position: relative;
+  min-height: 80vh;
   height: 80vh;
 }
 section.skills:target {
-  scroll-margin-top: 7rem;
+  scroll-margin-top: 4rem;
 }
 section.skills .skillsContainer {
   display: flex;

@@ -3,10 +3,11 @@ section.skills {
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
     width: 100%;
     position: relative;
+    min-height: 80vh;
     height: 80vh;
 
     &:target {
-        scroll-margin-top: 7rem;
+        scroll-margin-top: 4rem;
     }
 
     .skillsContainer {
