@@ -5,7 +5,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 999;
-    padding: 0 3rem;
+    padding: 0 2rem;
     @include theme($bg-color-01, null, $font-catamaran);
     @include displayFlex(center, space-between, row);
     @include userSelectNone();
@@ -13,7 +13,7 @@ header {
 
     .home {
         a {
-            font-size: 25px;
+            font-size: 20px;
             text-decoration: none;
             color: $text-opaque-2;
             transition: .3s;
@@ -96,7 +96,7 @@ header {
     #btn-menu {
         display: none;
         color: $text-opaque-2;
-        font-size: 30px;
+        font-size: 27px;
         cursor: pointer;
 
         &:hover {
@@ -107,11 +107,6 @@ header {
     @include for-phone-only {
         height: 4rem;
         line-height: 4rem;
-
-
-        .home a {
-            font-size: 25px;
-        }
 
         nav.nav-sections {
             @include nav-sections-responsive(100vw, 25px);
@@ -240,11 +235,5 @@ header {
                 font-size: 17px;
             }
         }
-    }
-}
-
-@include for-phone-only {
-    header {
-        padding: 0 2rem;
     }
 }

@@ -38,7 +38,7 @@ body {
         text-transform: uppercase;
         text-align: center;
         transition: all .2s;
-        @include textStyle(25px, bold, $text-green-strong);
+        @include textStyle(24px, bold, $text-green-strong);
 
         @include for-tablet-landscape {
             font-size: 32px

@@ -166,7 +166,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 999;
-  padding: 0 3rem;
+  padding: 0 2rem;
   background: #2c2c2c;
   font-family: "Catamaran", sans-serif;
   display: flex;
@@ -181,7 +181,7 @@ header {
   transition: 0.2s all;
 }
 header .home a {
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.881);
   transition: 0.3s;
@@ -249,7 +249,7 @@ header nav.networks ul li a i {
 header #btn-menu {
   display: none;
   color: rgba(255, 255, 255, 0.881);
-  font-size: 30px;
+  font-size: 27px;
   cursor: pointer;
 }
 header #btn-menu:hover {
@@ -259,9 +259,6 @@ header #btn-menu:hover {
   header {
     height: 4rem;
     line-height: 4rem;
-  }
-  header .home a {
-    font-size: 25px;
   }
   header nav.nav-sections ul {
     display: none;
@@ -435,11 +432,6 @@ header nav.nav-sections ul li:hover #my-projects::before {
   }
 }
 
-@media (max-width: 599.9px) {
-  header {
-    padding: 0 2rem;
-  }
-}
 section.inicio {
   background: #2c2c2c;
   font-family: "Play", sans-serif;
@@ -457,7 +449,7 @@ section.inicio .apresentacao {
   padding: 5rem 2rem 2rem;
   width: 100%;
   height: 100%;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 section.inicio .apresentacao div.front_container {
   background-color: #abed8d;
@@ -1024,28 +1016,29 @@ section.skills .resetBg i:hover {
 section.projects {
   background: #242424;
   font-family: "Catamaran", sans-serif;
+  text-align: center;
 }
 section.projects:target {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 3rem;
 }
 section.projects .projetos_container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 4rem;
-  padding: 5rem 3rem;
+  gap: 2rem;
+  padding: 3rem 2rem;
 }
 section.projects .projetos_container #image-title-projects {
-  max-width: 60px;
-  max-height: 45px;
+  width: 30px;
+  height: 40px;
   margin-top: -20px;
+  margin-left: -5px;
 }
 section.projects .projetos_container .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
-  grid-gap: 5rem;
+  text-align: center;
+  transition: 0.2s;
 }
 section.projects .projetos_container .cards .card_projeto {
   display: flex;
@@ -1055,13 +1048,14 @@ section.projects .projetos_container .cards .card_projeto {
   padding: 20px;
   gap: 10px;
   border-radius: 15px;
-  width: 300px;
+  text-align: justify;
   height: auto;
   background-color: rgba(255, 255, 255, 0.062);
+  transition: 0.2s all;
 }
 section.projects .projetos_container .cards .card_projeto::before {
   content: "";
-  width: 170px;
+  width: 50%;
   height: 7px;
   background: #85c766;
   border-radius: 20px;
@@ -1069,36 +1063,118 @@ section.projects .projetos_container .cards .card_projeto::before {
   bottom: 20px;
 }
 section.projects .projetos_container .cards .card_projeto .titulo_projeto {
-  font-size: 20px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.881);
+  font-size: clamp(10px, 5vw, 20px);
   text-transform: uppercase;
 }
+section.projects .projetos_container .cards .card_projeto .imagem_projeto img {
+  width: 100%;
+  max-width: 400px;
+}
 section.projects .projetos_container .cards .card_projeto .descricao_projeto {
-  font-size: 14px;
-  font-weight: normal;
   color: rgba(255, 255, 255, 0.4823529412);
   text-align: justify;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto {
   display: flex;
-  gap: 15px;
   padding: 0 0 6px;
+  width: 100%;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a {
-  font-size: 15px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.881);
   background: #2c2c2c;
   font-family: "Play", sans-serif;
   text-decoration: none;
   border: solid 1px rgba(143, 211, 112, 0.5411764706);
-  border-radius: 10px;
-  padding: 9px;
+  border-radius: 8px;
+  text-align: center;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a:hover {
   background-color: #85c766;
   color: #242424;
+}
+@media (max-width: 599.9px) {
+  section.projects .cards {
+    grid-template-columns: 1fr;
+  }
+  section.projects .cards .card_projeto .descricao_projeto {
+    font-size: 14px;
+  }
+  section.projects h4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 400px) {
+  section.projects .cards {
+    grid-gap: 2rem;
+  }
+  section.projects .cards .card_projeto {
+    width: 100%;
+  }
+  section.projects .cards .card_projeto .links_projeto {
+    gap: 10px;
+  }
+  section.projects .cards .card_projeto .links_projeto a {
+    width: 50%;
+    padding: 5px;
+    font-size: 12px;
+    transition: 0.2s all;
+  }
+}
+@media (min-width: 401px) {
+  section.projects .cards {
+    grid-gap: 2.5rem;
+  }
+  section.projects .cards .card_projeto {
+    width: 320px;
+  }
+  section.projects .cards .card_projeto .links_projeto {
+    gap: 15px;
+  }
+  section.projects .cards .card_projeto .links_projeto a {
+    width: 50%;
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 600px) {
+  section.projects .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.projects .cards .card_projeto {
+    width: 100%;
+  }
+  section.projects .cards .card_projeto .descricao_projeto {
+    font-size: 15px;
+  }
+}
+@media (min-width: 900px) {
+  section.projects .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section.projects .cards .card_projeto .descricao_projeto {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  section.projects {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  section.projects .cards {
+    padding-top: 1rem;
+  }
+  section.projects .cards .card_projeto {
+    width: 400px;
+  }
+  section.projects .cards .card_projeto .descricao_projeto {
+    font-size: 16px;
+  }
+  section.projects .cards .card_projeto .links_projeto a {
+    font-size: 16px;
+  }
 }
 
 section.contact {
@@ -1235,7 +1311,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   color: #85c766;
 }

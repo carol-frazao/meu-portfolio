@@ -1,40 +1,42 @@
 //Section 04: Projetos
 section.projects {
     @include theme($bg-color-02, null, $font-catamaran);
+    text-align: center;
 
     &:target {
-        scroll-margin-top: 2rem;
+        scroll-margin-top: 3rem;
     }
 
     .projetos_container {
         @include displayFlex(center, center, column);
-        gap: 4rem;
-        padding: 5rem 3rem;
+        gap: 2rem;
+        padding: 3rem 2rem;
 
         #image-title-projects {
-            max-width: 60px;
-            max-height: 45px;
+            width: 30px;
+            height: 40px;
             margin-top: -20px;
+            margin-left: -5px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            align-items: stretch;
-            grid-gap: 5rem;
+            text-align: center;
+            transition: .2s;
 
             .card_projeto {
                 @include displayFlex(center, space-between, column);
                 padding: 20px;
                 gap: 10px;
                 border-radius: 15px;
-                width: 300px;
+                text-align: justify;
                 height: auto;
                 background-color: rgba(255, 255, 255, 0.062);
+                transition: .2s all;
 
                 &::before {
                     content: '';
-                    width: 170px;
+                    width: 50%;
                     height: 7px;
                     background: #85c766;
                     border-radius: 20px;
@@ -43,33 +45,139 @@ section.projects {
                 }
 
                 .titulo_projeto {
-                    @include textStyle(20px, bold, $text-opaque-2);
+                    @include textStyle(null, bold, $text-opaque-2);
+                    font-size: clamp(10px, 5vw, 20px);
                     text-transform: uppercase;
                 }
 
+                .imagem_projeto img {
+                    width: 100%;
+                    max-width: 400px;
+                }
+
                 .descricao_projeto {
-                    @include textStyle(14px, normal, $text-opaque-1);
+                    color: $text-opaque-1;
                     text-align: justify;
                 }
 
                 .links_projeto {
                     display: flex;
-                    gap: 15px;
                     padding: 0 0 6px;
+                    width: 100%;
 
                     a {
-                        @include textStyle(15px, bold, $text-opaque-2);
+                        @include textStyle(null, bold, $text-opaque-2);
                         @include theme($bg-color-01, null, $font-play);
                         text-decoration: none;
                         border: solid 1px #8fd3708a;
-                        border-radius: 10px;
-                        padding: 9px;
+                        border-radius: 8px;
+                        text-align: center;
 
                         &:hover {
                             background-color: $text-green-strong;
                             color: #242424;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @include for-phone-only {
+        .cards {
+            grid-template-columns: 1fr;
+
+            .card_projeto .descricao_projeto {
+                font-size: 14px;
+            }
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .cards {
+            grid-gap: 2rem;
+
+            .card_projeto {
+                width: 100%;
+
+                .links_projeto {
+                    gap: 10px;
+
+                    a {
+                        width: 50%;
+                        padding: 5px;
+                        font-size: 12px;
+                        transition: .2s all;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 401px) {
+        .cards {
+            grid-gap: 2.5rem;
+
+            .card_projeto {
+                width: 320px;
+
+                .links_projeto {
+                    gap: 15px;
+
+                    a {
+                        width: 50%;
+                        padding: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-tablet-portrait {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+
+            .card_projeto {
+                width: 100%;
+
+                .descricao_projeto {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+
+            .card_projeto .descricao_projeto {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @include for-desktop-up {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+
+        .cards {
+            padding-top: 1rem;
+
+            .card_projeto {
+                width: 400px;
+
+                .descricao_projeto {
+                    font-size: 16px;
+                }
+
+                .links_projeto a {
+                    font-size: 16px;
                 }
             }
         }
