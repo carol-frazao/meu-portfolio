@@ -159,6 +159,22 @@ code {
     transform: rotateZ(360deg);
   }
 }
+@-webkit-keyframes anim-stars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
+}
+@keyframes anim-stars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
+}
 header {
   width: 100%;
   height: 4.2rem;
@@ -1490,6 +1506,9 @@ section.contact .contact-container .send-message form textarea {
     width: 90%;
     gap: 1rem;
   }
+  section.contact .contact-container:target {
+    scroll-margin-top: 2rem;
+  }
   section.contact .contact-container .infos-contact {
     width: 50%;
   }
@@ -1523,6 +1542,63 @@ section.contact .contact-container .send-message form textarea {
   section.contact #image-title-contact {
     width: 35px;
     height: 35px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-family: "Play", sans-serif;
+  cursor: default;
+  background: url("/assets/img/skills-wallpaper/html-wallpaper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-container #dev-dots-img {
+  width: 30px;
+}
+footer .footer-container strong {
+  font-size: 12px;
+  color: #eee;
+}
+footer .footer-container a {
+  text-decoration: none;
+  color: #eee;
+}
+footer .footer-container a i {
+  font-size: 14px;
+}
+footer .footer-container a i:hover {
+  color: rgb(0, 255, 200);
+}
+@media (min-width: 600px) {
+  footer .footer-container #dev-dots-img {
+    width: 40px;
+  }
+  footer .footer-container strong {
+    font-size: 15px;
+  }
+}
+@media (min-width: 900px) {
+  footer {
+    height: 4rem;
+  }
+  footer .footer-container #dev-dots-img {
+    width: 47px;
+  }
+  footer .footer-container strong {
+    font-size: 16px;
+  }
+  footer .footer-container a i {
+    font-size: 16px;
   }
 }
 

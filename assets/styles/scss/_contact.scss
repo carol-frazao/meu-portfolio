@@ -256,6 +256,10 @@ section.contact {
         }
 
         @include for-desktop-up {
+            &:target {
+                scroll-margin-top: 2rem;
+            }
+
             width: 90%;
             gap: 1rem;
 

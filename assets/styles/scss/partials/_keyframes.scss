@@ -72,3 +72,13 @@
         transform: rotateZ(360deg);
     }
 }
+
+@keyframes anim-stars {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-150px);
+    }
+}

@@ -1,0 +1,70 @@
+footer {
+    text-align: center;
+    font-family: $font-play;
+    cursor: default;
+    background: url('/assets/img/skills-wallpaper/html-wallpaper.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 3rem;
+    @include flexCenter;
+
+
+    .footer-container {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        #dev-dots-img {
+            width: 30px;
+        }
+
+        strong {
+            font-size: 12px;
+            color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+            color: #eee;
+
+            i {
+                font-size: 14px;
+
+                &:hover {
+                    color: rgb(0, 255, 200);
+                }
+            }
+        }
+    }
+
+    @include for-tablet-portrait {
+        .footer-container {
+            #dev-dots-img {
+                width: 40px;
+            }
+
+            strong {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        height: 4rem;
+
+        .footer-container {
+
+            #dev-dots-img {
+                width: 47px;
+            }
+
+            strong {
+                font-size: 16px;
+            }
+
+            a i {
+                font-size: 16px;
+            }
+        }
+    }
+}
