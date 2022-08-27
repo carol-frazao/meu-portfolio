@@ -40,6 +40,10 @@ body {
         transition: all .2s;
         @include textStyle(24px, bold, $text-green-strong);
 
+        @include for-large-devices-portrait {
+            font-size: 28px;
+        }
+
         @include for-tablet-landscape {
             font-size: 32px
         }

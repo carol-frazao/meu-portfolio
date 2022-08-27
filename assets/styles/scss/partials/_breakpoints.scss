@@ -10,6 +10,12 @@
     }
 }
 
+@mixin for-large-devices-portrait {
+    @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+        @content;
+    }
+}
+
 @mixin for-tablet-landscape {
     @media (min-width: 900px) {
         @content;

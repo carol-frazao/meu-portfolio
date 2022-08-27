@@ -181,7 +181,7 @@ header {
   transition: 0.2s all;
 }
 header .home a {
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.881);
   transition: 0.3s;
@@ -379,12 +379,17 @@ header nav.nav-sections ul li:hover #my-projects::before {
     display: block;
   }
 }
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  header .home a {
+    font-size: 23px;
+  }
+}
 @media (min-width: 900px) {
   header header {
     padding: 0 2rem;
   }
   header .home a {
-    font-size: 20px;
+    font-size: 21px;
   }
   header nav.nav-sections ul {
     display: flex;
@@ -455,7 +460,7 @@ section.inicio .apresentacao div.front_container {
   background-color: #abed8d;
   width: 13rem;
   border-radius: 8px;
-  padding: 2px;
+  padding: 3px;
   font-size: 13px;
   font-weight: bold;
   color: #000;
@@ -528,6 +533,31 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
     font-size: 20px;
   }
 }
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  section.inicio .apresentacao {
+    gap: 2rem;
+    padding: 3rem;
+    justify-content: space-around;
+  }
+  section.inicio .apresentacao div.front_container {
+    width: 16rem;
+    font-size: 18px;
+    padding: 5px;
+  }
+  section.inicio .apresentacao div.text_apresentacao h1 {
+    font-size: 32px;
+  }
+  section.inicio .apresentacao div.text_apresentacao p.descricao {
+    font-size: 21.5px;
+    line-height: 1.8rem;
+  }
+  section.inicio .apresentacao div.btn-iniciar span {
+    font-size: 25px;
+  }
+  section.inicio .apresentacao div.btn-iniciar a #img-start {
+    width: 140px;
+  }
+}
 @media (min-width: 900px) {
   section.inicio .apresentacao {
     display: flex;
@@ -541,7 +571,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
   }
   section.inicio .apresentacao div.front_container {
     width: 14rem;
-    padding: 5px;
+    padding: 4px;
   }
   section.inicio .apresentacao div.text_apresentacao h1 {
     font-size: 27px;
@@ -613,10 +643,10 @@ section.inicio .vetores-container .vetores {
 section.inicio .vetores-container .vetores #art-vetor {
   width: 250px;
 }
-section.inicio .vetores-container .vetores .vetores-sub {
+section.inicio .vetores-container .vetores .vetores-children {
   position: absolute;
 }
-section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
+section.inicio .vetores-container .vetores .vetores-children #code_symbol {
   position: absolute;
   transition: 0.6s;
   width: 40px;
@@ -626,7 +656,7 @@ section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
   top: -9em;
   left: -1.5em;
 }
-section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
+section.inicio .vetores-container .vetores .vetores-children #css_vetor {
   position: absolute;
   transition: 0.6s;
   width: 38px;
@@ -635,7 +665,7 @@ section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
   top: -8em;
   left: -6.5em;
 }
-section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
+section.inicio .vetores-container .vetores .vetores-children #js_vetor {
   position: absolute;
   transition: 0.6s;
   width: 38px;
@@ -644,7 +674,7 @@ section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
   top: -8em;
   right: -6.2em;
 }
-section.inicio .vetores-container .vetores .vetores-sub #react_gif {
+section.inicio .vetores-container .vetores .vetores-children #react_gif {
   position: absolute;
   transition: 0.6s;
   width: 40px;
@@ -652,13 +682,43 @@ section.inicio .vetores-container .vetores .vetores-sub #react_gif {
   left: -8em;
   top: -1em;
 }
-section.inicio .vetores-container .vetores .vetores-sub #html {
+section.inicio .vetores-container .vetores .vetores-children #html {
   position: absolute;
   transition: 0.6s;
   width: 40px;
   height: auto;
   right: -7.6em;
   top: -1em;
+}
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  section.inicio .vetores-container .vetores #art-vetor {
+    width: 400px;
+  }
+  section.inicio .vetores-container .vetores .vetores-children #code_symbol {
+    top: -12em;
+    left: -1.7em;
+    width: 50px;
+  }
+  section.inicio .vetores-container .vetores .vetores-children #css_vetor {
+    width: 50px;
+    left: -8.3em;
+    top: -8.5em;
+  }
+  section.inicio .vetores-container .vetores .vetores-children #js_vetor {
+    width: 50px;
+    right: -7.9em;
+    top: -8.5em;
+  }
+  section.inicio .vetores-container .vetores .vetores-children #react_gif {
+    width: 50px;
+    left: -10em;
+    top: -8px;
+  }
+  section.inicio .vetores-container .vetores .vetores-children #html {
+    width: 55px;
+    right: -10em;
+    top: -8px;
+  }
 }
 @media (min-width: 900px) {
   section.inicio .vetores-container {
@@ -676,26 +736,26 @@ section.inicio .vetores-container .vetores .vetores-sub #html {
     width: 330px;
     transition: 0.2s;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
+  section.inicio .vetores-container .vetores .vetores-children #code_symbol {
     width: 50px;
     top: -11em;
     left: -1.8em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
+  section.inicio .vetores-container .vetores .vetores-children #css_vetor {
     width: 45px;
     top: -8.5em;
     left: -7.6em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
+  section.inicio .vetores-container .vetores .vetores-children #js_vetor {
     width: 45px;
     top: -8.5em;
     right: -7.4em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #react_gif {
+  section.inicio .vetores-container .vetores .vetores-children #react_gif {
     width: 45px;
     left: -9.4em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #html {
+  section.inicio .vetores-container .vetores .vetores-children #html {
     width: 49px;
     right: -9.1em;
     top: -1em;
@@ -708,26 +768,26 @@ section.inicio .vetores-container .vetores .vetores-sub #html {
   section.inicio .vetores-container .vetores #art-vetor {
     width: 380px;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #code_symbol {
+  section.inicio .vetores-container .vetores .vetores-children #code_symbol {
     width: 55px;
     top: -12em;
     left: -2em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #css_vetor {
+  section.inicio .vetores-container .vetores .vetores-children #css_vetor {
     width: 50px;
     top: -9.5em;
     left: -9em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #js_vetor {
+  section.inicio .vetores-container .vetores .vetores-children #js_vetor {
     width: 50px;
     top: -9.5em;
     right: -8.5em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #react_gif {
+  section.inicio .vetores-container .vetores .vetores-children #react_gif {
     width: 51px;
     left: -11.5em;
   }
-  section.inicio .vetores-container .vetores .vetores-sub #html {
+  section.inicio .vetores-container .vetores .vetores-children #html {
     width: 55px;
     right: -11em;
   }
@@ -748,6 +808,9 @@ section.about {
   color: rgba(255, 255, 255, 0.4823529412);
   font-family: "Catamaran", sans-serif;
   min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section.about:target {
   scroll-margin-top: 4rem;
@@ -762,6 +825,7 @@ section.about .about-container {
   justify-content: space-between;
   flex-direction: column;
   padding: 3rem 0;
+  gap: 14px;
 }
 section.about .about-container .aboutMe {
   display: flex;
@@ -797,6 +861,23 @@ section.about .about-container .curriculo #arrow_download {
   -webkit-animation: arrow-move 0.7s infinite alternate;
           animation: arrow-move 0.7s infinite alternate;
   transition: 0.2s;
+}
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  section.about .about-container {
+    gap: 1rem;
+  }
+  section.about .about-container .aboutMe .photo img {
+    width: 300px;
+  }
+  section.about .about-container .aboutMe .about_text {
+    font-size: 20px;
+  }
+  section.about .about-container .curriculo a #curriculo_img {
+    width: 15rem;
+  }
+  section.about .about-container .curriculo #arrow_download {
+    margin-top: 12px;
+  }
 }
 @media (min-width: 900px) {
   section.about {
@@ -1316,6 +1397,15 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #85c766;
+}
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  .title-section h1,
+.title-section h2,
+.title-section h3,
+.title-section h4,
+.title-section h5 {
+    font-size: 28px;
+  }
 }
 @media (min-width: 900px) {
   .title-section h1,

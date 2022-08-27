@@ -16,7 +16,7 @@ section.inicio {
             background-color: #abed8d;
             width: 13rem;
             border-radius: 8px;
-            padding: 2px;
+            padding: 3px;
             @include textStyle(13px, bold, #000);
             text-align: center;
             cursor: default;
@@ -96,6 +96,39 @@ section.inicio {
             }
         }
 
+        @include for-large-devices-portrait {
+            gap: 2rem;
+            padding: 3rem;
+            justify-content: space-around;
+
+            div.front_container {
+                width: 16rem;
+                font-size: 18px;
+                padding: 5px
+            }
+
+            div.text_apresentacao {
+                h1 {
+                    font-size: 32px;
+                }
+
+                p.descricao {
+                    font-size: 21.5px;
+                    line-height: 1.8rem;
+                }
+            }
+
+            div.btn-iniciar {
+                span {
+                    font-size: 25px
+                }
+
+                a #img-start {
+                    width: 140px
+                }
+            }
+        }
+
         @include for-tablet-landscape {
             @include displayFlex(flex-start, center, column);
             width: 60%;
@@ -105,7 +138,7 @@ section.inicio {
 
             div.front_container {
                 width: 14rem;
-                padding: 5px;
+                padding: 4px;
             }
 
             div.text_apresentacao {
@@ -183,7 +216,7 @@ section.inicio {
                 width: 250px;
             }
 
-            .vetores-sub {
+            .vetores-children {
                 position: absolute;
 
                 #code_symbol {
@@ -221,6 +254,46 @@ section.inicio {
             }
         }
 
+        @include for-large-devices-portrait {
+            .vetores {
+                #art-vetor {
+                    width: 400px
+                }
+
+                .vetores-children {
+                    #code_symbol {
+                        top: -12em;
+                        left: -1.7em;
+                        width: 50px
+                    }
+
+                    #css_vetor {
+                        width: 50px;
+                        left: -8.3em;
+                        top: -8.5em;
+                    }
+
+                    #js_vetor {
+                        width: 50px;
+                        right: -7.9em;
+                        top: -8.5em;
+                    }
+
+                    #react_gif {
+                        width: 50px;
+                        left: -10em;
+                        top: -8px;
+                    }
+
+                    #html {
+                        width: 55px;
+                        right: -10em;
+                        top: -8px;
+                    }
+                }
+            }
+        }
+
         @include for-tablet-landscape {
             @include flexCenter;
             width: 50%;
@@ -235,7 +308,7 @@ section.inicio {
                     transition: .2s;
                 }
 
-                .vetores-sub {
+                .vetores-children {
                     #code_symbol {
                         width: 50px;
                         top: -11em;
@@ -276,7 +349,7 @@ section.inicio {
                     width: 380px;
                 }
 
-                .vetores-sub {
+                .vetores-children {
                     #code_symbol {
                         width: 55px;
                         top: -12em;
