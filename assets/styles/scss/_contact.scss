@@ -2,38 +2,45 @@
 section.contact {
     @include displayFlex(center, center, column);
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
 
     &:target {
-        scroll-margin-top: 3rem;
+        scroll-margin-top: 1rem;
+    }
+
+    .title-contact {
+        margin-top: 3rem;
     }
 
     #image-title-contact {
-        max-width: 50px;
-        max-height: 45px;
-        padding-top: 3px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px
     }
 
     .contact-container {
-        @include displayFlex(flex-start, center, row);
-        width: 80%;
-        margin-top: 3rem;
+        @include displayFlex(center, center, column);
+        margin: 2rem;
+        gap: 10px;
+        width: 100%;
 
         .infos-contact {
-            width: 50%;
+            padding: 0 2rem;
+            width: 100%;
 
             span {
-                @include textStyle(25px, bold, $text-opaque-2);
+                @include textStyle(18px, bold, $text-opaque-2);
                 text-transform: uppercase;
                 cursor: default;
+                white-space: nowrap;
             }
 
             p {
                 color: $text-opaque-1;
+                font-size: 14px;
 
                 img {
-                    width: 25px;
+                    width: 20px;
                     opacity: .6;
                     padding-left: 4px;
                 }
@@ -44,9 +51,10 @@ section.contact {
 
                 li {
                     list-style: none;
+                    white-space: nowrap;
 
                     a {
-                        @include textStyle(20px, normal, #d4d3d3);
+                        @include textStyle(17px, normal, #d4d3d3);
                         text-decoration: none;
 
                         &:hover {
@@ -54,6 +62,8 @@ section.contact {
                         }
 
                         i {
+                            font-size: 15px;
+                            ;
                             padding-right: 5px;
                         }
                     }
@@ -74,7 +84,8 @@ section.contact {
         }
 
         .send-message {
-            width: 50%;
+            width: 100%;
+            padding: 0 2rem;
 
             form {
                 display: flex;
@@ -85,12 +96,13 @@ section.contact {
                     width: 100%;
                     margin-bottom: 1em;
                     border-radius: 5px;
-                    border: solid 3px $text-green-strong;
+                    border: solid 2px #069134;
                     background-color: #eee;
                 }
 
                 input {
-                    padding: 4px;
+                    padding: 5px;
+                    font-size: 14px;
                 }
 
                 textarea {
@@ -108,12 +120,191 @@ section.contact {
                     padding: 5px;
                     transition: .2s;
                     background-color: $text-green-strong;
+                    color: white;
 
-                    &:hover {
-                        transform: scale(.99);
+                    &:active {
+                        transform: scale(.95);
                     }
                 }
             }
+        }
+
+        @include for-tablet-portrait {
+            gap: 1.5rem;
+
+            .infos-contact {
+                text-align: center;
+
+                ul {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: center;
+                }
+            }
+
+            .send-message {
+                form {
+                    align-items: center;
+
+                    label {
+                        width: 80%;
+                    }
+
+                    input,
+                    textarea {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 700px) {
+            .infos-contact {
+                padding: 0 3rem;
+            }
+
+            .send-message {
+                padding: 0 3rem;
+            }
+        }
+
+        @include for-large-devices-portrait {
+            &:target {
+                scroll-margin-top: -3rem;
+            }
+
+            .infos-contact {
+                span {
+                    font-size: 24px
+                }
+
+                p {
+                    font-size: 20px
+                }
+
+                ul li a {
+                    font-size: 18px;
+                }
+            }
+
+            .send-message {
+                form {
+                    label {
+                        font-size: 18px;
+                    }
+
+                    input,
+                    textarea {
+                        padding: 10px;
+                        font-size: 18px;
+                    }
+
+                    textarea {
+                        height: 14rem;
+                    }
+
+                    #btn-submit {
+                        padding: 13px;
+                        font-size: 20px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+
+        @include for-tablet-landscape {
+            @include displayFlex(flex-start, space-beetwen, row);
+
+            .infos-contact {
+                width: 45%;
+                text-align: left;
+
+                span {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                ul {
+                    display: inline-block;
+                }
+            }
+
+            .send-message {
+                width: 55%;
+
+                form {
+                    align-items: flex-start;
+
+                    label {
+                        width: 100%;
+                    }
+
+                    input {
+                        padding: 6px;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        @include for-desktop-up {
+            width: 90%;
+            gap: 1rem;
+
+            .infos-contact {
+                width: 50%;
+
+                span {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                ul li a {
+                    font-size: 20px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .send-message {
+                width: 50%;
+                padding: 0;
+                padding-right: 2rem;
+
+                form {
+
+                    input,
+                    textarea {
+                        width: 100%;
+
+                    }
+
+                    #btn-submit {
+                        font-size: 18px;
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-tablet-landscape {
+        #image-title-contact {
+            width: 35px;
+            height: 35px;
         }
     }
 }

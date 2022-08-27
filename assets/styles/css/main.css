@@ -855,9 +855,9 @@ section.about .about-container .curriculo a #curriculo_img {
   width: 12rem;
 }
 section.about .about-container .curriculo #arrow_download {
-  width: 30px;
-  height: 30px;
-  margin-top: 6px;
+  width: 25px;
+  height: 25px;
+  margin-top: 8px;
   -webkit-animation: arrow-move 0.7s infinite alternate;
           animation: arrow-move 0.7s infinite alternate;
   transition: 0.2s;
@@ -914,6 +914,10 @@ section.about .about-container .curriculo #arrow_download {
   }
   section.about .about-container .curriculo a #curriculo_img {
     width: 14rem;
+  }
+  section.about .about-container .curriculo #arrow_download {
+    width: 30px;
+    height: 30px;
   }
 }
 @media (min-width: 1200px) {
@@ -986,6 +990,7 @@ section.skills .skillsContainer .skill strong {
   padding-bottom: 4px;
 }
 section.skills .skillsContainer .skill img {
+  max-width: 150px;
   width: 100px;
   height: auto;
   -o-object-fit: cover;
@@ -1268,40 +1273,46 @@ section.contact {
   background: #2c2c2c;
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
 }
 section.contact:target {
-  scroll-margin-top: 3rem;
+  scroll-margin-top: 1rem;
+}
+section.contact .title-contact {
+  margin-top: 3rem;
 }
 section.contact #image-title-contact {
-  max-width: 50px;
-  max-height: 45px;
-  padding-top: 3px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 section.contact .contact-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  flex-direction: row;
-  width: 80%;
-  margin-top: 3rem;
+  flex-direction: column;
+  margin: 2rem;
+  gap: 10px;
+  width: 100%;
 }
 section.contact .contact-container .infos-contact {
-  width: 50%;
+  padding: 0 2rem;
+  width: 100%;
 }
 section.contact .contact-container .infos-contact span {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.881);
   text-transform: uppercase;
   cursor: default;
+  white-space: nowrap;
 }
 section.contact .contact-container .infos-contact p {
   color: rgba(255, 255, 255, 0.4823529412);
+  font-size: 14px;
 }
 section.contact .contact-container .infos-contact p img {
-  width: 25px;
+  width: 20px;
   opacity: 0.6;
   padding-left: 4px;
 }
@@ -1310,9 +1321,10 @@ section.contact .contact-container .infos-contact ul {
 }
 section.contact .contact-container .infos-contact ul li {
   list-style: none;
+  white-space: nowrap;
 }
 section.contact .contact-container .infos-contact ul li a {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: normal;
   color: #d4d3d3;
   text-decoration: none;
@@ -1321,6 +1333,7 @@ section.contact .contact-container .infos-contact ul li a:hover {
   color: #fff;
 }
 section.contact .contact-container .infos-contact ul li a i {
+  font-size: 15px;
   padding-right: 5px;
 }
 section.contact .contact-container .infos-contact ul #info-wpp i {
@@ -1333,7 +1346,8 @@ section.contact .contact-container .infos-contact ul #info-mail i {
   color: #bdbbbb;
 }
 section.contact .contact-container .send-message {
-  width: 50%;
+  width: 100%;
+  padding: 0 2rem;
 }
 section.contact .contact-container .send-message form {
   display: flex;
@@ -1344,11 +1358,12 @@ section.contact .contact-container .send-message form textarea {
   width: 100%;
   margin-bottom: 1em;
   border-radius: 5px;
-  border: solid 3px #85c766;
+  border: solid 2px #069134;
   background-color: #eee;
 }
 section.contact .contact-container .send-message form input {
-  padding: 4px;
+  padding: 5px;
+  font-size: 14px;
 }
 section.contact .contact-container .send-message form textarea {
   padding: 7px;
@@ -1366,9 +1381,149 @@ section.contact .contact-container .send-message form #btn-submit {
   padding: 5px;
   transition: 0.2s;
   background-color: #85c766;
+  color: white;
 }
-section.contact .contact-container .send-message form #btn-submit:hover {
-  transform: scale(0.99);
+section.contact .contact-container .send-message form #btn-submit:active {
+  transform: scale(0.95);
+}
+@media (min-width: 600px) {
+  section.contact .contact-container {
+    gap: 1.5rem;
+  }
+  section.contact .contact-container .infos-contact {
+    text-align: center;
+  }
+  section.contact .contact-container .infos-contact ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  section.contact .contact-container .send-message form {
+    align-items: center;
+  }
+  section.contact .contact-container .send-message form label {
+    width: 80%;
+  }
+  section.contact .contact-container .send-message form input,
+section.contact .contact-container .send-message form textarea {
+    width: 80%;
+  }
+}
+@media (min-width: 700px) {
+  section.contact .contact-container .infos-contact {
+    padding: 0 3rem;
+  }
+  section.contact .contact-container .send-message {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+  section.contact .contact-container:target {
+    scroll-margin-top: -3rem;
+  }
+  section.contact .contact-container .infos-contact span {
+    font-size: 24px;
+  }
+  section.contact .contact-container .infos-contact p {
+    font-size: 20px;
+  }
+  section.contact .contact-container .infos-contact ul li a {
+    font-size: 18px;
+  }
+  section.contact .contact-container .send-message form label {
+    font-size: 18px;
+  }
+  section.contact .contact-container .send-message form input,
+section.contact .contact-container .send-message form textarea {
+    padding: 10px;
+    font-size: 18px;
+  }
+  section.contact .contact-container .send-message form textarea {
+    height: 14rem;
+  }
+  section.contact .contact-container .send-message form #btn-submit {
+    padding: 13px;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 900px) {
+  section.contact .contact-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-beetwen;
+    flex-direction: row;
+  }
+  section.contact .contact-container .infos-contact {
+    width: 45%;
+    text-align: left;
+  }
+  section.contact .contact-container .infos-contact span {
+    font-size: 22px;
+  }
+  section.contact .contact-container .infos-contact p {
+    font-size: 16px;
+  }
+  section.contact .contact-container .infos-contact ul {
+    display: inline-block;
+  }
+  section.contact .contact-container .send-message {
+    width: 55%;
+  }
+  section.contact .contact-container .send-message form {
+    align-items: flex-start;
+  }
+  section.contact .contact-container .send-message form label {
+    width: 100%;
+  }
+  section.contact .contact-container .send-message form input {
+    padding: 6px;
+  }
+  section.contact .contact-container .send-message form input,
+section.contact .contact-container .send-message form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  section.contact .contact-container {
+    width: 90%;
+    gap: 1rem;
+  }
+  section.contact .contact-container .infos-contact {
+    width: 50%;
+  }
+  section.contact .contact-container .infos-contact span {
+    font-size: 25px;
+  }
+  section.contact .contact-container .infos-contact p {
+    font-size: 18px;
+  }
+  section.contact .contact-container .infos-contact ul li a {
+    font-size: 20px;
+  }
+  section.contact .contact-container .infos-contact ul li a i {
+    font-size: 20px;
+  }
+  section.contact .contact-container .send-message {
+    width: 50%;
+    padding: 0;
+    padding-right: 2rem;
+  }
+  section.contact .contact-container .send-message form input,
+section.contact .contact-container .send-message form textarea {
+    width: 100%;
+  }
+  section.contact .contact-container .send-message form #btn-submit {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+@media (min-width: 900px) {
+  section.contact #image-title-contact {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 html {

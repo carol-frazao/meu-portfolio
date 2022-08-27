@@ -49,9 +49,9 @@ section.about {
             }
 
             #arrow_download {
-                width: 30px;
-                height: 30px;
-                margin-top: 6px;
+                width: 25px;
+                height: 25px;
+                margin-top: 8px;
                 animation: arrow-move .7s infinite alternate;
                 transition: .2s;
             }
@@ -123,6 +123,11 @@ section.about {
             .curriculo {
                 a #curriculo_img {
                     width: 14rem;
+                }
+
+                #arrow_download {
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
