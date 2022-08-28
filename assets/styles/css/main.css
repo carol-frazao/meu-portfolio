@@ -1282,7 +1282,7 @@ section.contact {
   background: #2c2c2c;
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 section.contact .title-contact {
   margin-top: 3rem;

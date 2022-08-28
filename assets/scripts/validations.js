@@ -37,11 +37,5 @@ function envioMensagem() {
     return false;
   }
 
-  if (document.form.mensagem.value.length < 20) {
-    alert("A mensagem precisa ter pelo menos 20 caracteres");
-    document.form.mensagem.focus();
-    return false;
-  }
-
   return true;
 }
