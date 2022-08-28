@@ -53,6 +53,44 @@ body {
             font-size: 35px;
         }
     }
+}
 
+.back-to-top {
+    display: none;
+    background: $text-green-strong;
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, .75);
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    animation: back-to-top .5s infinite alternate-reverse;
 
+    &::after {
+        content: '▲';
+        @include flexCenter;
+        padding-top: 2px;
+        font-size: 25px;
+        color: white;
+    }
+
+    &:hover {
+        background-color: #1a1a1a;
+        border: solid 3px $text-green-strong;
+        text-decoration: none;
+    }
+
+    @keyframes back-to-top {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(8px);
+        }
+    }
 }

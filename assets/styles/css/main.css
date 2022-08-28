@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 html,
@@ -1659,5 +1660,51 @@ body {
 .title-section h4,
 .title-section h5 {
     font-size: 35px;
+  }
+}
+
+.back-to-top {
+  display: none;
+  background: #85c766;
+  border-radius: 50%;
+  bottom: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, 0.75);
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  animation: back-to-top 0.5s infinite alternate-reverse;
+}
+.back-to-top::after {
+  content: "▲";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  font-size: 25px;
+  color: white;
+}
+.back-to-top:hover {
+  background-color: #1a1a1a;
+  border: solid 3px #85c766;
+  text-decoration: none;
+}
+@-webkit-keyframes back-to-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(8px);
+  }
+}
+@keyframes back-to-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(8px);
   }
 }

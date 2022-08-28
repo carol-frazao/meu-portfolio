@@ -37,7 +37,7 @@
     ></script>
   </head>
 
-  <body style="background-color: #2c2c2c">
+  <body style="background-color: #2c2c2c" id="body">
     <header>
       <!-- Home index -->
       <div class="home">
@@ -740,6 +740,8 @@
           </div>
         </div>
       </section>
+
+      <a class="back-to-top" onclick="scrollToTop();"></a>
     </main>
 
     <footer>
@@ -764,10 +766,12 @@
 
     <!-- scripts -->
     <script type="module" src="assets/scripts/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/timers.js"></script>
     <script type="text/javascript" src="assets/scripts/skills.js"></script>
     <script type="text/javascript" src="assets/scripts/navBar.js"></script>
     <script type="text/javascript" src="assets/scripts/validations.js"></script>
+    <script type="text/javascript" src="assets/scripts/scrollToTop.js"></script>
 
     <script
       src="https://unpkg.com/react@17/umd/react.production.min.js"
