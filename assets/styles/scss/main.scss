@@ -19,6 +19,26 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $text-green-strong rgba(255, 255, 255, 0.062);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.062);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $text-green-strong;
+    border-radius: 20px;
+}
+
 body {
     background-color: #1a1a1a;
 }
