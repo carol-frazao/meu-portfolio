@@ -138,8 +138,16 @@ section.skills {
     @include for-tablet-landscape {
         height: 100vh;
 
-        .skillsContainer .skill img {
-            width: 110px;
+        .skillsContainer {
+
+            .swiper,
+            .skill-img {
+                width: 95%;
+            }
+
+            .skill img {
+                width: 110px;
+            }
         }
 
         #btn-reset-bg {

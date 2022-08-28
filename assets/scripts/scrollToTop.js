@@ -8,6 +8,5 @@ $(document).scroll(function () {
     $(".back-to-top").css("display", "block");
   } else {
     $(".back-to-top").css("display", "none");
-    hideBtn();
   }
 });

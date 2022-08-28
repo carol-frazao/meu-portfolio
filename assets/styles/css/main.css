@@ -1108,6 +1108,10 @@ section.skills .resetBg i:hover {
   section.skills {
     height: 100vh;
   }
+  section.skills .skillsContainer .swiper,
+section.skills .skillsContainer .skill-img {
+    width: 95%;
+  }
   section.skills .skillsContainer .skill img {
     width: 110px;
   }
