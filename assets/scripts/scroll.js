@@ -1,4 +1,3 @@
-const scrollToTop = () => window.scrollTo(0, 0);
 const posicaoInicial = (section) => $(section).position().top;
 
 $(document).scroll(function () {
