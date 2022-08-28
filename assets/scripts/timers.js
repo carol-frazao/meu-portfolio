@@ -1,7 +1,7 @@
-const getElement = (element) => document.querySelector(element);
+const get = (element) => document.querySelector(element);
 
 // Type write no título da introdução
-const text_h1 = getElement("#text_h1");
+const text_h1 = get("#text_h1");
 
 function typeWhiter(text) {
   const textArray = text.innerText.split("");
@@ -16,12 +16,12 @@ typeWhiter(text_h1);
 
 //Tempo para exibir os vetores
 const vetor = {
-  art_vetor: getElement("#art-vetor"),
-  react_gif: getElement("#react_gif"),
-  css_vetor: getElement("#css_vetor"),
-  code_vetor: getElement("#code_symbol"),
-  html_vetor: getElement("#html"),
-  js_vetor: getElement("#js_vetor"),
+  art_vetor: get("#art-vetor"),
+  react_gif: get("#react_gif"),
+  css_vetor: get("#css_vetor"),
+  code_vetor: get("#code_symbol"),
+  html_vetor: get("#html"),
+  js_vetor: get("#js_vetor"),
 };
 
 setTimeout(() => {

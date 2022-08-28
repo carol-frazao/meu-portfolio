@@ -4,10 +4,6 @@ section.about {
     min-height: 85vh;
     @include flexCenter;
 
-    &:target {
-        scroll-margin-top: 4rem;
-    }
-
     #image-icon-about {
         max-width: 40px;
         max-height: 40px;
@@ -91,10 +87,6 @@ section.about {
         #image-icon-about {
             max-width: 50px;
             max-height: 50px;
-        }
-
-        &:target {
-            scroll-margin-top: 2rem;
         }
 
         .about-container {

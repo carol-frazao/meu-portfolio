@@ -62,12 +62,12 @@
             width: 100%;
             height: 100%;
             @include flexCenter;
+            color: #1c1c1c;
 
             a {
                 display: block;
                 width: 100%;
                 font-size: $fontSize;
-                color: #1c1c1c;
                 text-transform: uppercase;
                 font-weight: bold;
             }

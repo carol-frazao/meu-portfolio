@@ -6,10 +6,6 @@ section.skills {
     min-height: 80vh;
     height: 80vh;
 
-    &:target {
-        scroll-margin-top: 5rem;
-    }
-
     .skillsContainer {
         @include displayFlex(center, space-evenly, column);
         padding: 3rem;
@@ -155,5 +151,4 @@ section.skills {
             right: 5%;
         }
     }
-
 }

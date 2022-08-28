@@ -50,23 +50,25 @@
           <i class="fa-solid fa-xmark close-menu" id="close-nav"></i>
 
           <li class="section-page close-menu">
-            <a href="#inicio"> Início </a>
+            <a onclick="scrollar('#inicio')"> Início </a>
           </li>
 
           <li class="section-page close-menu">
-            <a href="#about"> Sobre mim </a>
+            <a onclick="scrollar('#about')"> Sobre mim </a>
           </li>
 
           <li class="section-page close-menu">
-            <a href="#skills"> Skills </a>
+            <a onclick="scrollToSkills()"> Skills </a>
           </li>
 
           <li class="section-page close-menu">
-            <a href="#projects" id="my-projects"> < Meus projetos /> </a>
+            <a id="my-projects" onclick="scrollar('#projects')">
+              < Meus projetos />
+            </a>
           </li>
 
           <li class="section-page close-menu">
-            <a href="#contact"> Contato </a>
+            <a onclick="scrollar('#contact')"> Contato </a>
           </li>
         </ul>
       </nav>
@@ -771,7 +773,7 @@
     <script type="text/javascript" src="assets/scripts/skills.js"></script>
     <script type="text/javascript" src="assets/scripts/navBar.js"></script>
     <script type="text/javascript" src="assets/scripts/validations.js"></script>
-    <script type="text/javascript" src="assets/scripts/scrollToTop.js"></script>
+    <script type="text/javascript" src="assets/scripts/scroll.js"></script>
 
     <script
       src="https://unpkg.com/react@17/umd/react.production.min.js"

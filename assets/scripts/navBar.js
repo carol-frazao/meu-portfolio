@@ -1,7 +1,7 @@
 //Navbar responsivo
 function responsiveNavbar() {
-  const btnMenu = getElement("#btn-menu");
-  const navList = getElement("#nav-list");
+  const btnMenu = get("#btn-menu");
+  const navList = get("#nav-list");
   const btnCloseMenu = document.querySelectorAll(".close-menu");
 
   btnMenu.onclick = () => {

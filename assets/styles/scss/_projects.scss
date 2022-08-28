@@ -3,10 +3,6 @@ section.projects {
     @include theme($bg-color-02, null, $font-catamaran);
     text-align: center;
 
-    &:target {
-        scroll-margin-top: 3rem;
-    }
-
     .projetos_container {
         @include displayFlex(center, center, column);
         gap: 2rem;

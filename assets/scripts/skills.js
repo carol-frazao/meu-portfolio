@@ -1,22 +1,22 @@
 // Eventos ao clicar nas skills: animações e backgrounds
 function skillEvents() {
-  const container = getElement("#skills");
+  const container = get("#skills");
   const backgroundCover = () => (container.style.backgroundSize = "cover");
   const background = (image) =>
     (container.style.background = "url(" + image + ") center");
-  const btnResetBg = getElement("#btn-reset-bg");
-  const resetBgContainer = getElement(".resetBg");
+  const btnResetBg = get("#btn-reset-bg");
+  const resetBgContainer = get(".resetBg");
   const displayResetBG = () => (resetBgContainer.style.opacity = "1");
   const skills = {
-    html: getElement("#html-img"),
-    css: getElement("#css-img"),
-    js: getElement("#js-img"),
-    sass: getElement("#sass-img"),
-    react: getElement("#react-img"),
-    node: getElement("#node-img"),
-    git: getElement("#git-img"),
-    github: getElement("#github-img"),
-    figma: getElement("#figma-img"),
+    html: get("#html-img"),
+    css: get("#css-img"),
+    js: get("#js-img"),
+    sass: get("#sass-img"),
+    react: get("#react-img"),
+    node: get("#node-img"),
+    git: get("#git-img"),
+    github: get("#github-img"),
+    figma: get("#figma-img"),
   };
 
   // set rotate on click

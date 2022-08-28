@@ -216,7 +216,8 @@ header nav.nav-sections ul li {
   list-style: none;
   cursor: pointer;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  color: rgba(255, 255, 255, 0.881);
 }
 header nav.nav-sections ul li:hover {
   background-color: rgba(136, 136, 136, 0.158);
@@ -224,7 +225,6 @@ header nav.nav-sections ul li:hover {
 header nav.nav-sections ul li a {
   text-decoration: none;
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.881);
   transition: 0.2s all;
   display: block;
 }
@@ -299,12 +299,12 @@ header #btn-menu:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #1c1c1c;
   }
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
     font-size: 25px;
-    color: #1c1c1c;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -354,12 +354,12 @@ header nav.nav-sections ul li:hover #my-projects::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #1c1c1c;
   }
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
     font-size: 25px;
-    color: #1c1c1c;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -829,9 +829,6 @@ section.about {
   align-items: center;
   justify-content: center;
 }
-section.about:target {
-  scroll-margin-top: 4rem;
-}
 section.about #image-icon-about {
   max-width: 40px;
   max-height: 40px;
@@ -907,9 +904,6 @@ section.about .about-container .curriculo #arrow_download {
     max-width: 50px;
     max-height: 50px;
   }
-  section.about:target {
-    scroll-margin-top: 2rem;
-  }
   section.about .about-container {
     width: 100%;
     padding: 0;
@@ -966,9 +960,6 @@ section.skills {
   position: relative;
   min-height: 80vh;
   height: 80vh;
-}
-section.skills:target {
-  scroll-margin-top: 5rem;
 }
 section.skills .skillsContainer {
   display: flex;
@@ -1125,9 +1116,6 @@ section.projects {
   background: #242424;
   font-family: "Catamaran", sans-serif;
   text-align: center;
-}
-section.projects:target {
-  scroll-margin-top: 3rem;
 }
 section.projects .projetos_container {
   display: flex;
@@ -1295,9 +1283,6 @@ section.contact {
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
   min-height: 80vh;
-}
-section.contact:target {
-  scroll-margin-top: 1rem;
 }
 section.contact .title-contact {
   margin-top: 3rem;
@@ -1540,15 +1525,7 @@ section.contact .contact-container .send-message form textarea {
     padding: 8px;
   }
 }
-@media (min-width: 600px) {
-  section.contact:target {
-    scroll-margin-top: 1rem;
-  }
-}
 @media (min-width: 900px) {
-  section.contact:target {
-    scroll-margin-top: 2rem;
-  }
   section.contact #image-title-contact {
     width: 35px;
     height: 35px;
@@ -1673,28 +1650,27 @@ body {
   border-radius: 50%;
   bottom: 1rem;
   right: 1rem;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   z-index: 3;
   box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, 0.75);
   color: white;
   cursor: pointer;
   position: fixed;
   animation: back-to-top 0.5s infinite alternate-reverse;
+  text-decoration: none;
+  border: solid 3px #85c766;
 }
 .back-to-top::after {
   content: "▲";
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 2px;
-  font-size: 25px;
+  font-size: 28px;
   color: white;
 }
-.back-to-top:hover {
+.back-to-top:active {
   background-color: #1a1a1a;
-  border: solid 3px #85c766;
-  text-decoration: none;
 }
 @-webkit-keyframes back-to-top {
   from {

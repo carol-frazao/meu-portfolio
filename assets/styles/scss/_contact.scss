@@ -4,10 +4,6 @@ section.contact {
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
     min-height: 80vh;
 
-    &:target {
-        scroll-margin-top: 1rem;
-    }
-
     .title-contact {
         margin-top: 3rem;
     }
@@ -302,17 +298,7 @@ section.contact {
         }
     }
 
-    @include for-tablet-portrait {
-        &:target {
-            scroll-margin-top: 1rem;
-        }
-    }
-
     @include for-tablet-landscape {
-        &:target {
-            scroll-margin-top: 2rem;
-        }
-
         #image-title-contact {
             width: 35px;
             height: 35px;
