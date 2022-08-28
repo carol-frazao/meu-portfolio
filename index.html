@@ -684,7 +684,12 @@
           </div>
 
           <div class="send-message">
-            <form id="form" name="form">
+            <form
+              action="https://formspree.io/f/xyyvzbkv"
+              method="POST"
+              id="form"
+              name="form"
+            >
               <label for="nome"> Nome </label>
               <input
                 type="text"
@@ -692,6 +697,7 @@
                 id="nome"
                 placeholder="Digite seu nome"
                 class="input-form"
+                required
               />
 
               <label for="email"> E-mail </label>
@@ -701,6 +707,7 @@
                 id="email"
                 placeholder="Digite seu e-mail"
                 class="input-form"
+                required
               />
 
               <label for="assunto"> Assunto </label>
@@ -710,6 +717,7 @@
                 id="assunto"
                 placeholder="Sobre o que quer falar?"
                 class="input-form"
+                required
               />
 
               <label for="mensagem"> Mensagem </label>
@@ -719,13 +727,14 @@
                 cols="30"
                 rows="10"
                 placeholder="Deixe sua mensagem"
+                required
               ></textarea>
 
               <input
-                type="button"
+                type="submit"
                 value="Enviar"
                 id="btn-submit"
-                onclick="submitAnimation()"
+                onclick="envioMensagem()"
               />
             </form>
           </div>
@@ -758,6 +767,7 @@
     <script type="text/javascript" src="assets/scripts/timers.js"></script>
     <script type="text/javascript" src="assets/scripts/skills.js"></script>
     <script type="text/javascript" src="assets/scripts/navBar.js"></script>
+    <script type="text/javascript" src="assets/scripts/validations.js"></script>
 
     <script
       src="https://unpkg.com/react@17/umd/react.production.min.js"
