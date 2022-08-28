@@ -1289,7 +1289,7 @@ section.contact {
   background: #2c2c2c;
   color: rgba(255, 255, 255, 0.881);
   font-family: "Catamaran", sans-serif;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 section.contact:target {
   scroll-margin-top: 1rem;
@@ -1314,6 +1314,7 @@ section.contact .contact-container {
 section.contact .contact-container .infos-contact {
   padding: 0 2rem;
   width: 100%;
+  text-align: center;
 }
 section.contact .contact-container .infos-contact span {
   font-size: 18px;
@@ -1334,6 +1335,10 @@ section.contact .contact-container .infos-contact p img {
 }
 section.contact .contact-container .infos-contact ul {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 section.contact .contact-container .infos-contact ul li {
   list-style: none;
@@ -1410,9 +1415,7 @@ section.contact .contact-container .send-message form #btn-submit:active {
     text-align: center;
   }
   section.contact .contact-container .infos-contact ul {
-    display: flex;
     gap: 2rem;
-    justify-content: center;
   }
   section.contact .contact-container .send-message form {
     align-items: center;
@@ -1434,9 +1437,6 @@ section.contact .contact-container .send-message form textarea {
   }
 }
 @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
-  section.contact .contact-container:target {
-    scroll-margin-top: -3rem;
-  }
   section.contact .contact-container .infos-contact span {
     font-size: 24px;
   }
@@ -1506,9 +1506,6 @@ section.contact .contact-container .send-message form textarea {
     width: 90%;
     gap: 1rem;
   }
-  section.contact .contact-container:target {
-    scroll-margin-top: 2rem;
-  }
   section.contact .contact-container .infos-contact {
     width: 50%;
   }
@@ -1538,7 +1535,15 @@ section.contact .contact-container .send-message form textarea {
     padding: 8px;
   }
 }
+@media (min-width: 600px) {
+  section.contact:target {
+    scroll-margin-top: 1rem;
+  }
+}
 @media (min-width: 900px) {
+  section.contact:target {
+    scroll-margin-top: 2rem;
+  }
   section.contact #image-title-contact {
     width: 35px;
     height: 35px;
@@ -1552,7 +1557,7 @@ footer {
   background: url("/assets/img/skills-wallpaper/html-wallpaper.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1574,10 +1579,13 @@ footer .footer-container a {
   color: #eee;
 }
 footer .footer-container a i {
-  font-size: 14px;
+  font-size: 16px;
 }
 footer .footer-container a i:hover {
   color: rgb(0, 255, 200);
+}
+footer .footer-container a:nth-child(even) {
+  padding-left: 3px;
 }
 @media (min-width: 600px) {
   footer .footer-container #dev-dots-img {
@@ -1589,15 +1597,12 @@ footer .footer-container a i:hover {
 }
 @media (min-width: 900px) {
   footer {
-    height: 4rem;
+    height: 4.5rem;
   }
   footer .footer-container #dev-dots-img {
     width: 47px;
   }
   footer .footer-container strong {
-    font-size: 16px;
-  }
-  footer .footer-container a i {
     font-size: 16px;
   }
 }

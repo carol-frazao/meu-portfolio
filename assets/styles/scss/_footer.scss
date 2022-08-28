@@ -5,7 +5,7 @@ footer {
     background: url('/assets/img/skills-wallpaper/html-wallpaper.jpg');
     background-size: cover;
     background-attachment: fixed;
-    height: 3rem;
+    height: 4rem;
     @include flexCenter;
 
 
@@ -28,12 +28,16 @@ footer {
             color: #eee;
 
             i {
-                font-size: 14px;
+                font-size: 16px;
 
                 &:hover {
                     color: rgb(0, 255, 200);
                 }
             }
+        }
+
+        a:nth-child(even) {
+            padding-left: 3px;
         }
     }
 
@@ -50,7 +54,7 @@ footer {
     }
 
     @include for-tablet-landscape {
-        height: 4rem;
+        height: 4.5rem;
 
         .footer-container {
 
@@ -59,10 +63,6 @@ footer {
             }
 
             strong {
-                font-size: 16px;
-            }
-
-            a i {
                 font-size: 16px;
             }
         }

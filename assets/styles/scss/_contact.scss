@@ -2,7 +2,7 @@
 section.contact {
     @include displayFlex(center, center, column);
     @include theme($bg-color-01, $text-opaque-2, $font-catamaran);
-    min-height: 100vh;
+    min-height: 80vh;
 
     &:target {
         scroll-margin-top: 1rem;
@@ -27,6 +27,7 @@ section.contact {
         .infos-contact {
             padding: 0 2rem;
             width: 100%;
+            text-align: center;
 
             span {
                 @include textStyle(18px, bold, $text-opaque-2);
@@ -48,6 +49,10 @@ section.contact {
 
             ul {
                 padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
 
                 li {
                     list-style: none;
@@ -136,9 +141,7 @@ section.contact {
                 text-align: center;
 
                 ul {
-                    display: flex;
                     gap: 2rem;
-                    justify-content: center;
                 }
             }
 
@@ -169,9 +172,6 @@ section.contact {
         }
 
         @include for-large-devices-portrait {
-            &:target {
-                scroll-margin-top: -3rem;
-            }
 
             .infos-contact {
                 span {
@@ -256,9 +256,6 @@ section.contact {
         }
 
         @include for-desktop-up {
-            &:target {
-                scroll-margin-top: 2rem;
-            }
 
             width: 90%;
             gap: 1rem;
@@ -305,7 +302,17 @@ section.contact {
         }
     }
 
+    @include for-tablet-portrait {
+        &:target {
+            scroll-margin-top: 1rem;
+        }
+    }
+
     @include for-tablet-landscape {
+        &:target {
+            scroll-margin-top: 2rem;
+        }
+
         #image-title-contact {
             width: 35px;
             height: 35px;
