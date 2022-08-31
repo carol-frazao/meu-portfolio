@@ -73,12 +73,22 @@
     }
 }
 
-@keyframes anim-stars {
+@keyframes rotate-ball {
     from {
-        transform: translateY(0px);
+        transform: rotate(0);
     }
 
     to {
-        transform: translateY(-150px);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
     }
 }

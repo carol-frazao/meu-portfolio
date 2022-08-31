@@ -75,6 +75,45 @@ body {
     }
 }
 
+.floats-networks {
+    position: fixed;
+    bottom: 1%;
+    left: 0;
+
+    ul {
+        background-color: #fffefe22;
+        list-style: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px;
+
+        a {
+            display: block;
+            text-decoration: none;
+            font-size: 23px;
+            margin: 1px;
+        }
+
+        #linkedin-float {
+            color: rgb(44, 136, 222);
+            margin-bottom: 5px;
+        }
+
+        #github-float {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        #wpp-float {
+            color: rgb(82, 210, 47);
+        }
+    }
+
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
 .back-to-top {
     display: none;
     background: $text-green-strong;

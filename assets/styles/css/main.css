@@ -160,20 +160,28 @@ code {
     transform: rotateZ(360deg);
   }
 }
-@-webkit-keyframes anim-stars {
+@-webkit-keyframes rotate-ball {
   from {
-    transform: translateY(0px);
+    transform: rotate(0);
   }
   to {
-    transform: translateY(-150px);
+    transform: rotate(360deg);
   }
 }
-@keyframes anim-stars {
+@keyframes rotate-ball {
   from {
-    transform: translateY(0px);
+    transform: rotate(0);
   }
   to {
-    transform: translateY(-150px);
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
   }
 }
 header {
@@ -1661,6 +1669,41 @@ body {
 .title-section h4,
 .title-section h5 {
     font-size: 35px;
+  }
+}
+
+.floats-networks {
+  position: fixed;
+  bottom: 1%;
+  left: 0;
+}
+.floats-networks ul {
+  background-color: rgba(255, 254, 254, 0.1333333333);
+  list-style: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+}
+.floats-networks ul a {
+  display: block;
+  text-decoration: none;
+  font-size: 23px;
+  margin: 1px;
+}
+.floats-networks ul #linkedin-float {
+  color: rgb(44, 136, 222);
+  margin-bottom: 5px;
+}
+.floats-networks ul #github-float {
+  color: white;
+  margin-bottom: 5px;
+}
+.floats-networks ul #wpp-float {
+  color: rgb(82, 210, 47);
+}
+@media (min-width: 600px) {
+  .floats-networks {
+    display: none;
   }
 }
 
