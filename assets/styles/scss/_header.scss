@@ -129,7 +129,7 @@ header {
 
     @media (min-width: 600px) and (max-width: 899.9px) {
         nav.nav-sections {
-            @include nav-sections-responsive(70vw, 25px);
+            @include nav-sections-responsive(70vw, 22px);
 
             #close-nav {
                 font-size: 50px;

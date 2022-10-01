@@ -262,19 +262,19 @@ header #btn-menu:hover {
     line-height: 4rem;
   }
   header nav.nav-sections ul {
-    display: none;
+    display: flex;
     overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -150%;
     transition: 0.3s;
     height: 100vh;
     width: 100vw;
     background-color: #c7fa73;
     padding: 0;
-    padding-bottom: 17%;
+    padding-bottom: 15%;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -284,17 +284,18 @@ header #btn-menu:hover {
   header nav.nav-sections ul li {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #1c1c1c;
   }
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
+    height: 100%;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header nav.nav-sections ul li #my-projects {
     color: #1c1c1c;
@@ -321,19 +322,19 @@ header nav.nav-sections ul li:hover #my-projects::before {
 }
 @media (min-width: 600px) and (max-width: 899.9px) {
   header nav.nav-sections ul {
-    display: none;
+    display: flex;
     overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -150%;
     transition: 0.3s;
     height: 100vh;
     width: 70vw;
     background-color: #c7fa73;
     padding: 0;
-    padding-bottom: 17%;
+    padding-bottom: 15%;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -343,17 +344,18 @@ header nav.nav-sections ul li:hover #my-projects::before {
   header nav.nav-sections ul li {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #1c1c1c;
   }
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
-    font-size: 25px;
+    height: 100%;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header nav.nav-sections ul li #my-projects {
     color: #1c1c1c;

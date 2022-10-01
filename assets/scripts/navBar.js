@@ -5,15 +5,13 @@ function responsiveNavbar() {
   const btnCloseMenu = document.querySelectorAll(".close-menu");
 
   btnMenu.onclick = () => {
-    setTimeout(() => navList.style.display = "flex", 0);
-    setTimeout(() => navList.style.right = "0", 100);
-};
+    setTimeout(() => navList.style.right = "0", 0);
+  };
 
   btnCloseMenu.forEach((btn) => {
     btn.onclick = () => {
-      setTimeout(() => navList.style.right = "-100%", 0)
-      setTimeout(() => navList.style.display = "none", 100)
-  };
+      setTimeout(() => navList.style.right = "-150%", 0)
+    };
   });
 }
 responsiveNavbar();
