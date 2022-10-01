@@ -25,7 +25,6 @@ section.projects {
                 padding: 20px;
                 gap: 10px;
                 border-radius: 15px;
-                text-align: justify;
                 height: auto;
                 background-color: rgba(255, 255, 255, 0.062);
                 transition: .2s all;
@@ -44,6 +43,7 @@ section.projects {
                     @include textStyle(null, bold, $text-opaque-2);
                     font-size: clamp(10px, 5vw, 20px);
                     text-transform: uppercase;
+                    text-align: center;
                 }
 
                 .imagem_projeto img {
