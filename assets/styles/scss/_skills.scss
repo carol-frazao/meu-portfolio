@@ -73,6 +73,10 @@ section.skills {
             @include skillAfter(rgba(43, 81, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
         }
 
+        #skill-styledComponents::after {
+            @include skillAfter(rgba(218, 104, 167, 0.414), rgba(239, 192, 200, 0.508), rgba(239, 192, 200, 0.81))
+        }
+
         #skill-nodejs::after {
             @include skillAfter(rgba(42, 129, 65, 0.677), rgba(178, 203, 178, 0.445), rgb(189, 214, 193))
         }

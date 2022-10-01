@@ -110,7 +110,7 @@ header {
         line-height: 4rem;
 
         nav.nav-sections {
-            @include nav-sections-responsive(100vw, 25px);
+            @include nav-sections-responsive(100vw, 20px);
 
             #close-nav {
                 font-size: 50px;

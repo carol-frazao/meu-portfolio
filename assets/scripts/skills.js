@@ -13,6 +13,7 @@ function skillEvents() {
     js: get("#js-img"),
     sass: get("#sass-img"),
     react: get("#react-img"),
+    styled: get("#styled-img"),
     node: get("#node-img"),
     git: get("#git-img"),
     github: get("#github-img"),
@@ -58,6 +59,13 @@ function skillEvents() {
 
   skills.react.addEventListener("click", () => {
     background("assets/img/skills-wallpaper/react-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
+
+  skills.styled.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/styled-background.png");
     backgroundCover();
     displayResetBG();
     btnResetBg.style.cursor = "pointer";

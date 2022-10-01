@@ -81,27 +81,25 @@ body {
     left: 0;
 
     ul {
-        background-color: #fffefe22;
         list-style: none;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        padding: 5px;
+        padding: 8px;
 
         a {
             display: block;
             text-decoration: none;
-            font-size: 23px;
+            font-size: 20px;
             margin: 1px;
+            animation: scale .6s infinite alternate;
         }
 
         #linkedin-float {
             color: rgb(44, 136, 222);
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
 
         #github-float {
             color: white;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
 
         #wpp-float {

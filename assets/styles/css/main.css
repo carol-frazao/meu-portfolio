@@ -263,14 +263,18 @@ header #btn-menu:hover {
   }
   header nav.nav-sections ul {
     display: none;
-    justify-content: center;
+    overflow: hidden;
     flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    right: 0;
-    padding: 0 0 6rem;
+    top: 0;
+    right: -100%;
+    transition: 0.3s;
     height: 100vh;
     width: 100vw;
     background-color: #c7fa73;
+    padding: 0;
+    padding-bottom: 17%;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -288,7 +292,7 @@ header #btn-menu:hover {
   header nav.nav-sections ul li a {
     display: block;
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -318,14 +322,18 @@ header nav.nav-sections ul li:hover #my-projects::before {
 @media (min-width: 600px) and (max-width: 899.9px) {
   header nav.nav-sections ul {
     display: none;
-    justify-content: center;
+    overflow: hidden;
     flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    right: 0;
-    padding: 0 0 6rem;
+    top: 0;
+    right: -100%;
+    transition: 0.3s;
     height: 100vh;
     width: 70vw;
     background-color: #c7fa73;
+    padding: 0;
+    padding-bottom: 17%;
   }
   header nav.nav-sections ul #close-nav {
     display: inline-flex;
@@ -1023,6 +1031,11 @@ section.skills .skillsContainer #skill-reactjs::after {
   border-top: solid 2px rgba(181, 195, 216, 0.445);
   border-bottom: solid 3px rgb(164, 167, 186);
 }
+section.skills .skillsContainer #skill-styledComponents::after {
+  background-color: rgba(218, 104, 167, 0.414);
+  border-top: solid 2px rgba(239, 192, 200, 0.508);
+  border-bottom: solid 3px rgba(239, 192, 200, 0.81);
+}
 section.skills .skillsContainer #skill-nodejs::after {
   background-color: rgba(42, 129, 65, 0.677);
   border-top: solid 2px rgba(178, 203, 178, 0.445);
@@ -1654,25 +1667,24 @@ body {
   left: 0;
 }
 .floats-networks ul {
-  background-color: rgba(255, 254, 254, 0.1333333333);
   list-style: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 5px;
+  padding: 8px;
 }
 .floats-networks ul a {
   display: block;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 20px;
   margin: 1px;
+  -webkit-animation: scale 0.6s infinite alternate;
+          animation: scale 0.6s infinite alternate;
 }
 .floats-networks ul #linkedin-float {
   color: rgb(44, 136, 222);
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 .floats-networks ul #github-float {
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 .floats-networks ul #wpp-float {
   color: rgb(82, 210, 47);

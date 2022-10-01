@@ -41,7 +41,7 @@
     <header>
       <!-- Home index -->
       <div class="home">
-        <a href="index.html"> <strong> Carol </strong> Frazão </a>
+        <a href="/"> <strong> Carol </strong> Frazão </a>
       </div>
 
       <!-- Navegar entre as sessões da página -->
@@ -137,7 +137,7 @@
           <div class="btn-iniciar" id="start">
             <span>Vamos lá?</span>
 
-            <a id="start" href="#" onclick="scrollar('#about')">
+            <a id="start" onclick="scrollar('#about')">
               <img
                 src="assets/img/icons/press-start.png"
                 alt="Start"
@@ -326,6 +326,17 @@
                   alt="ReactJS"
                   class="skill-img"
                   id="react-img"
+                  onclick="skillEvents()"
+                />
+              </div>
+
+              <div class="swiper-slide skill" id="skill-styledComponents">
+                <strong> STYLED COMPONENTS </strong>
+                <img
+                  src="./assets//img/styled-components.png"
+                  alt="Styled Components"
+                  class="skill-img"
+                  id="styled-img"
                   onclick="skillEvents()"
                 />
               </div>
