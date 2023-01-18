@@ -1363,19 +1363,22 @@ section.contact .contact-container .send-message form {
   display: flex;
   flex-direction: column;
 }
-section.contact .contact-container .send-message form input,
-section.contact .contact-container .send-message form textarea {
+section.contact .contact-container .send-message form .input-container {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 11px;
+}
+section.contact .contact-container .send-message form .input-container input,
+section.contact .contact-container .send-message form .input-container textarea {
+  width: 100%;
   border-radius: 5px;
   border: solid 2px #069134;
   background-color: #eee;
 }
-section.contact .contact-container .send-message form input {
+section.contact .contact-container .send-message form .input-container input {
   padding: 5px;
   font-size: 14px;
 }
-section.contact .contact-container .send-message form textarea {
+section.contact .contact-container .send-message form .input-container textarea {
   padding: 7px;
   resize: none;
   height: 10rem;
@@ -1386,15 +1389,21 @@ section.contact .contact-container .send-message form #btn-submit {
   color: inherit;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 8px;
   cursor: pointer;
   padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
   transition: 0.2s;
   background-color: #85c766;
   color: white;
 }
 section.contact .contact-container .send-message form #btn-submit:active {
   transform: scale(0.95);
+}
+section.contact .contact-container .inputFeedback {
+  margin-top: -1rem;
+  color: red;
 }
 @media (min-width: 600px) {
   section.contact .contact-container {

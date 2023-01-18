@@ -722,52 +722,66 @@
               id="form"
               name="form"
             >
-              <label for="nome"> Nome </label>
-              <input
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Digite seu nome"
-                class="input-form"
-                required
-              />
+              <div class="input-container">
+                <label for="nome"> Nome </label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="Digite seu nome"
+                  class="input-form"
+                  onblur="hideFeedback()"
+                  required
+                />
+                <i class="inputFeedback" id="nameFeedback"></i>
+              </div>
 
-              <label for="email"> E-mail </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Digite seu e-mail"
-                class="input-form"
-                required
-              />
+              <div class="input-container">
+                <label for="email"> E-mail </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Digite seu e-mail"
+                  class="input-form"
+                  onblur="hideFeedback()"
+                  required
+                />
+                <i class="inputFeedback" id="emailFeedback"></i>
+              </div>
 
-              <label for="assunto"> Assunto </label>
-              <input
-                type="text"
-                name="assunto"
-                id="assunto"
-                placeholder="Sobre o que quer falar?"
-                class="input-form"
-                required
-              />
+              <div class="input-container">
+                <label for="assunto"> Assunto </label>
+                <input
+                  type="text"
+                  name="assunto"
+                  id="assunto"
+                  placeholder="Sobre o que quer falar?"
+                  class="input-form"
+                  onblur="hideFeedback()"
+                  required
+                />
+                <i class="inputFeedback" id="assuntoFeedback"></i>
+              </div>
 
-              <label for="mensagem"> Mensagem </label>
-              <textarea
-                name="mensagem"
-                id="mensagem"
-                cols="30"
-                rows="10"
-                placeholder="Deixe sua mensagem"
-                required
-              ></textarea>
+              <div class="input-container">
+                <label for="mensagem"> Mensagem </label>
+                <textarea
+                  name="mensagem"
+                  id="mensagem"
+                  cols="30"
+                  rows="10"
+                  placeholder="Deixe sua mensagem"
+                  onblur="hideFeedback()"
+                  required
+                ></textarea>
+                <i class="inputFeedback" id="mensagemFeedback"></i>
+              </div>
 
-              <input
-                type="submit"
-                value="Enviar"
-                id="btn-submit"
-                onclick="envioMensagem()"
-              />
+              <button type="submit" id="btn-submit" onclick="validaCampo()">
+                Enviar
+              </button>
+
             </form>
           </div>
         </div>
@@ -838,6 +852,7 @@
     <script type="text/javascript" src="assets/scripts/navBar.js"></script>
     <script type="text/javascript" src="assets/scripts/validations.js"></script>
     <script type="text/javascript" src="assets/scripts/scroll.js"></script>
+    <script type="text/javascript" src="assets/scripts/hideFeedback.js"></script>
 
     <script
       src="https://unpkg.com/react@17/umd/react.production.min.js"

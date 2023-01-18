@@ -1,18 +1,18 @@
-function envioMensagem() {
+function validaCampo() {
   if (document.form.nome.value == "") {
-    alert("Preencha seu nome");
+    document.getElementById('nameFeedback').innerText = "Insira seu nome"
     document.form.nome.focus();
     return false;
   }
 
   if (document.form.nome.value.length < 3) {
-    alert("O nome precisa ter no mínimo 3 caracteres");
+    document.getElementById('nameFeedback').innerText = "Nome precisa ter no mínimo 3 caracteres"
     document.form.nome.focus();
     return false;
   }
 
   if (document.form.email.value == "") {
-    alert("O e-mail é obrigatório");
+    document.getElementById('emailFeedback').innerText = "Insira seu e-mail"
     return false;
   }
 
@@ -20,19 +20,19 @@ function envioMensagem() {
     document.form.email.value.indexOf("@") == -1 ||
     document.form.email.value.indexOf(".") == -1
   ) {
-    alert("Insira um e-mail válido");
+    document.getElementById('emailFeedback').innerText = "Formato inválido"
     document.form.email.focus();
     return false;
   }
 
   if (document.form.assunto.value == "") {
-    alert("Defina um assunto para a sua mensagem");
+    document.getElementById('assuntoFeedback').innerText = "Defina um assunto para esta mensagem"
     document.form.assunto.focus();
     return false;
   }
 
   if (document.form.mensagem.value == "") {
-    alert("Digite sua mensagem");
+    document.getElementById('mensagemFeedback').innerText = "Digite sua mensagem"
     document.form.assunto.focus();
     return false;
   }
