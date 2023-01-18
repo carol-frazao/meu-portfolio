@@ -1,23 +1,24 @@
 // Eventos ao clicar nas skills: animações e backgrounds
 function skillEvents() {
-  const container = get("#skills");
+  const container = document.getElementById("skills");
   const backgroundCover = () => (container.style.backgroundSize = "cover");
   const background = (image) =>
     (container.style.background = "url(" + image + ") center");
-  const btnResetBg = get("#btn-reset-bg");
-  const resetBgContainer = get(".resetBg");
+  const btnResetBg = document.getElementById("btn-reset-bg");
+  const resetBgContainer = document.querySelector(".resetBg");
   const displayResetBG = () => (resetBgContainer.style.opacity = "1");
   const skills = {
-    html: get("#html-img"),
-    css: get("#css-img"),
-    js: get("#js-img"),
-    sass: get("#sass-img"),
-    react: get("#react-img"),
-    styled: get("#styled-img"),
-    node: get("#node-img"),
-    git: get("#git-img"),
-    github: get("#github-img"),
-    figma: get("#figma-img"),
+    html: document.getElementById("html-img"),
+    css: document.getElementById("css-img"),
+    js: document.getElementById("js-img"),
+    sass: document.getElementById("sass-img"),
+    react: document.getElementById("react-img"),
+    styled: document.getElementById("styled-img"),
+    node: document.getElementById("node-img"),
+    git: document.getElementById("git-img"),
+    github: document.getElementById("github-img"),
+    figma: document.getElementById("figma-img"),
+    bootstrap: document.getElementById('bootstrap-img')
   };
 
   // set rotate on click
@@ -94,6 +95,13 @@ function skillEvents() {
 
   skills.figma.addEventListener("click", () => {
     background("assets/img/skills-wallpaper/figma-background.jpg");
+    backgroundCover();
+    displayResetBG();
+    btnResetBg.style.cursor = "pointer";
+  });
+
+  skills.bootstrap.addEventListener("click", () => {
+    background("assets/img/skills-wallpaper/bootstrap-background.jpg");
     backgroundCover();
     displayResetBG();
     btnResetBg.style.cursor = "pointer";
