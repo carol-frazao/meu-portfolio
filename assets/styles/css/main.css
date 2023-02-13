@@ -41,18 +41,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@-webkit-keyframes pisca {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes pisca {
   0% {
     opacity: 1;
@@ -64,28 +52,12 @@ code {
     opacity: 1;
   }
 }
-@-webkit-keyframes scale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
 @keyframes scale {
   from {
     transform: scale(1);
   }
   to {
     transform: scale(0.9);
-  }
-}
-@-webkit-keyframes code-scale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
   }
 }
 @keyframes code-scale {
@@ -96,25 +68,9 @@ code {
     transform: scale(1.1);
   }
 }
-@-webkit-keyframes css-js-move {
-  from {
-    transform: translateY(30px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 @keyframes css-js-move {
   from {
     transform: translateY(30px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes arrow-move {
-  from {
-    transform: translateY(10px);
   }
   to {
     transform: translateY(0);
@@ -128,28 +84,12 @@ code {
     transform: translateY(0);
   }
 }
-@-webkit-keyframes move-img-slide {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(10px);
-  }
-}
 @keyframes move-img-slide {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(10px);
-  }
-}
-@-webkit-keyframes rotate-img-slide {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(360deg);
   }
 }
 @keyframes rotate-img-slide {
@@ -177,7 +117,6 @@ header {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   transition: 0.2s all;
 }
@@ -305,7 +244,7 @@ header #btn-menu:hover {
     border-left: solid 10px #1c1c1c;
   }
   header nav.nav-sections ul li:hover a::before,
-header nav.nav-sections ul li:hover #my-projects::before {
+  header nav.nav-sections ul li:hover #my-projects::before {
     content: url("/assets/img/icons/guia.png");
     padding-right: 5px;
   }
@@ -365,7 +304,7 @@ header nav.nav-sections ul li:hover #my-projects::before {
     border-left: solid 10px #1c1c1c;
   }
   header nav.nav-sections ul li:hover a::before,
-header nav.nav-sections ul li:hover #my-projects::before {
+  header nav.nav-sections ul li:hover #my-projects::before {
     content: url("/assets/img/icons/guia.png");
     padding-right: 5px;
   }
@@ -489,8 +428,7 @@ section.inicio .apresentacao div.text_apresentacao h1 {
 section.inicio .apresentacao div.text_apresentacao h1::after {
   content: "|";
   opacity: 1;
-  -webkit-animation: pisca 0.7s infinite;
-          animation: pisca 0.7s infinite;
+  animation: pisca 0.7s infinite;
 }
 section.inicio .apresentacao div.text_apresentacao p.descricao {
   font-size: 16px;
@@ -596,8 +534,7 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
   section.inicio .apresentacao div.text_apresentacao h1::after {
     content: "|";
     opacity: 1;
-    -webkit-animation: pisca 0.7s infinite;
-            animation: pisca 0.7s infinite;
+    animation: pisca 0.7s infinite;
   }
   section.inicio .apresentacao div.text_apresentacao p.descricao {
     font-size: 16px;
@@ -662,8 +599,7 @@ section.inicio .vetores-container .vetores .vetores-children #code_symbol {
   transition: 0.6s;
   width: 40px;
   height: auto;
-  -webkit-animation: code-scale 1.3s infinite alternate ease-in 2.5s;
-          animation: code-scale 1.3s infinite alternate ease-in 2.5s;
+  animation: code-scale 1.3s infinite alternate ease-in 2.5s;
   top: -9em;
   left: -1.5em;
 }
@@ -866,8 +802,7 @@ section.about .about-container .curriculo #arrow_download {
   width: 25px;
   height: 25px;
   margin-top: 8px;
-  -webkit-animation: arrow-move 0.7s infinite alternate;
-          animation: arrow-move 0.7s infinite alternate;
+  animation: arrow-move 0.7s infinite alternate;
   transition: 0.2s;
 }
 @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
@@ -977,7 +912,6 @@ section.skills .skillsContainer .skill-img {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 section.skills .skillsContainer .skill {
@@ -998,8 +932,7 @@ section.skills .skillsContainer .skill img {
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
-  -webkit-animation: move-img-slide 1s infinite alternate;
-          animation: move-img-slide 1s infinite alternate;
+  animation: move-img-slide 1s infinite alternate;
 }
 section.skills .skillsContainer .skill::after {
   content: "";
@@ -1099,7 +1032,7 @@ section.skills .resetBg i:hover {
     height: 100vh;
   }
   section.skills .skillsContainer .swiper,
-section.skills .skillsContainer .skill-img {
+  section.skills .skillsContainer .skill-img {
     width: 95%;
   }
   section.skills .skillsContainer .skill img {
@@ -1175,6 +1108,7 @@ section.projects .projetos_container .cards .card_projeto .links_projeto {
   display: flex;
   padding: 0 0 6px;
   width: 100%;
+  cursor: pointer;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a {
   font-weight: bold;
@@ -1189,6 +1123,12 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a {
 section.projects .projetos_container .cards .card_projeto .links_projeto a:hover {
   background-color: #85c766;
   color: #242424;
+}
+section.projects .meus_trabalhos {
+  padding: 0 2rem 4rem !important;
+}
+section.projects .link-myWork {
+  justify-content: center;
 }
 @media (max-width: 599.9px) {
   section.projects .cards {
@@ -1422,7 +1362,7 @@ section.contact .contact-container .inputFeedback {
     width: 80%;
   }
   section.contact .contact-container .send-message form input,
-section.contact .contact-container .send-message form textarea {
+  section.contact .contact-container .send-message form textarea {
     width: 80%;
   }
 }
@@ -1448,7 +1388,7 @@ section.contact .contact-container .send-message form textarea {
     font-size: 18px;
   }
   section.contact .contact-container .send-message form input,
-section.contact .contact-container .send-message form textarea {
+  section.contact .contact-container .send-message form textarea {
     padding: 10px;
     font-size: 18px;
   }
@@ -1494,7 +1434,7 @@ section.contact .contact-container .send-message form textarea {
     padding: 6px;
   }
   section.contact .contact-container .send-message form input,
-section.contact .contact-container .send-message form textarea {
+  section.contact .contact-container .send-message form textarea {
     width: 100%;
     font-size: 16px;
   }
@@ -1525,7 +1465,7 @@ section.contact .contact-container .send-message form textarea {
     padding-right: 2rem;
   }
   section.contact .contact-container .send-message form input,
-section.contact .contact-container .send-message form textarea {
+  section.contact .contact-container .send-message form textarea {
     width: 100%;
   }
   section.contact .contact-container .send-message form #btn-submit {
@@ -1646,28 +1586,28 @@ body {
 }
 @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
   .title-section h1,
-.title-section h2,
-.title-section h3,
-.title-section h4,
-.title-section h5 {
+  .title-section h2,
+  .title-section h3,
+  .title-section h4,
+  .title-section h5 {
     font-size: 28px;
   }
 }
 @media (min-width: 900px) {
   .title-section h1,
-.title-section h2,
-.title-section h3,
-.title-section h4,
-.title-section h5 {
+  .title-section h2,
+  .title-section h3,
+  .title-section h4,
+  .title-section h5 {
     font-size: 32px;
   }
 }
 @media (min-width: 1200px) {
   .title-section h1,
-.title-section h2,
-.title-section h3,
-.title-section h4,
-.title-section h5 {
+  .title-section h2,
+  .title-section h3,
+  .title-section h4,
+  .title-section h5 {
     font-size: 35px;
   }
 }
@@ -1686,8 +1626,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   margin: 1px;
-  -webkit-animation: scale 0.6s infinite alternate;
-          animation: scale 0.6s infinite alternate;
+  animation: scale 0.6s infinite alternate;
 }
 .floats-networks ul #linkedin-float {
   color: rgb(44, 136, 222);
@@ -1733,14 +1672,6 @@ body {
 }
 .back-to-top:active {
   background-color: #1a1a1a;
-}
-@-webkit-keyframes back-to-top {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(8px);
-  }
 }
 @keyframes back-to-top {
   from {

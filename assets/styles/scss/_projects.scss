@@ -60,6 +60,7 @@ section.projects {
                     display: flex;
                     padding: 0 0 6px;
                     width: 100%;
+                    cursor: pointer;
 
                     a {
                         @include textStyle(null, bold, $text-opaque-2);
@@ -77,6 +78,13 @@ section.projects {
                 }
             }
         }
+    }
+
+    .meus_trabalhos {
+        padding: 0 2rem 4rem !important;
+    }
+    .link-myWork {
+        justify-content: center;
     }
 
     @include for-phone-only {
