@@ -421,7 +421,7 @@
           </div>
 
           <div class="cards">
-            <div class="card1 card_projeto">
+            <div class="card1 card_projeto portfolio">
               <div class="titulo_projeto">
                 <span> Meu portfólio </span>
               </div>
@@ -435,34 +435,91 @@
 
               <div class="descricao_projeto">
                 <p>
-                  Este é meu portfólio profissional, onde disponibilizo meus
-                  projetos e algumas informações pessoais. Prototipei com Figma
-                  e desenvolvi utilizando HTML, pré-processador Sass, e
-                  Javascript. Todos os meus projetos futuros serão publicados
-                  aqui. 😉
+                  Este é meu portfólio, onde disponibilizo meus
+                  projetos e algumas informações pessoais. Desenvolvi utilizando HTML, pré-processador Sass e
+                  Javascript. Todos os meus projetos futuros serão publicados aqui. 😉
                 </p>
               </div>
 
-              <div class="links_projeto">
-                <a
+              <div class="links_projeto link-com-prototipo">
+                <div class="link-group">
+                  <a
                   href="https://github.com/carol-frazao/meu-portfolio"
                   class="repositorio"
                   target="_blank"
-                >
-                  Repositório
-                </a>
-
-                <a
+                  >
+                    Repositório
+                  </a>
+                  <a
+                  href="https://www.figma.com/file/ecwVPO34CYVgadFTokgpQL/Meu-portf%C3%B3lio?node-id=0%3A1&t=UDWelSjsIE1UlfGC-0"
+                  class="acessarPrototipo"
+                  target="_blank"
+                  >
+                    Protótipo
+                  </a>
+                </div>
+                <div>
+                  <a
                   href="https://carol-frazao.vercel.app"
                   class="acessarProjeto"
                   target="_blank"
-                >
-                  Aplicação
-                </a>
+                  >
+                    Aplicação
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div class="card2 card_projeto">
+            <div class="card5 card_projeto big-burguer">
+              <div class="titulo_projeto">
+                <span> Big Burguer </span>
+              </div>
+
+              <div class="imagem_projeto">
+                <img
+                  src="assets/img/Projetos/bigBurger_devices.png"
+                  alt="Big Burguer"
+                />
+              </div>
+
+              <div class="descricao_projeto">
+                <p>
+                  O Big Burguer é uma proposta de página SPA para uma
+                  hamburgueria. Este é um projeto em React, ainda em desenvolvimento. Você pode acompanhá-lo logo aqui 👇
+                </p>
+              </div>
+
+              <div class="links_projeto link-com-prototipo">
+                <div class="link-group">
+                  <a
+                  class="repositorio"
+                  href="https://github.com/carol-frazao/big-burguer"
+                  target="_blank"
+                  >
+                    Repositório
+                  </a>
+
+                  <a
+                    class="acessarPrototipo"
+                    href="https://www.figma.com/file/F71VuC20bWmbkTk3saZOm5/Big-Burguer?node-id=14%3A239&t=PiRUrOUGf63z8eBx-1"
+                    target="_blank"
+                  >
+                    Protótipo
+                  </a>
+                </div>
+                <div>
+                  <a
+                  class="acessarProjeto"
+                  href="https://bigburguer.netlify.app/"
+                  target="_blank"
+                  >
+                    Aplicação
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card2 card_projeto dh-games">
               <div class="titulo_projeto">
                 <span> DH Games </span>
               </div>
@@ -499,7 +556,7 @@
               </div>
             </div>
 
-            <div class="card3 card_projeto">
+            <div class="card3 card_projeto pokedex">
               <div class="titulo_projeto">
                 <span> Pokédex </span>
               </div>
@@ -540,7 +597,7 @@
               </div>
             </div>
 
-            <div class="card4 card_projeto">
+            <div class="card4 card_projeto calculadora">
               <div class="titulo_projeto">
                 <span> Calculadora </span>
               </div>
@@ -580,47 +637,7 @@
               </div>
             </div>
 
-            <div class="card5 card_projeto">
-              <div class="titulo_projeto">
-                <span> Big Burguer - Em breve </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/bigBurger_devices.png"
-                  alt="Big Burguer"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  O Big Burguer é uma proposta de página SPA para uma
-                  hamburgueria. Estou desenvolvendo em React e estilizando com
-                  Sass e Styled Components, em breve disponibilizarei a
-                  aplicação aqui. Por hora, acesse a UI do projeto 👇
-                </p>
-              </div>
-
-              <div class="links_projeto">
-                <a
-                  class="repositorio"
-                  href="https://github.com/carol-frazao/big-burguer"
-                  target="_blank"
-                >
-                  Repositório
-                </a>
-
-                <a
-                  class="acessarProjeto"
-                  href="./assets/documents/BigBurguer_UI.pdf"
-                  target="_blank"
-                >
-                  Protótipo
-                </a>
-              </div>
-            </div>
-
-            <div class="card6 card_projeto">
+            <div class="card6 card_projeto star-guide">
               <div class="titulo_projeto">
                 <span> Star Guide - Em breve </span>
               </div>
@@ -636,15 +653,14 @@
                 <p>
                   O Star Guide será um guia de filmes, séries, animes e
                   documentários, com sinopse, trailer e avaliações da
-                  comunidade, tudo para ajudar os usuários a escolher os
-                  melhores títulos e maratonar. Este projeto está em fase
-                  inicial; no momento estou projetando sua UI, logo
-                  disponibilizarei o protótipo.
+                  comunidade, a fim de ajudar os usuários a escolher os
+                  melhores títulos para maratonar. Este projeto está em fase
+                  inicial; estou criando o protótipo e logo disponilizarei aqui.
                 </p>
               </div>
 
-              <div class="links_projeto">
-                <a class="repositorio" target="_blank" onclick="handleClick()">
+              <!-- <div class="links_projeto">
+                <a class="repositorio" target="_blank" onclick="handleClick()" disabled>
                   Repositório
                 </a>
 
@@ -655,7 +671,7 @@
                 >
                   Protótipo
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

@@ -1119,10 +1119,29 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a {
   border: solid 1px rgba(143, 211, 112, 0.5411764706);
   border-radius: 8px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a:hover {
   background-color: #85c766;
   color: #242424;
+}
+section.projects .projetos_container .cards .card_projeto .link-com-prototipo {
+  flex-direction: column;
+  gap: 10px;
+}
+section.projects .projetos_container .cards .card_projeto .link-com-prototipo .link-group {
+  display: flex;
+  gap: 10px;
+}
+section.projects .projetos_container .cards .card_projeto .link-com-prototipo .link-group a {
+  display: inline-block;
+  width: 50%;
+}
+section.projects .projetos_container .cards .card_projeto .link-com-prototipo .acessarProjeto {
+  display: inline-block;
+  width: 100%;
 }
 section.projects .meus_trabalhos {
   padding: 0 2rem 4rem !important;

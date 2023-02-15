@@ -69,11 +69,31 @@ section.projects {
                         border: solid 1px #8fd3708a;
                         border-radius: 8px;
                         text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
 
                         &:hover {
                             background-color: $text-green-strong;
                             color: #242424;
                         }
+                    }
+                }
+                .link-com-prototipo {
+                    flex-direction: column;
+                    gap: 10px;
+                    .link-group {
+                        display: flex;
+                        gap: 10px;
+                        a {
+                            display: inline-block;
+                            width: 50%;
+                        }
+                    }
+                    .acessarProjeto {
+                        display: inline-block;
+                        width: 100%;
                     }
                 }
             }
