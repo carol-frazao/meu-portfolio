@@ -127,7 +127,7 @@ header .home a {
   transition: 0.3s;
 }
 header .home a:hover > strong {
-  color: #9cf78e;
+  color: #adf48a;
 }
 header nav.nav-sections {
   height: 100%;
@@ -152,7 +152,7 @@ header nav.nav-sections ul li a {
   display: block;
 }
 header nav.nav-sections ul li #my-projects {
-  color: #9cf78e;
+  color: #adf48a;
 }
 header nav.nav-sections #close-nav {
   display: none;
@@ -181,7 +181,7 @@ header nav.networks ul li a {
   color: rgba(255, 255, 255, 0.881);
 }
 header nav.networks ul li a:hover {
-  color: #9cf78e;
+  color: #adf48a;
 }
 header nav.networks ul li a i {
   padding-right: 5px;
@@ -193,7 +193,7 @@ header #btn-menu {
   cursor: pointer;
 }
 header #btn-menu:hover {
-  color: #9cf78e;
+  color: #adf48a;
 }
 @media (max-width: 599.9px) {
   header {
@@ -323,7 +323,7 @@ header #btn-menu:hover {
     font-size: 20px;
   }
   header nav.networks #send-email a:hover > i {
-    color: #9cf78e;
+    color: #adf48a;
   }
   header #btn-menu {
     display: block;
@@ -364,7 +364,7 @@ header #btn-menu:hover {
   }
   header nav.networks #send-email a i {
     background-color: rgba(238, 238, 238, 0.1);
-    color: #9cf78e;
+    color: #adf48a;
     border-radius: 50%;
     padding: 12px;
   }
@@ -407,7 +407,7 @@ section.inicio .apresentacao {
   gap: 1.5rem;
 }
 section.inicio .apresentacao div.front_container {
-  background-color: #abed8d;
+  background-color: #adf48a;
   width: 13rem;
   border-radius: 8px;
   padding: 3px;
@@ -939,7 +939,7 @@ section.skills .skillsContainer .skill::after {
   height: 9px;
   width: 60px;
   border-radius: 50%;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 section.skills .skillsContainer #skill-html::after {
   background-color: rgba(110, 34, 34, 0.775);
@@ -997,7 +997,7 @@ section.skills .skillsContainer div.swiper-button-next {
 }
 section.skills .skillsContainer div.swiper-button-prev:hover,
 section.skills .skillsContainer div.swiper-button-next:hover {
-  color: #89df62;
+  color: #91ea67;
 }
 section.skills .resetBg {
   position: absolute;
@@ -1084,7 +1084,7 @@ section.projects .projetos_container .cards .card_projeto::before {
   content: "";
   width: 50%;
   height: 7px;
-  background: #85c766;
+  background: #91ea67;
   border-radius: 20px;
   position: relative;
   bottom: 20px;
@@ -1116,7 +1116,7 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a {
   background: #2c2c2c;
   font-family: "Play", sans-serif;
   text-decoration: none;
-  border: solid 1px rgba(143, 211, 112, 0.5411764706);
+  border: solid 1px rgba(155, 238, 117, 0.5411764706);
   border-radius: 8px;
   text-align: center;
   display: flex;
@@ -1124,7 +1124,7 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a {
   justify-content: center;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a:hover {
-  background-color: #89df62;
+  background-color: #91ea67;
   color: #242424;
 }
 section.projects .projetos_container .cards .card_projeto .link-com-prototipo {
@@ -1344,7 +1344,7 @@ section.contact .contact-container .send-message form .label-float textarea {
   resize: none;
 }
 section.contact .contact-container .send-message form .label-float textarea:focus {
-  border: solid 2px #9cf78e !important;
+  border: solid 2px #adf48a !important;
 }
 section.contact .contact-container .send-message form .label-float input, section.contact .contact-container .send-message form .label-float textarea {
   color: white;
@@ -1361,7 +1361,7 @@ section.contact .contact-container .send-message form .label-float input, sectio
   -webkit-appearance: none;
 }
 section.contact .contact-container .send-message form .label-float input:focus, section.contact .contact-container .send-message form .label-float textarea:focus {
-  border-bottom: 2px solid #9cf78e;
+  border-bottom: 2px solid #adf48a;
 }
 section.contact .contact-container .send-message form .label-float input::-moz-placeholder, section.contact .contact-container .send-message form .label-float textarea::-moz-placeholder {
   color: transparent;
@@ -1412,7 +1412,7 @@ section.contact .contact-container .send-message form #btn-submit {
   border-radius: 3px;
   border: none;
   transition: 0.1s;
-  background-color: #89df62;
+  background-color: #91ea67;
   color: black;
 }
 section.contact .contact-container .send-message form #btn-submit:hover {
@@ -1624,7 +1624,7 @@ html {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #89df62 rgba(255, 255, 255, 0.062);
+  scrollbar-color: #91ea67 rgba(255, 255, 255, 0.062);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -1637,7 +1637,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #89df62;
+  background-color: #91ea67;
   border-radius: 20px;
 }
 
@@ -1662,7 +1662,7 @@ body {
   transition: all 0.2s;
   font-size: 24px;
   font-weight: bold;
-  color: #89df62;
+  color: #91ea67;
 }
 @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
   .title-section h1,
@@ -1727,7 +1727,7 @@ body {
 
 .back-to-top {
   display: none;
-  background: #89df62;
+  background: #91ea67;
   border-radius: 50%;
   bottom: 1rem;
   right: 1rem;
@@ -1740,7 +1740,7 @@ body {
   position: fixed;
   animation: back-to-top 0.5s infinite alternate-reverse;
   text-decoration: none;
-  border: solid 3px #89df62;
+  border: solid 3px #91ea67;
 }
 .back-to-top::after {
   content: "▲";
@@ -1748,7 +1748,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  color: white;
+  color: #fff;
 }
 .back-to-top:active {
   background-color: #1a1a1a;
