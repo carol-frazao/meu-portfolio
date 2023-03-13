@@ -128,7 +128,6 @@ section.contact {
                         transition: all .3s ease-out;
                         -webkit-transition: all .3s ease-out;
                         -moz-transition: all .3s ease-out;
-                        -webkit-appearance: none;
                         &:focus {
                             border-bottom: 2px solid $text-green-light;
                         }
@@ -174,9 +173,9 @@ section.contact {
                     border: none;
                     transition: .1s;
                     background-color: $text-green-strong;
-                    color: black;
+                    color: #2b2b2b;
                     &:hover {
-                        box-shadow: 0 0 3px 2px #ceedba8d;
+                        box-shadow: 0 0 4px 2px #ceedba8d;
                     }
                     &:active {
                         transform: scale(.95);

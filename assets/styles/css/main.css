@@ -22,12 +22,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-button,
-[type=submit] {
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-
 p {
   -webkit-margin-start: 0;
           margin-inline-start: 0;
@@ -1358,7 +1352,6 @@ section.contact .contact-container .send-message form .label-float input, sectio
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
-  -webkit-appearance: none;
 }
 section.contact .contact-container .send-message form .label-float input:focus, section.contact .contact-container .send-message form .label-float textarea:focus {
   border-bottom: 2px solid #adf48a;
@@ -1413,10 +1406,10 @@ section.contact .contact-container .send-message form #btn-submit {
   border: none;
   transition: 0.1s;
   background-color: #91ea67;
-  color: black;
+  color: #2b2b2b;
 }
 section.contact .contact-container .send-message form #btn-submit:hover {
-  box-shadow: 0 0 3px 2px rgba(206, 237, 186, 0.5529411765);
+  box-shadow: 0 0 4px 2px rgba(206, 237, 186, 0.5529411765);
 }
 section.contact .contact-container .send-message form #btn-submit:active {
   transform: scale(0.95);
