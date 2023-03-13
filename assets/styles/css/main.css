@@ -127,7 +127,7 @@ header .home a {
   transition: 0.3s;
 }
 header .home a:hover > strong {
-  color: #BBF2A1;
+  color: #9cf78e;
 }
 header nav.nav-sections {
   height: 100%;
@@ -152,7 +152,7 @@ header nav.nav-sections ul li a {
   display: block;
 }
 header nav.nav-sections ul li #my-projects {
-  color: #BBF2A1;
+  color: #9cf78e;
 }
 header nav.nav-sections #close-nav {
   display: none;
@@ -181,7 +181,7 @@ header nav.networks ul li a {
   color: rgba(255, 255, 255, 0.881);
 }
 header nav.networks ul li a:hover {
-  color: #BBF2A1;
+  color: #9cf78e;
 }
 header nav.networks ul li a i {
   padding-right: 5px;
@@ -193,7 +193,7 @@ header #btn-menu {
   cursor: pointer;
 }
 header #btn-menu:hover {
-  color: #BBF2A1;
+  color: #9cf78e;
 }
 @media (max-width: 599.9px) {
   header {
@@ -323,7 +323,7 @@ header #btn-menu:hover {
     font-size: 20px;
   }
   header nav.networks #send-email a:hover > i {
-    color: #BBF2A1;
+    color: #9cf78e;
   }
   header #btn-menu {
     display: block;
@@ -364,7 +364,7 @@ header #btn-menu:hover {
   }
   header nav.networks #send-email a i {
     background-color: rgba(238, 238, 238, 0.1);
-    color: #BBF2A1;
+    color: #9cf78e;
     border-radius: 50%;
     padding: 12px;
   }
@@ -997,7 +997,7 @@ section.skills .skillsContainer div.swiper-button-next {
 }
 section.skills .skillsContainer div.swiper-button-prev:hover,
 section.skills .skillsContainer div.swiper-button-next:hover {
-  color: #85c766;
+  color: #89df62;
 }
 section.skills .resetBg {
   position: absolute;
@@ -1124,7 +1124,7 @@ section.projects .projetos_container .cards .card_projeto .links_projeto a {
   justify-content: center;
 }
 section.projects .projetos_container .cards .card_projeto .links_projeto a:hover {
-  background-color: #85c766;
+  background-color: #89df62;
   color: #242424;
 }
 section.projects .projetos_container .cards .card_projeto .link-com-prototipo {
@@ -1321,26 +1321,84 @@ section.contact .contact-container .send-message {
 section.contact .contact-container .send-message form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
-section.contact .contact-container .send-message form .input-container {
+section.contact .contact-container .send-message form .label-float {
+  position: relative;
+  padding-top: 10px;
   width: 100%;
-  margin-bottom: 11px;
 }
-section.contact .contact-container .send-message form .input-container input,
-section.contact .contact-container .send-message form .input-container textarea {
-  width: 100%;
-  border-radius: 5px;
-  border: solid 2px #069134;
-  background-color: #eee;
+section.contact .contact-container .send-message form .label-float label {
+  color: #d4d3d3;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
 }
-section.contact .contact-container .send-message form .input-container input {
-  padding: 5px;
-  font-size: 14px;
-}
-section.contact .contact-container .send-message form .input-container textarea {
-  padding: 7px;
+section.contact .contact-container .send-message form .label-float textarea {
+  border: solid 2px #bdbbbb !important;
   resize: none;
-  height: 10rem;
+}
+section.contact .contact-container .send-message form .label-float textarea:focus {
+  border: solid 2px #9cf78e !important;
+}
+section.contact .contact-container .send-message form .label-float input, section.contact .contact-container .send-message form .label-float textarea {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: solid 2px #bdbbbb;
+  outline: none;
+  padding: 4px;
+  width: 100%;
+  min-width: 180px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+}
+section.contact .contact-container .send-message form .label-float input:focus, section.contact .contact-container .send-message form .label-float textarea:focus {
+  border-bottom: 2px solid #9cf78e;
+}
+section.contact .contact-container .send-message form .label-float input::-moz-placeholder, section.contact .contact-container .send-message form .label-float textarea::-moz-placeholder {
+  color: transparent;
+}
+section.contact .contact-container .send-message form .label-float input::placeholder, section.contact .contact-container .send-message form .label-float textarea::placeholder {
+  color: transparent;
+}
+section.contact .contact-container .send-message form .label-float input:focus:required:invalid + label:before, section.contact .contact-container .send-message form .label-float textarea:focus:required:invalid + label:before {
+  content: "*";
+  color: rgb(202, 15, 15);
+  margin-right: 4px;
+  font-size: 12px;
+}
+section.contact .contact-container .send-message form .label-float input:not(:-moz-placeholder-shown) + label, section.contact .contact-container .send-message form .label-float textarea:not(:-moz-placeholder-shown) + label {
+  font-size: 12px;
+  margin-top: 0;
+  opacity: 0.9;
+}
+section.contact .contact-container .send-message form .label-float input:focus + label, section.contact .contact-container .send-message form .label-float input:not(:placeholder-shown) + label, section.contact .contact-container .send-message form .label-float textarea:focus + label, section.contact .contact-container .send-message form .label-float textarea:not(:placeholder-shown) + label {
+  font-size: 12px;
+  margin-top: 0;
+  opacity: 0.9;
+}
+section.contact .contact-container .send-message form .input-mensagem {
+  margin-top: 8px;
+}
+section.contact .contact-container .send-message form .input-mensagem .label-msg {
+  margin-top: 15px;
+  margin-left: 8px;
+}
+section.contact .contact-container .send-message form .input-mensagem textarea:not(:-moz-placeholder-shown) + label {
+  margin-top: -10px !important;
+  margin-left: 0;
+}
+section.contact .contact-container .send-message form .input-mensagem textarea:focus + label, section.contact .contact-container .send-message form .input-mensagem textarea:not(:placeholder-shown) + label {
+  margin-top: -10px !important;
+  margin-left: 0;
 }
 section.contact .contact-container .send-message form #btn-submit {
   font-size: 17px;
@@ -1351,11 +1409,14 @@ section.contact .contact-container .send-message form #btn-submit {
   cursor: pointer;
   padding: 5px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
-  transition: 0.2s;
-  background-color: #85c766;
-  color: white;
+  transition: 0.1s;
+  background-color: #89df62;
+  color: black;
+}
+section.contact .contact-container .send-message form #btn-submit:hover {
+  box-shadow: 0 0 3px 2px rgba(206, 237, 186, 0.5529411765);
 }
 section.contact .contact-container .send-message form #btn-submit:active {
   transform: scale(0.95);
@@ -1563,7 +1624,7 @@ html {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #85c766 rgba(255, 255, 255, 0.062);
+  scrollbar-color: #89df62 rgba(255, 255, 255, 0.062);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -1576,7 +1637,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #85c766;
+  background-color: #89df62;
   border-radius: 20px;
 }
 
@@ -1601,7 +1662,7 @@ body {
   transition: all 0.2s;
   font-size: 24px;
   font-weight: bold;
-  color: #85c766;
+  color: #89df62;
 }
 @media (min-width: 700px) and (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
   .title-section h1,
@@ -1666,7 +1727,7 @@ body {
 
 .back-to-top {
   display: none;
-  background: #85c766;
+  background: #89df62;
   border-radius: 50%;
   bottom: 1rem;
   right: 1rem;
@@ -1679,7 +1740,7 @@ body {
   position: fixed;
   animation: back-to-top 0.5s infinite alternate-reverse;
   text-decoration: none;
-  border: solid 3px #85c766;
+  border: solid 3px #89df62;
 }
 .back-to-top::after {
   content: "▲";

@@ -91,31 +91,78 @@ section.contact {
             form {
                 display: flex;
                 flex-direction: column;
+                gap: 10px;
 
-                .input-container {
+                .label-float {
+                    position: relative;
+                    padding-top: 10px;
                     width: 100%;
-                    margin-bottom: 11px;
 
-                    input,
-                    textarea {
-                        width: 100%;
-                        border-radius: 5px;
-                        border: solid 2px #069134;
-                        background-color: #eee;
+                    label {
+                        color: #d4d3d3;
+                        pointer-events: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        margin-top: 13px;
+                        transition: all .3s ease-out;
+                        -webkit-transition: all .3s ease-out;
+                        -moz-transition: all .3s ease-out;
                     }
-
-                    input {
-                        padding: 5px;
-                        font-size: 14px;
-                    }
-
                     textarea {
-                        padding: 7px;
+                        border: solid 2px #bdbbbb !important;
                         resize: none;
-                        height: 10rem
+                        &:focus {
+                            border: solid 2px $text-green-light !important;
+                        }
+                    }
+                    input, textarea {
+                        color: white;
+                        background-color: transparent;
+                        border-color: transparent;
+                        border-bottom: solid 2px #bdbbbb;
+                        outline: none;
+                        padding: 4px;
+                        width: 100%;
+                        min-width: 180px;
+                        transition: all .3s ease-out;
+                        -webkit-transition: all .3s ease-out;
+                        -moz-transition: all .3s ease-out;
+                        -webkit-appearance: none;
+                        &:focus {
+                            border-bottom: 2px solid $text-green-light;
+                        }
+                        &::placeholder {
+                            color: transparent;
+                        }
+                        &:focus:required:invalid + label:before {
+                            content: '*';
+                            color: rgb(202, 15, 15);
+                            margin-right: 4px;
+                            font-size: 12px;
+                        }
+                        &:focus + label,
+                        &:not(:placeholder-shown) + label {
+                            font-size: 12px;
+                            margin-top: 0;
+                            opacity: .9;
+                        }
                     }
                 }
-
+                .input-mensagem {
+                    margin-top: 8px;
+                    .label-msg {
+                        margin-top: 15px;
+                        margin-left: 8px;
+                    }
+                    textarea {
+                        &:focus + label,
+                        &:not(:placeholder-shown) + label {
+                            margin-top: -10px !important;
+                            margin-left: 0;
+                        }
+                    }
+                }
                 #btn-submit {
                     @include textStyle(17px, bold, inherit);
                     text-transform: uppercase;
@@ -123,12 +170,14 @@ section.contact {
                     cursor: pointer;
                     padding: 5px;
                     width: 100%;
-                    border-radius: 5px;
+                    border-radius: 3px;
                     border: none;
-                    transition: .2s;
+                    transition: .1s;
                     background-color: $text-green-strong;
-                    color: white;
-
+                    color: black;
+                    &:hover {
+                        box-shadow: 0 0 3px 2px #ceedba8d;
+                    }
                     &:active {
                         transform: scale(.95);
                     }
