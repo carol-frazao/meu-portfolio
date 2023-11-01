@@ -204,12 +204,18 @@ section.inicio {
     }
 
     .vetores-container {
-        width: 100%;
         height: auto;
-        margin: 2rem 0 4rem;
+        margin-bottom: 2rem;
+        background-color: #1a1a1a23;
+        border-radius: 50%;
+        padding: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .vetores {
             @include flexCenter;
+            position: relative;
             transition: .4s;
 
             #art-vetor {
@@ -222,21 +228,21 @@ section.inicio {
                 #code_symbol {
                     @include vetorStyle(40px);
                     animation: code-scale 1.3s infinite alternate ease-in 2.5s;
-                    top: -9em;
+                    top: -8.5em;
                     left: -1.5em;
                 }
 
                 #css_vetor {
                     @include vetorStyle(38px);
                     animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
-                    top: -8em;
+                    top: -7em;
                     left: -6.5em;
                 }
 
                 #js_vetor {
                     @include vetorStyle(38px);
                     animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
-                    top: -8em;
+                    top: -7em;
                     right: -6.2em;
                 }
 
@@ -300,8 +306,8 @@ section.inicio {
             margin-bottom: 2rem;
 
             .vetores {
-                padding-left: 3rem;
-                padding-top: 2rem;
+                // padding-left: 3rem;
+                // padding-top: 2rem;
 
                 #art-vetor {
                     width: 330px;

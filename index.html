@@ -108,7 +108,7 @@
     <main class="sections">
       <!---- Section 01: Início ----->
       <section class="section1 inicio" id="inicio">
-        <section class="apresentacao" id="apresentacao">
+        <div class="apresentacao" id="apresentacao">
           <div class="front_container">
             <strong> Front-End Developer </strong>
           </div>
@@ -152,10 +152,11 @@
             startBtn.style.opacity = "0";
             setTimeout(() => (startBtn.style.opacity = "1"), 2500);
           </script>
-        </section>
+        </div>
 
         <!---- Imagens e animações---->
-        <section class="vetores-container">
+        <div class="vetores-container">
+          <div class="bg-animations"></div>
           <div class="vetores">
             <img
               src="assets/img/create-vetor/art-vetor2.png"
@@ -208,7 +209,7 @@
             const vetores = document.querySelectorAll(".image_vetor");
             vetores.forEach((img) => (img.style.opacity = "0"));
           </script>
-        </section>
+        </div>
       </section>
 
       <!--- Section 02: Sobre mim --->

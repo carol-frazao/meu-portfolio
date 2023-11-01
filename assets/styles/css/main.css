@@ -23,10 +23,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  -webkit-margin-start: 0;
-          margin-inline-start: 0;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding: 0;
   margin: 0;
 }
@@ -572,14 +570,20 @@ section.inicio .apresentacao div.btn-iniciar a #img-start {
   }
 }
 section.inicio .vetores-container {
-  width: 100%;
   height: auto;
-  margin: 2rem 0 4rem;
+  margin-bottom: 2rem;
+  background-color: rgba(26, 26, 26, 0.137254902);
+  border-radius: 50%;
+  padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section.inicio .vetores-container .vetores {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   transition: 0.4s;
 }
 section.inicio .vetores-container .vetores #art-vetor {
@@ -594,7 +598,7 @@ section.inicio .vetores-container .vetores .vetores-children #code_symbol {
   width: 40px;
   height: auto;
   animation: code-scale 1.3s infinite alternate ease-in 2.5s;
-  top: -9em;
+  top: -8.5em;
   left: -1.5em;
 }
 section.inicio .vetores-container .vetores .vetores-children #css_vetor {
@@ -603,7 +607,7 @@ section.inicio .vetores-container .vetores .vetores-children #css_vetor {
   width: 38px;
   height: auto;
   animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
-  top: -8em;
+  top: -7em;
   left: -6.5em;
 }
 section.inicio .vetores-container .vetores .vetores-children #js_vetor {
@@ -612,7 +616,7 @@ section.inicio .vetores-container .vetores .vetores-children #js_vetor {
   width: 38px;
   height: auto;
   animation: css-js-move 1.2s infinite alternate-reverse ease-in 2.7s;
-  top: -8em;
+  top: -7em;
   right: -6.2em;
 }
 section.inicio .vetores-container .vetores .vetores-children #react_gif {
@@ -668,10 +672,6 @@ section.inicio .vetores-container .vetores .vetores-children #html {
     justify-content: center;
     width: 50%;
     margin-bottom: 2rem;
-  }
-  section.inicio .vetores-container .vetores {
-    padding-left: 3rem;
-    padding-top: 2rem;
   }
   section.inicio .vetores-container .vetores #art-vetor {
     width: 330px;
@@ -1617,7 +1617,7 @@ html {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #91ea67 rgba(255, 255, 255, 0.062);
+  scrollbar-color: #91ea67 rgba(161, 161, 161, 0.062);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -1753,4 +1753,4 @@ body {
   to {
     transform: translateY(8px);
   }
-}
+}/*# sourceMappingURL=main.css.map */
