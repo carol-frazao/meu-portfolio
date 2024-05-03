@@ -960,6 +960,11 @@ section.skills .skillsContainer #skill-reactjs::after {
   border-top: solid 2px rgba(181, 195, 216, 0.445);
   border-bottom: solid 3px rgb(164, 167, 186);
 }
+section.skills .skillsContainer #skill-redux::after {
+  background-color: rgba(104, 43, 137, 0.775);
+  border-top: solid 2px rgba(181, 195, 216, 0.445);
+  border-bottom: solid 3px rgb(164, 167, 186);
+}
 section.skills .skillsContainer #skill-styledComponents::after {
   background-color: rgba(218, 104, 167, 0.414);
   border-top: solid 2px rgba(239, 192, 200, 0.508);
@@ -984,6 +989,11 @@ section.skills .skillsContainer #skill-figma::after {
   background-color: rgba(140, 36, 135, 0.64);
   border-top: solid 2px rgba(211, 204, 211, 0.445);
   border-bottom: solid 3px rgb(193, 166, 196);
+}
+section.skills .skillsContainer #skill-firebase::after {
+  background-color: rgba(140, 104, 36, 0.64);
+  border-top: solid 2px rgba(179, 170, 159, 0.445);
+  border-bottom: solid 3px rgb(196, 187, 166);
 }
 section.skills .skillsContainer div.swiper-button-prev,
 section.skills .skillsContainer div.swiper-button-next {

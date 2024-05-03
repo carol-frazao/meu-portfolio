@@ -73,6 +73,10 @@ section.skills {
             @include skillAfter(rgba(43, 81, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
         }
 
+        #skill-redux::after {
+            @include skillAfter(rgba(104, 43, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+        }
+
         #skill-styledComponents::after {
             @include skillAfter(rgba(218, 104, 167, 0.414), rgba(239, 192, 200, 0.508), rgba(239, 192, 200, 0.81))
         }
@@ -92,7 +96,9 @@ section.skills {
         #skill-figma::after {
             @include skillAfter(rgba(140, 36, 135, 0.64), rgba(211, 204, 211, 0.445), rgb(193, 166, 196))
         }
-
+        #skill-firebase::after {
+            @include skillAfter(rgba(140, 104, 36, 0.64), rgba(179, 170, 159, 0.445), rgb(196, 187, 166))
+        }
 
         div.swiper-button-prev,
         div.swiper-button-next {
