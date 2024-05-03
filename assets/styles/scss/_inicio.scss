@@ -213,6 +213,12 @@ section.inicio {
         align-items: center;
         justify-content: center;
 
+        @media (min-width: 1850px) {
+            height: 700px !important;
+            padding: 0 !important;
+            width: 800px !important;
+        }
+
         .vetores {
             @include flexCenter;
             position: relative;
