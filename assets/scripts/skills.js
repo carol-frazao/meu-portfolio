@@ -15,8 +15,7 @@ function skillEvents() {
     git = document.getElementById("git-img"),
     github = document.getElementById("github-img"),
     figma = document.getElementById("figma-img"),
-    bootstrap = document.getElementById('bootstrap-img'),
-    firebase = document.getElementById("firebase-img");
+    bootstrap = document.getElementById('bootstrap-img')
 
   const backgroundCover = () => container.style.backgroundSize = "cover";
   const background = (image) => container.style.background = "url(" + image + ") center";
@@ -53,7 +52,6 @@ function skillEvents() {
   setBackground(github, "assets/img/skills-wallpaper/github-background.jpg");
   setBackground(figma, "assets/img/skills-wallpaper/figma-background.jpg");
   setBackground(bootstrap, "assets/img/skills-wallpaper/bootstrap-background.jpg");
-  setBackground(firebase, "assets/img/skills-wallpaper/firebase-background.png");
 
   btnResetBg.addEventListener("click", e => {
     container.style.background = "#2c2c2c";
