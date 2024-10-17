@@ -19,7 +19,7 @@ header {
             transition: .3s;
 
             &:hover>strong {
-                color: $text-green-light;
+                color: $primary-light;
             }
         }
     }
@@ -50,7 +50,7 @@ header {
                 }
 
                 #my-projects {
-                    color: $text-green-light
+                    color: $primary-light
                 }
             }
         }
@@ -83,7 +83,7 @@ header {
                     color: $text-opaque-2;
 
                     &:hover {
-                        color: $text-green-light;
+                        color: $primary-light;
                     }
 
                     i {
@@ -101,7 +101,7 @@ header {
         cursor: pointer;
 
         &:hover {
-            color: $text-green-light;
+            color: $primary-light;
         }
     }
 
@@ -155,7 +155,7 @@ header {
                 }
 
                 &:hover>i {
-                    color: $text-green-light;
+                    color: $primary-light;
                 }
             }
 
@@ -208,7 +208,7 @@ header {
             #send-email a {
                 i {
                     background-color: rgba(#eee, 0.1);
-                    color: $text-green-light;
+                    color: $primary-light;
                     border-radius: 50%;
                     padding: 12px;
                 }

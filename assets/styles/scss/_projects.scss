@@ -33,7 +33,7 @@ section.projects {
                     content: '';
                     width: 50%;
                     height: 7px;
-                    background: $text-green-strong;
+                    background: $primary;
                     border-radius: 20px;
                     position: relative;
                     bottom: 20px;
@@ -66,7 +66,7 @@ section.projects {
                         @include textStyle(null, bold, $text-opaque-2);
                         @include theme($bg-color-01, null, $font-play);
                         text-decoration: none;
-                        border: solid 1px #9bee758a;
+                        border: solid 1px $primary-opaque;
                         border-radius: 8px;
                         text-align: center;
                         display: flex;
@@ -75,7 +75,7 @@ section.projects {
 
 
                         &:hover {
-                            background-color: $text-green-strong;
+                            background-color: $primary;
                             color: #242424;
                         }
                     }

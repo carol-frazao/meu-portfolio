@@ -22,7 +22,7 @@ html {
 /* Works on Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: $text-green-strong rgba(161, 161, 161, 0.062);
+    scrollbar-color: $primary rgba(161, 161, 161, 0.062);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -35,7 +35,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $text-green-strong;
+    background-color: $primary;
     border-radius: 20px;
 }
 
@@ -59,7 +59,7 @@ body {
         text-transform: uppercase;
         text-align: center;
         transition: all .2s;
-        @include textStyle(24px, bold, $text-green-strong);
+        @include textStyle(24px, bold, $primary);
 
         @include for-large-devices-portrait {
             font-size: 28px;
@@ -114,7 +114,7 @@ body {
 
 .back-to-top {
     display: none;
-    background: $text-green-strong;
+    background: $primary;
     border-radius: 50%;
     bottom: 1rem;
     right: 1rem;
@@ -127,7 +127,7 @@ body {
     position: fixed;
     animation: back-to-top .5s infinite alternate-reverse;
     text-decoration: none;
-    border: solid 3px $text-green-strong;
+    border: solid 3px $primary;
 
     &::after {
         content: '▲';

@@ -113,7 +113,7 @@ section.contact {
                         border: solid 2px #bdbbbb !important;
                         resize: none;
                         &:focus {
-                            border: solid 2px $text-green-light !important;
+                            border: solid 2px $primary-light !important;
                         }
                     }
                     input, textarea {
@@ -129,7 +129,7 @@ section.contact {
                         -webkit-transition: all .3s ease-out;
                         -moz-transition: all .3s ease-out;
                         &:focus {
-                            border-bottom: 2px solid $text-green-light;
+                            border-bottom: 2px solid $primary-light;
                         }
                         &::placeholder {
                             color: transparent;
@@ -172,10 +172,10 @@ section.contact {
                     border-radius: 3px;
                     border: none;
                     transition: .1s;
-                    background-color: $text-green-strong;
+                    background-color: $primary;
                     color: #2b2b2b;
                     &:hover {
-                        box-shadow: 0 0 4px 2px #ceedba8d;
+                        box-shadow: 0 0 4px 2px $primary-opaque;
                     }
                     &:active {
                         transform: scale(.95);
