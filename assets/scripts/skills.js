@@ -7,8 +7,11 @@ function skillEvents() {
     html = document.getElementById("html-img"),
     css = document.getElementById("css-img"),
     js = document.getElementById("js-img"),
+    ts = document.getElementById("ts-img"),
     sass = document.getElementById("sass-img"),
     react = document.getElementById("react-img"),
+    nextjs = document.getElementById("nextjs-img"),
+    gatsby = document.getElementById("gatsby-img"),
     redux = document.getElementById("redux-img"),
     styled = document.getElementById("styled-img"),
     node = document.getElementById("node-img"),
@@ -43,8 +46,11 @@ function skillEvents() {
   setBackground(html, "assets/img/skills-wallpaper/html-wallpaper.jpg")
   setBackground(css, "assets/img/skills-wallpaper/css-wallpaper.jpg");
   setBackground(js, "assets/img/skills-wallpaper/js-wallpaper.jpg");
+  setBackground(ts, "assets/img/skills-wallpaper/ts-background.png");
   setBackground(sass, "assets/img/skills-wallpaper/sass-background.png");
   setBackground(react, "assets/img/skills-wallpaper/react-background.jpg");
+  setBackground(nextjs, "assets/img/skills-wallpaper/nextjs-background.png");
+  setBackground(gatsby, "assets/img/skills-wallpaper/gatsby-background.jpeg");
   setBackground(redux, "assets/img/skills-wallpaper/redux-background.png");
   setBackground(styled, "assets/img/skills-wallpaper/styled-background.png");
   setBackground(node, "assets/img/skills-wallpaper/node-background.png");

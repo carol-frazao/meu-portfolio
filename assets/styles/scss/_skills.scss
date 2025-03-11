@@ -65,6 +65,10 @@ section.skills {
             @include skillAfter(rgba(129, 113, 34, 0.744), rgba(233, 224, 199, 0.445), rgb(196, 190, 171))
         }
 
+        #skill-ts::after {
+          @include skillAfter(rgba(43, 81, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+        }
+
         #skill-sass::after {
             @include skillAfter(rgba(161, 75, 89, 0.673), rgba(239, 192, 200, 0.508), rgba(239, 192, 200, 0.81))
         }
@@ -73,8 +77,16 @@ section.skills {
             @include skillAfter(rgba(43, 81, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
         }
 
+        #skill-nextjs::after {
+          @include skillAfter(rgba(41, 41, 41, 0.626), rgba(170, 170, 170, 0.459), rgb(161, 161, 161))
+        }
+
+        #skill-gatsby::after {
+          @include skillAfter(rgba(104, 43, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+        }
+
         #skill-redux::after {
-            @include skillAfter(rgba(104, 43, 137, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
+            @include skillAfter(rgba(125, 69, 155, 0.775), rgba(181, 195, 216, 0.445), rgb(164, 167, 186))
         }
 
         #skill-styledComponents::after {

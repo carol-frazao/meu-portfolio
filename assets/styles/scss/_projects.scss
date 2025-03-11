@@ -1,210 +1,215 @@
 //Section 04: Projetos
 section.projects {
-    @include theme($bg-color-02, null, $font-catamaran);
-    text-align: center;
+  @include theme($bg-color-02, null, $font-catamaran);
+  text-align: center;
 
-    .projetos_container {
-        @include displayFlex(center, center, column);
-        gap: 2rem;
-        padding: 4rem 2rem;
+  .meus_trabalhos {
+    padding: 3rem 2rem 2rem !important;
+  }
 
-        #image-title-projects {
-            width: 30px;
-            height: 40px;
-            margin-top: -20px;
-            margin-left: -5px;
+  .projetos_container {
+    @include displayFlex(center, center, column);
+    gap: 2rem;
+    padding: 2rem;
+
+    #image-title-projects {
+      width: 30px;
+      height: 40px;
+      margin-top: -20px;
+      margin-left: -5px;
+    }
+
+    .cards {
+      display: grid;
+      text-align: center;
+      transition: .2s;
+
+      .card_projeto {
+        @include displayFlex(center, space-between, column);
+        padding: 20px;
+        gap: 10px;
+        border-radius: 15px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.062);
+        transition: .2s all;
+
+        &::before {
+          content: '';
+          width: 50%;
+          height: 7px;
+          background: $primary;
+          border-radius: 20px;
+          position: relative;
+          bottom: 20px;
         }
 
-        .cards {
-            display: grid;
+        .titulo_projeto {
+          @include textStyle(null, bold, $text-opaque-2);
+          font-size: clamp(10px, 5vw, 20px);
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        .imagem_projeto img {
+          width: 100%;
+          max-width: 400px;
+        }
+
+        .descricao_projeto {
+          color: $text-opaque-1;
+          text-align: justify;
+        }
+
+        .links_projeto {
+          display: flex;
+          padding: 0 0 6px;
+          width: 100%;
+          cursor: pointer;
+
+          a {
+            @include textStyle(null, bold, $text-opaque-2);
+            @include theme($bg-color-01, null, $font-play);
+            text-decoration: none;
+            border: solid 1px $primary-opaque;
+            border-radius: 8px;
             text-align: center;
-            transition: .2s;
-
-            .card_projeto {
-                @include displayFlex(center, space-between, column);
-                padding: 20px;
-                gap: 10px;
-                border-radius: 15px;
-                height: auto;
-                background-color: rgba(255, 255, 255, 0.062);
-                transition: .2s all;
-
-                &::before {
-                    content: '';
-                    width: 50%;
-                    height: 7px;
-                    background: $primary;
-                    border-radius: 20px;
-                    position: relative;
-                    bottom: 20px;
-                }
-
-                .titulo_projeto {
-                    @include textStyle(null, bold, $text-opaque-2);
-                    font-size: clamp(10px, 5vw, 20px);
-                    text-transform: uppercase;
-                    text-align: center;
-                }
-
-                .imagem_projeto img {
-                    width: 100%;
-                    max-width: 400px;
-                }
-
-                .descricao_projeto {
-                    color: $text-opaque-1;
-                    text-align: justify;
-                }
-
-                .links_projeto {
-                    display: flex;
-                    padding: 0 0 6px;
-                    width: 100%;
-                    cursor: pointer;
-
-                    a {
-                        @include textStyle(null, bold, $text-opaque-2);
-                        @include theme($bg-color-01, null, $font-play);
-                        text-decoration: none;
-                        border: solid 1px $primary-opaque;
-                        border-radius: 8px;
-                        text-align: center;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
 
-                        &:hover {
-                            background-color: $primary;
-                            color: #242424;
-                        }
-                    }
-                }
-                .link-com-prototipo {
-                    flex-direction: column;
-                    gap: 10px;
-                    .link-group {
-                        display: flex;
-                        gap: 10px;
-                        a {
-                            display: inline-block;
-                            width: 50%;
-                        }
-                    }
-                    .acessarProjeto {
-                        display: inline-block;
-                        width: 100%;
-                    }
-                }
+            &:hover {
+              background-color: $primary;
+              color: #242424;
             }
+          }
         }
-    }
 
-    .meus_trabalhos {
-        padding: 0 2rem 4rem !important;
-    }
-    .link-myWork {
-        justify-content: center;
-    }
+        .link-com-prototipo {
+          flex-direction: column;
+          gap: 10px;
 
-    @include for-phone-only {
-        .cards {
-            grid-template-columns: 1fr;
+          .link-group {
+            display: flex;
+            gap: 10px;
 
-            .card_projeto .descricao_projeto {
-                font-size: 14px;
+            a {
+              display: inline-block;
+              width: 50%;
             }
-        }
+          }
 
-        h4 {
-            font-size: 22px;
+          .acessarProjeto {
+            display: inline-block;
+            width: 100%;
+          }
         }
+      }
+    }
+  }
+
+  .link-myWork {
+    justify-content: center;
+  }
+
+  @include for-phone-only {
+    .cards {
+      grid-template-columns: 1fr;
+
+      .card_projeto .descricao_projeto {
+        font-size: 14px;
+      }
     }
 
-    @media (max-width: 400px) {
-        .cards {
-            grid-gap: 2rem;
-
-            .card_projeto {
-                width: 100%;
-
-                .links_projeto {
-                    gap: 10px;
-
-                    a {
-                        width: 50%;
-                        padding: 5px;
-                        font-size: 12px;
-                        transition: .2s all;
-                    }
-                }
-            }
-        }
+    h4 {
+      font-size: 22px;
     }
+  }
 
-    @media (min-width: 401px) {
-        .cards {
-            grid-gap: 2.5rem;
+  @media (max-width: 400px) {
+    .cards {
+      grid-gap: 2rem;
 
-            .card_projeto {
-                width: 320px;
+      .card_projeto {
+        width: 100%;
 
-                .links_projeto {
-                    gap: 15px;
+        .links_projeto {
+          gap: 10px;
 
-                    a {
-                        width: 50%;
-                        padding: 5px;
-                        font-size: 14px;
-                    }
-                }
-            }
+          a {
+            width: 50%;
+            padding: 5px;
+            font-size: 12px;
+            transition: .2s all;
+          }
         }
+      }
     }
+  }
 
-    @include for-tablet-portrait {
-        .cards {
-            grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 401px) {
+    .cards {
+      grid-gap: 2.5rem;
 
-            .card_projeto {
-                width: 100%;
+      .card_projeto {
+        width: 320px;
 
-                .descricao_projeto {
-                    font-size: 15px;
-                }
-            }
+        .links_projeto {
+          gap: 15px;
+
+          a {
+            width: 50%;
+            padding: 5px;
+            font-size: 14px;
+          }
         }
+      }
     }
+  }
 
-    @include for-tablet-landscape {
-        .cards {
-            grid-template-columns: repeat(3, 1fr);
+  @include for-tablet-portrait {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
 
-            .card_projeto .descricao_projeto {
-                font-size: 15px;
-            }
+      .card_projeto {
+        width: 100%;
+
+        .descricao_projeto {
+          font-size: 15px;
         }
+      }
     }
+  }
 
-    @include for-desktop-up {
-        padding-top: 2rem;
-        padding-bottom: 3rem;
+  @include for-tablet-landscape {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
 
-        .cards {
-            padding-top: 1rem;
-            grid-gap: 3rem;
+      .card_projeto .descricao_projeto {
+        font-size: 15px;
+      }
+    }
+  }
 
-            .card_projeto {
-                width: 370px;
+  @include for-desktop-up {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 
-                .descricao_projeto {
-                    font-size: 16px;
-                }
+    .cards {
+      padding-top: 1rem;
+      grid-gap: 3rem;
 
-                .links_projeto a {
-                    font-size: 16px;
-                }
-            }
+      .card_projeto {
+        width: 370px;
+
+        .descricao_projeto {
+          font-size: 16px;
         }
+
+        .links_projeto a {
+          font-size: 16px;
+        }
+      }
     }
+  }
 }

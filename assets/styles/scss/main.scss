@@ -16,137 +16,137 @@
 
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Works on Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: $primary rgba(161, 161, 161, 0.062);
+  scrollbar-width: thin;
+  scrollbar-color: $primary rgba(161, 161, 161, 0.062);
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.062);
+  background: rgba(255, 255, 255, 0.062);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $primary;
-    border-radius: 20px;
+  background-color: $primary;
+  border-radius: 20px;
 }
 
 body {
-    background-color: #1a1a1a;
+  background-color: #1a1a1a;
 }
 
 //Títulos
 .title-section {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  cursor: default;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-transform: uppercase;
     text-align: center;
-    gap: 15px;
-    cursor: default;
+    transition: all .2s;
+    @include textStyle(24px, bold, $primary);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        text-transform: uppercase;
-        text-align: center;
-        transition: all .2s;
-        @include textStyle(24px, bold, $primary);
-
-        @include for-large-devices-portrait {
-            font-size: 28px;
-        }
-
-        @include for-tablet-landscape {
-            font-size: 32px
-        }
-
-        @include for-desktop-up {
-            font-size: 35px;
-        }
+    @include for-large-devices-portrait {
+      font-size: 28px;
     }
+
+    @include for-tablet-landscape {
+      font-size: 32px
+    }
+
+    @include for-desktop-up {
+      font-size: 35px;
+    }
+  }
 }
 
 .floats-networks {
-    position: fixed;
-    bottom: 1%;
-    left: 0;
+  position: fixed;
+  bottom: 1%;
+  left: 0;
 
-    ul {
-        list-style: none;
-        padding: 8px;
+  ul {
+    list-style: none;
+    padding: 8px;
 
-        a {
-            display: block;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 1px;
-            animation: scale .6s infinite alternate;
-        }
-
-        #linkedin-float {
-            color: rgb(44, 136, 222);
-            margin-bottom: 7px;
-        }
-
-        #github-float {
-            color: white;
-            margin-bottom: 7px;
-        }
-
-        #wpp-float {
-            color: rgb(82, 210, 47);
-        }
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 1px;
+      animation: scale .6s infinite alternate;
     }
 
-    @media (min-width: 600px) {
-        display: none;
+    #linkedin-float {
+      color: rgb(44, 136, 222);
+      margin-bottom: 7px;
     }
+
+    #github-float {
+      color: white;
+      margin-bottom: 7px;
+    }
+
+    #wpp-float {
+      color: rgb(82, 210, 47);
+    }
+  }
+
+  @media (min-width: 600px) {
+    display: none;
+  }
 }
 
 .back-to-top {
-    display: none;
-    background: $primary;
-    border-radius: 50%;
-    bottom: 1rem;
-    right: 1rem;
-    width: 55px;
-    height: 55px;
-    z-index: 3;
-    box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, .75);
-    color: white;
-    cursor: pointer;
-    position: fixed;
-    animation: back-to-top .5s infinite alternate-reverse;
-    text-decoration: none;
-    border: solid 3px $primary;
+  display: none;
+  background: $primary;
+  border-radius: 50%;
+  bottom: 1rem;
+  right: 1rem;
+  width: 55px;
+  height: 55px;
+  z-index: 3;
+  box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, .75);
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  animation: back-to-top .5s infinite alternate-reverse;
+  text-decoration: none;
+  border: solid 3px $primary;
 
-    &::after {
-        content: '▲';
-        @include flexCenter;
-        font-size: 28px;
-        color: #fff;
+  &::after {
+    content: '▲';
+    @include flexCenter;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #1a1a1a;
+  }
+
+  @keyframes back-to-top {
+    from {
+      transform: translateY(0);
     }
 
-    &:active {
-        background-color: #1a1a1a;
+    to {
+      transform: translateY(8px);
     }
-
-    @keyframes back-to-top {
-        from {
-            transform: translateY(0);
-        }
-
-        to {
-            transform: translateY(8px);
-        }
-    }
+  }
 }

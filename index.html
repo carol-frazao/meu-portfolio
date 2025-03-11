@@ -1,865 +1,475 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carol Frazão</title>
-    <link
-      rel="shortcut icon"
-      type="image/svg"
-      href="assets/img/icons/code-favicon.png"
-    />
-    <link rel="stylesheet" href="assets/styles/css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://kit.fontawesome.com/7fde04edb1.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--Swiper-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!--Bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body style="background-color: #2c2c2c">
-    <header>
-      <!-- Home index -->
-      <div class="home">
-        <a href="/"> <strong> Carol </strong> Frazão </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carol Frazão</title>
+  <link rel="shortcut icon" type="image/svg" href="assets/img/icons/code-favicon.png" />
+  <link rel="stylesheet" href="assets/styles/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/7fde04edb1.js" crossorigin="anonymous"></script>
+  <!--Swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #2c2c2c">
+  <header>
+    <!-- Home index -->
+    <div class="home">
+      <a href="/"> <strong> Carol </strong> Frazão </a>
+    </div>
+
+    <!-- Navegar entre as sessões da página -->
+    <nav class="nav-sections">
+      <ul id="nav-list">
+        <i class="fa-solid fa-xmark close-menu" id="close-nav"></i>
+
+        <li class="section-page close-menu">
+          <a onclick="scrollar('#inicio')"> Início </a>
+        </li>
+
+        <li class="section-page close-menu">
+          <a onclick="scrollar('#about')"> Sobre mim </a>
+        </li>
+
+        <li class="section-page close-menu">
+          <a onclick="scrollToSkills()"> Skills </a>
+        </li>
+
+        <li class="section-page close-menu">
+          <a id="my-projects" onclick="scrollar('#projects')">
+            < Meus projetos />
+          </a>
+        </li>
+
+        <li class="section-page close-menu">
+          <a onclick="scrollar('#contact')"> Contato </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Minhas redes -->
+    <nav class="networks">
+      <ul>
+        <li class="network">
+          <a href="https://www.linkedin.com/in/carol-frazao/" target="_blank">
+            <i class="fa-brands fa-linkedin i_network"></i>
+            <span>Linkedin</span>
+          </a>
+        </li>
+
+        <li class="network">
+          <a href="https://github.com/carol-frazao" target="_blank">
+            <i class="fa-brands fa-github i_network"></i>
+            <span>Github</span>
+          </a>
+        </li>
+
+        <li class="network" id="send-email" target="_blank">
+          <a href="mailto:anacf04@outlook.com">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <i class="fa-solid fa-bars-staggered" id="btn-menu" onclick="responsiveNavbar()"></i>
+  </header>
+
+  <main class="sections">
+    <!---- Section 01: Início ----->
+    <section class="section1 inicio" id="inicio">
+      <div class="apresentacao" id="apresentacao">
+        <div class="front_container">
+          <strong> Front-End Developer </strong>
+        </div>
+
+        <div class="text_apresentacao" id="text_apresentacao">
+          <h1 id="text_h1">
+            Olá, meu nome é Carol. <br />
+            Bem-vindo(a) ao meu portfólio!
+          </h1>
+
+          <p class="descricao" id="descricao">
+            Esse é o meu cantinho. Aqui você poderá saber um pouco sobre mim,
+            minhas competências, visualizar alguns dos meus projetos, trabalhos, e/ou
+            ainda me enviar uma mensagem, caso queria fazer um contato
+            profissional. É um prazer te ter por aqui! &#10084;
+          </p>
+        </div>
+
+        <script>
+          const descricao = document.getElementById("descricao");
+          descricao.style.opacity = "0";
+          setTimeout(() => (descricao.style.opacity = "1"), 2500);
+        </script>
+        <!-- Navegar p/ sessão Sobre --->
+        <div class="btn-iniciar" id="start">
+          <span>Vamos lá?</span>
+
+          <a id="start" onclick="scrollar('#about')">
+            <img src="assets/img/icons/press-start.png" alt="Start" id="img-start" style="max-width: 200px" />
+          </a>
+        </div>
+
+        <script>
+          const startBtn = document.getElementById("start");
+          startBtn.style.opacity = "0";
+          setTimeout(() => (startBtn.style.opacity = "1"), 2500);
+        </script>
       </div>
 
-      <!-- Navegar entre as sessões da página -->
-      <nav class="nav-sections">
-        <ul id="nav-list">
-          <i class="fa-solid fa-xmark close-menu" id="close-nav"></i>
+      <!---- Imagens e animações---->
+      <div class="vetores-container">
+        <div class="bg-animations"></div>
+        <div class="vetores">
+          <img src="assets/img/create-vetor/art-vetor2.png" alt="Vetor imagem" style="max-width: 600px" id="art-vetor"
+            class="image_vetor" />
 
-          <li class="section-page close-menu">
-            <a onclick="scrollar('#inicio')"> Início </a>
-          </li>
+          <div class="vetores-children">
+            <img src="assets/img/create-vetor/cod.png" style="max-width: 100px" alt="Coding" id="code_symbol"
+              class="image_vetor" />
+            <img src="assets/img/create-vetor/css-vetor.png" alt="CSS" style="max-height: 100px" id="css_vetor"
+              class="image_vetor" />
+            <img src="assets/img/gifs/react.gif" alt="React" style="max-width: 100px" id="react_gif"
+              class="image_vetor" />
+            <img src="assets/img/create-vetor/js-vetor.png" alt="Javascript" style="max-height: 100px" id="js_vetor"
+              class="image_vetor" />
+            <img src="assets/img/gifs/html.gif" alt="HTML" style="max-height: 100px" id="html" class="image_vetor" />
+          </div>
+        </div>
 
-          <li class="section-page close-menu">
-            <a onclick="scrollar('#about')"> Sobre mim </a>
-          </li>
+        <script>
+          const vetores = document.querySelectorAll(".image_vetor");
+          vetores.forEach((img) => (img.style.opacity = "0"));
+        </script>
+      </div>
+    </section>
 
-          <li class="section-page close-menu">
-            <a onclick="scrollToSkills()"> Skills </a>
-          </li>
+    <!--- Sobre mim --->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="title-section">
+          <h2>Sobre mim</h2>
+          <img src="assets/img/gifs/lupa-gif.gif" id="image-icon-about" />
+        </div>
 
-          <li class="section-page close-menu">
-            <a id="my-projects" onclick="scrollar('#projects')">
-              < Meus projetos />
-            </a>
-          </li>
-
-          <li class="section-page close-menu">
-            <a onclick="scrollar('#contact')"> Contato </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Minhas redes -->
-      <nav class="networks">
-        <ul>
-          <li class="network">
-            <a href="https://www.linkedin.com/in/carol-frazao/" target="_blank">
-              <i class="fa-brands fa-linkedin i_network"></i>
-              <span>Linkedin</span>
-            </a>
-          </li>
-
-          <li class="network">
-            <a href="https://github.com/carol-frazao" target="_blank">
-              <i class="fa-brands fa-github i_network"></i>
-              <span>Github</span>
-            </a>
-          </li>
-
-          <li class="network" id="send-email" target="_blank">
-            <a href="mailto:anacf04@outlook.com">
-              <i class="fa-regular fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <i
-        class="fa-solid fa-bars-staggered"
-        id="btn-menu"
-        onclick="responsiveNavbar()"
-      ></i>
-    </header>
-
-    <main class="sections">
-      <!---- Section 01: Início ----->
-      <section class="section1 inicio" id="inicio">
-        <div class="apresentacao" id="apresentacao">
-          <div class="front_container">
-            <strong> Front-End Developer </strong>
+        <div class="aboutMe">
+          <div class="photo">
+            <img src="assets/img/photo_black.jpg" alt="Foto Carol" style="max-width: 350px" />
           </div>
 
-          <div class="text_apresentacao" id="text_apresentacao">
-            <h1 id="text_h1">
-              Olá, meu nome é Carol. <br />
-              Bem-vindo(a) ao meu portfólio!
-            </h1>
-
-            <p class="descricao" id="descricao">
-              Esse é o meu cantinho. Aqui você poderá saber um pouco sobre mim,
-              minhas competências, visualizar alguns dos meus projetos, trabalhos, e/ou
-              ainda me enviar uma mensagem, caso queria fazer um contato
-              profissional. É um prazer te ter por aqui! &#10084;
+          <div class="about_text">
+            <p>
+              Sou uma desenvolvedora front-end, apaixonada por criar soluções digitais que combinam design atrativo com
+              eficiência e usabilidade.
+              Com um olhar atento para a experiência do usuário, estou sempre em busca de soluções inovadoras para
+              desafios complexos.
+            </p>
+            <p>
+              Iniciei minha transição de carreira em 2021, vindo da área administrativa, e desde então me dedico ao
+              desenvolvimento de aplicações web.
+              Atualmente, atuo como desenvolvedora front-end, com foco na construção de interfaces funcionais e
+              modernas. Também possuo experiência no back-end, o que me permite colaborar de forma completa no ciclo de
+              desenvolvimento de software.
+            </p>
+            <p>
+              Trabalho com tecnologias como HTML, CSS/Sass, JavaScript, React e Redux, além de Node.js e TypeScript,
+              quando necessário. Em equipe, contribuo como scrum master, coordenando entregas ágeis e sempre buscando
+              melhorar a experiência final do usuário.
+            </p>
+            <p>
+              Estou em constante aprendizado e motivada a enfrentar novos desafios, sempre com o objetivo de criar
+              soluções que gerem valor tanto para os usuários quanto para a empresa.
+            </p>
+            <p>
+              Conheça mais sobre minha trajetória profissional acessando meu currículo:
             </p>
           </div>
-
-          <script>
-            const descricao = document.getElementById("descricao");
-            descricao.style.opacity = "0";
-            setTimeout(() => (descricao.style.opacity = "1"), 2500);
-          </script>
-          <!-- Navegar p/ sessão Sobre --->
-          <div class="btn-iniciar" id="start">
-            <span>Vamos lá?</span>
-
-            <a id="start" onclick="scrollar('#about')">
-              <img
-                src="assets/img/icons/press-start.png"
-                alt="Start"
-                id="img-start"
-                style="max-width: 200px"
-              />
-            </a>
-          </div>
-
-          <script>
-            const startBtn = document.getElementById("start");
-            startBtn.style.opacity = "0";
-            setTimeout(() => (startBtn.style.opacity = "1"), 2500);
-          </script>
         </div>
 
-        <!---- Imagens e animações---->
-        <div class="vetores-container">
-          <div class="bg-animations"></div>
-          <div class="vetores">
-            <img
-              src="assets/img/create-vetor/art-vetor2.png"
-              alt="Vetor imagem"
-              style="max-width: 600px"
-              id="art-vetor"
-              class="image_vetor"
-            />
-
-            <div class="vetores-children">
-              <img
-                src="assets/img/create-vetor/cod.png"
-                style="max-width: 100px"
-                alt="Coding"
-                id="code_symbol"
-                class="image_vetor"
-              />
-              <img
-                src="assets/img/create-vetor/css-vetor.png"
-                alt="CSS"
-                style="max-height: 100px"
-                id="css_vetor"
-                class="image_vetor"
-              />
-              <img
-                src="assets/img/gifs/react.gif"
-                alt="React"
-                style="max-width: 100px"
-                id="react_gif"
-                class="image_vetor"
-              />
-              <img
-                src="assets/img/create-vetor/js-vetor.png"
-                alt="Javascript"
-                style="max-height: 100px"
-                id="js_vetor"
-                class="image_vetor"
-              />
-              <img
-                src="assets/img/gifs/html.gif"
-                alt="HTML"
-                style="max-height: 100px"
-                id="html"
-                class="image_vetor"
-              />
-            </div>
-          </div>
-
-          <script>
-            const vetores = document.querySelectorAll(".image_vetor");
-            vetores.forEach((img) => (img.style.opacity = "0"));
-          </script>
+        <div class="curriculo">
+          <a href="assets/documents/curriculo-carol.pdf" target="_blank">
+            <img src="assets/img/curriculo-preview.png" alt="Currículo" id="curriculo_img" style="max-width: 300px" />
+          </a>
+          <img src="assets/img/icons/arrow-download.png" alt="Download" id="arrow_download" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--- Section 02: Sobre mim --->
-      <section class="section2 about" id="about">
-        <div class="about-container">
-          <div class="title-section">
-            <h2>Sobre mim</h2>
-            <img src="assets/img/gifs/lupa-gif.gif" id="image-icon-about" />
-          </div>
+    <!--- Skills --->
+    <section class="skills" id="skills">
+      <div class="skillsContainer">
+        <div class="title-section">
+          <h3>Conhecimentos</h3>
+          <img src="assets/img/gifs/lamp-ideia.gif" id="image-title-skills" />
+        </div>
 
-          <div class="aboutMe">
-            <div class="photo">
-              <img
-                src="assets/img/photo_black.jpg"
-                alt="Foto Carol"
-                style="max-width: 350px"
-              />
+        <div class="swiper swiperContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide skill" id="skill-html" title="Clique">
+              <strong> HTML </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                alt="HTML" class="skill-img" id="html-img" onclick="skillEvents()" />
             </div>
 
-            <div class="about_text">
+            <div class="swiper-slide skill" id="skill-css" title="Clique">
+              <strong> CSS </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                alt="CSS" class="skill-img" id="css-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-js" title="Clique">
+              <strong> JAVASCRIPT </strong>
+              <img src="assets/img/icons/js-vetor.png" alt="Javascript" class="skill-img" id="js-img"
+                onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-ts" title="Clique">
+              <strong> TYPESCRIPT </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="Typescript" class="skill-img" id="ts-img"
+                onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-sass" title="Clique">
+              <strong> SASS </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+                alt="SASS" class="skill-img" id="sass-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-reactjs" title="Clique">
+              <strong> REACT.JS </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                alt="ReactJS" class="skill-img" id="react-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-gatsby" title="Clique">
+              <strong> GATSBY </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gatsby/gatsby-original.svg"
+                alt="Gatsby" class="skill-img" id="gatsby-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-nextjs" title="Clique">
+              <strong> NEXT.JS </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+                alt="Next.js" class="skill-img" id="nextjs-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-redux" title="Clique">
+              <strong> REDUX </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+                alt="Redux" class="skill-img" id="redux-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-styledComponents" title="Clique">
+              <strong> STYLED COMPONENTS </strong>
+              <img src="./assets//img/styled-components.png" alt="Styled Components" class="skill-img" id="styled-img"
+                onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-nodejs" title="Clique">
+              <strong> NODE.JS </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                alt="NodeJS" class="skill-img" id="node-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-git" title="Clique">
+              <strong> GIT </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"
+                class="skill-img" id="git-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-github" title="Clique">
+              <strong> GITHUB </strong>
+              <img src="assets/img/icons/github-256.png" alt="Github" class="skill-img" id="github-img"
+                onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-figma" title="Clique">
+              <strong> FIGMA </strong>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
+                alt="Figma" class="skill-img" id="figma-img" onclick="skillEvents()" />
+            </div>
+
+            <div class="swiper-slide skill" id="skill-figma" title="Clique">
+              <strong> BOOTSTRAP </strong>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap" class="skill-img" id="bootstrap-img" onclick="skillEvents()" />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="resetBg">
+        <img src="assets/img/gifs/empolgado-bebe.gif" alt="Empolgado" id="gif-empolgado" />
+        <i id="btn-reset-bg" onclick="skillEvents()"> Redefinir</i>
+      </div>
+    </section>
+
+    <!--- Meus trabalhos --->
+    <section class="projects" id="myWorks">
+      <div class="projetos_container meus_trabalhos">
+        <div class="title-section">
+          <h4>Meus trabalhos</h4>
+          <img src="assets/img/gifs/seta-gif.gif" id="image-title-projects" style="max-width: 50px" />
+        </div>
+
+        <div class="cards">
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span>Site Grupo Farias</span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/gf_devices.png" alt="Site Institucional  Farias" />
+            </div>
+
+            <div class="descricao_projeto">
               <p>
-                Sou uma desenvolvedora front-end, apaixonada por criar soluções digitais que combinam design atrativo com eficiência e usabilidade. 
-                Com um olhar atento para a experiência do usuário, estou sempre em busca de soluções inovadoras para desafios complexos.
+                Site institucional desenvolvido em Gatsby com TypeScript para o Grupo Farias, empresa referência no
+                setor de bioenergia, etanol e açúcar no Brasil.
               </p>
+            </div>
+
+            <div class="links_projeto link-com-prototipo">
+              <div class="link-group">
+                <a class="acessarPrototipo"
+                  href="https://www.figma.com/proto/Yp9nsemvYxFuKf3wLU52l0/Site-Institucional-GF?node-id=283-839&p=f&t=X9tqy5M6iwhIfxbr-0&scaling=min-zoom&content-scaling=fixed&page-id=283%3A3&starting-point-node-id=283%3A839&show-proto-sidebar=1"
+                  target="_blank">
+                  Figma Mobile
+                </a>
+
+                <a class="acessarPrototipo"
+                  href="https://www.figma.com/proto/Yp9nsemvYxFuKf3wLU52l0/Site-Institucional-GF?node-id=283-1134&p=f&t=X9tqy5M6iwhIfxbr-0&scaling=min-zoom&content-scaling=fixed&page-id=283%3A3&starting-point-node-id=283%3A1134&show-proto-sidebar=1"
+                  target="_blank">
+                  Figma Desktop
+                </a>
+              </div>
+              <div>
+                <a class="acessarProjeto" href="https://homolog.grupofarias.com.br/" target="_blank">
+                  Site Institucional
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span>LP Pontual Contabilidade</span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/pontual-contabilidade-devices.png" alt="LP Bravo" />
+            </div>
+
+            <div class="descricao_projeto">
               <p>
-                Iniciei minha transição de carreira em 2021, vindo da área administrativa, e desde então me dedico ao desenvolvimento de aplicações web. 
-                Atualmente, atuo como desenvolvedora front-end, com foco na construção de interfaces funcionais e modernas. Também possuo experiência no back-end, o que me permite colaborar de forma completa no ciclo de desenvolvimento de software.
-              </p>
-              <p>
-                Trabalho com tecnologias como HTML, CSS/Sass, JavaScript, React e Redux, além de Node.js e TypeScript, quando necessário. Em equipe, contribuo como scrum master, coordenando entregas ágeis e sempre buscando melhorar a experiência final do usuário.
-              </p>
-              <p>
-                Estou em constante aprendizado e motivada a enfrentar novos desafios, sempre com o objetivo de criar soluções que gerem valor tanto para os usuários quanto para a empresa.
-              </p>
-              <p>
-                Conheça mais sobre minha trajetória profissional acessando meu currículo:
+                Landing page desenvolvida para o escritório contábil Pontual Contabilidade.
               </p>
             </div>
-          </div>
 
-          <div class="curriculo">
-            <a href="assets/documents/curriculo-carol.pdf" target="_blank">
-              <img
-                src="assets/img/curriculo-preview.png"
-                alt="Currículo"
-                id="curriculo_img"
-                style="max-width: 300px"
-              />
-            </a>
-            <img
-              src="assets/img/icons/arrow-download.png"
-              alt="Download"
-              id="arrow_download"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!--- Section 03: Skills --->
-      <section class="section3 skills" id="skills">
-        <div class="skillsContainer">
-          <div class="title-section">
-            <h3>Conhecimentos</h3>
-            <img src="assets/img/gifs/lamp-ideia.gif" id="image-title-skills" />
-          </div>
-
-          <div class="swiper swiperContainer">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide skill" id="skill-html" title="Clique">
-                <strong> HTML </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                  alt="HTML"
-                  class="skill-img"
-                  id="html-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-css" title="Clique">
-                <strong> CSS </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                  alt="CSS"
-                  class="skill-img"
-                  id="css-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-js" title="Clique">
-                <strong> JAVASCRIPT </strong>
-                <img
-                  src="assets/img/icons/js-vetor.png"
-                  alt="Javascript"
-                  class="skill-img"
-                  id="js-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-sass" title="Clique">
-                <strong> SASS </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-                  alt="SASS"
-                  class="skill-img"
-                  id="sass-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-reactjs" title="Clique">
-                <strong> REACT.JS </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-                  alt="ReactJS"
-                  class="skill-img"
-                  id="react-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-redux" title="Clique">
-                <strong> REDUX </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-                  alt="Redux"
-                  class="skill-img"
-                  id="redux-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-styledComponents" title="Clique">
-                <strong> STYLED COMPONENTS </strong>
-                <img
-                  src="./assets//img/styled-components.png"
-                  alt="Styled Components"
-                  class="skill-img"
-                  id="styled-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-nodejs" title="Clique">
-                <strong> NODE.JS </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
-                  alt="NodeJS"
-                  class="skill-img"
-                  id="node-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-git" title="Clique">
-                <strong> GIT </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-                  alt="Git"
-                  class="skill-img"
-                  id="git-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-github" title="Clique">
-                <strong> GITHUB </strong>
-                <img
-                  src="assets/img/icons/github-256.png"
-                  alt="Github"
-                  class="skill-img"
-                  id="github-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-figma" title="Clique">
-                <strong> FIGMA </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
-                  alt="Figma"
-                  class="skill-img"
-                  id="figma-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-
-              <div class="swiper-slide skill" id="skill-figma" title="Clique">
-                <strong> BOOTSTRAP </strong>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
-                  alt="Bootstrap"
-                  class="skill-img"
-                  id="bootstrap-img"
-                  onclick="skillEvents()"
-                />
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </div>
-
-        <div class="resetBg">
-          <img
-            src="assets/img/gifs/empolgado-bebe.gif"
-            alt="Empolgado"
-            id="gif-empolgado"
-          />
-          <i id="btn-reset-bg" onclick="skillEvents()"> Redefinir</i>
-        </div>
-      </section>
-
-      <!--- Section 04: Meus projetos --->
-      <section class="section4 projects" id="projects">
-        <div class="projetos_container">
-          <div class="title-section">
-            <h4>Projetos de estudo</h4>
-            <img
-              src="assets/img/gifs/seta-gif.gif"
-              id="image-title-projects"
-              style="max-width: 50px"
-            />
-          </div>
-
-          <div class="cards">
-            <div class="card_projeto portfolio">
-              <div class="titulo_projeto">
-                <span> Meu portfólio </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/porfolio_devices.png"
-                  alt="Meu portólio"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Este é meu portfólio, onde disponibilizo meus
-                  projetos e algumas informações pessoais. Desenvolvi utilizando HTML, pré-processador Sass e
-                  Javascript. Todos os meus projetos futuros serão publicados aqui.
-                </p>
-              </div>
-
-              <div class="links_projeto link-com-prototipo">
-                <div class="link-group">
-                  <a
-                  href="https://www.figma.com/proto/ecwVPO34CYVgadFTokgpQL/Meu-portf%C3%B3lio?node-id=105-161&t=x4rDNYhz0zEDBkX6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=105%3A161&device-frame=0&show-proto-sidebar=1"
-                  target="_blank"
-                  >
-                    Figma Mobile
-                  </a>
-                  <a
-                  href="https://www.figma.com/proto/ecwVPO34CYVgadFTokgpQL/Meu-portf%C3%B3lio?node-id=104-2&t=x4rDNYhz0zEDBkX6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=104%3A2&device-frame=0&show-proto-sidebar=1"
-                  target="_blank"
-                  >
-                    Figma Desktop
-                  </a>
-                </div>
-                <div>
-                  <a
-                  href="https://carol-frazao.vercel.app"
-                  class="acessarProjeto"
-                  target="_blank"
-                  >
-                    Acessar
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card_projeto app-clima">
-              <div class="titulo_projeto">
-                <span> Weather App </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/weather-app-devices.png"
-                  alt="Meu portólio"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Este é um app de clima simples desenvolvido em React, 
-                  onde utilizei a API OpenWeatherMap para consumir os dados climáticos. 
-                  É possível pesquisar por região ou utilizar a geolocalização do dispositivo para obter os dados.
-                </p>
-              </div>
-
-              <div class="links_projeto">
-                <a
-                  href="https://github.com/carol-frazao/weather-app"
-                  class="repositorio"
-                  target="_blank"
-                >
-                  Repositório
-                </a>
-                <a
-                  href="https://weather-app-by-carol.vercel.app/"
-                  class="acessarProjeto"
-                  target="_blank"
-                >
-                  Acessar
-                </a>
-              </div>
-            </div>
-
-            <div class="card_projeto dh-games">
-              <div class="titulo_projeto">
-                <span> DH Games </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img src="assets/img/Projetos/dh_devices.png" alt="DH Games" />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  O DH Games é uma proposta de e-commerce. Foi meu primeiro projeto, onde desenvolvi o front e
-                  o back utilizando as tecnologias EJS, CSS,
-                  Javascript, Node.js, e banco de dados com mySQL (para a
-                  listagem de produtos e cadastro de usuários).
-                </p>
-              </div>
-
-              <div class="links_projeto">
-                <a
-                  href="https://github.com/carol-frazao/dh-games"
-                  class="repositorio"
-                  target="_blank"
-                >
-                  Repositório
-                </a>
-                <a
-                  href="https://dh-games.onrender.com/"
-                  class="acessarProjeto"
-                  target="_blank"
-                >
-                  Acessar
-                </a>
-              </div>
-            </div>
-
-            <div class="card_projeto pokedex">
-              <div class="titulo_projeto">
-                <span> Pokédex </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/pokedex_devices.png"
-                  alt="Pokedex"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  A pokédex é uma enciclopédia virtual portátil que os
-                  treinadores de Pokémon transportam para registrar espécies que
-                  encontram em suas viagens. Neste projeto utilizei HTML, CSS,
-                  Javascript, e consumi a PokéAPI (interface RESTful API com
-                  dados relacionados a Pokémon). 😎
-                </p>
-              </div>
-
-              <div class="links_projeto">
-                <a
-                  href="https://github.com/carol-frazao/pokedex"
-                  class="repositorio"
-                  target="_blank"
-                >
-                  Repositório
-                </a>
-
-                <a
-                  href="https://carol-frazao.github.io/pokedex/"
-                  class="acessarProjeto"
-                  target="_blank"
-                >
-                  Acessar
-                </a>
-              </div>
-            </div>
-
-            <div class="card_projeto calculadora">
-              <div class="titulo_projeto">
-                <span> Calculadora </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/calculadora_devices.png"
-                  alt="Calculadora"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Calculadora simples desenvolvida em HTML, CSS e Javascript. 
-                  Ela é capaz de realizar operações básicas. 😀
-                </p>
-              </div>
-
-              <div class="links_projeto">
-                <a
-                  href="https://github.com/carol-frazao/calculator"
-                  class="repositorio"
-                  target="_blank"
-                >
-                  Repositório
-                </a>
-
-                <a
-                  href="https://carol-frazao.github.io/calculator/"
-                  class="acessarProjeto"
-                  target="_blank"
-                >
-                  Acessar
-                </a>
-              </div>
-            </div>
-
-            <div class="card_projeto big-burguer">
-              <div class="titulo_projeto">
-                <span> Big Burguer </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/bigBurger_devices.png"
-                  alt="Big Burguer"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  O Big Burguer é uma proposta de landing-page para uma
-                  hamburgueria. Este é um projeto foi feito em React.
-                </p>
-              </div>
-
-              <div class="links_projeto link-com-prototipo">
-                <div class="link-group">
-                  <a
-                  class="repositorio"
-                  href="https://github.com/carol-frazao/big-burguer"
-                  target="_blank"
-                  >
-                    Repositório
-                  </a>
-
-                  <a
-                    class="acessarPrototipo"
-                    href="https://www.figma.com/file/F71VuC20bWmbkTk3saZOm5/Big-Burguer?node-id=14%3A239&t=PiRUrOUGf63z8eBx-1"
-                    target="_blank"
-                  >
-                    Protótipo
-                  </a>
-                </div>
-                <div>
-                  <a
-                  class="acessarProjeto"
-                  href="https://bigburguer.netlify.app/"
-                  target="_blank"
-                  >
-                    Acessar
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- <div class="card_projeto star-guide">
-              <div class="titulo_projeto">
-                <span> Star Guide - Em breve </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/starGuide_devices.png"
-                  alt="Star Guide"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  O Star Guide é uma ideia de guia de filmes e séries, com sinopse, trailer e avaliações da
-                  comunidade, a fim de ajudar os usuários a escolher os
-                  melhores títulos para maratonar. Este projeto ainda está saindo do papel. 
-                  Estou projetando seu layout e logo logo disponilizarei aqui.
-                </p>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--- Section 05: Meus trabalhos --->
-      <section class="section5 projects" id="myWorks">
-        <div class="projetos_container meus_trabalhos">
-          <div class="title-section">
-            <h4>Meus trabalhos</h4>
-            <img
-              src="assets/img/gifs/seta-gif.gif"
-              id="image-title-projects"
-              style="max-width: 50px"
-            />
-          </div>
-
-          <div class="cards">
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span>Pontual Contabilidade</span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/pontual-contabilidade-devices.png"
-                  alt="LP Bravo"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Landing page desenvolvida em Gatsby, framework React para páginas estáticas, ao escritório contábil Pontual Contabilidade.
-                </p>
-              </div>
-
-              <div class="links_projeto link-com-prototipo">
-                <div class="link-group">
-                  <a
-                  class="acessarPrototipo"
+            <div class="links_projeto link-com-prototipo">
+              <div class="link-group">
+                <a class="acessarPrototipo"
                   href="https://www.figma.com/proto/1YEko0pMgSqpGQ64s6D8Sc/Pontual-Contabilidade?node-id=98-23&p=f&t=x4rDNYhz0zEDBkX6-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&show-proto-sidebar=1&starting-point-node-id=98%3A23"
-                  target="_blank"
-                  >
-                    Figma Mobile
-                  </a>
-
-                  <a
-                    class="acessarPrototipo"
-                    href="https://www.figma.com/proto/1YEko0pMgSqpGQ64s6D8Sc/Pontual-Contabilidade?node-id=14-144&p=f&t=x4rDNYhz0zEDBkX6-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&show-proto-sidebar=1&starting-point-node-id=14%3A144"
-                    target="_blank"
-                  >
-                    Figma Desktop
-                  </a>
-                </div>
-                <div>
-                  <a
-                  class="acessarProjeto"
-                  href="https://pontualcontabilidadecn.com.br/"
-                  target="_blank"
-                  >
-                    Landing Page
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span> LP Bravo Brasil </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/bravo-devices.png"
-                  alt="LP Bravo"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Landing pages desenvolvidas em HTML com jQuery à Bravo Brasil Corretora.
-                </p>
-              </div>
-
-              <div class="links_projeto link-myWork">
-                <a
-                  href="https://www.bravobrasil.com.br"
-                  class="acessarProjeto"
-                  target="_blank"
-                >
-                  LP Institucional
+                  target="_blank">
+                  Figma Mobile
                 </a>
 
-                <a
-                href="https://www.bravobrasil.com.br/rcpm.html"
-                class="acessarProjeto"
-                target="_blank"
-                >
-                  LP RCPM
+                <a class="acessarPrototipo"
+                  href="https://www.figma.com/proto/1YEko0pMgSqpGQ64s6D8Sc/Pontual-Contabilidade?node-id=14-144&p=f&t=x4rDNYhz0zEDBkX6-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&show-proto-sidebar=1&starting-point-node-id=14%3A144"
+                  target="_blank">
+                  Figma Desktop
+                </a>
+              </div>
+              <div>
+                <a class="acessarProjeto" href="https://pontualcontabilidadecn.com.br/" target="_blank">
+                  Landing Page
                 </a>
               </div>
             </div>
+          </div>
 
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span> RCPM Bravo Brasil </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/rcpm-devices.png"
-                  alt="RCPM Bravo"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Sistema de cotação de seguro RCPM da Bravo Brasil Corretora, desenvolvido em equipe colaborativa,
-                  onde desenvolvi o front da aplicação.
-                </p>
-              </div>
-
-              <div class="links_projeto link-myWork">
-                <a
-                  href="https://cliente.bravobrasil.com.br/rcpm"
-                  class="acessarProjeto"
-                  target="_blank"
-                  style="width: 80%;"
-                >
-                  RCPM Bravo Brasil
-                </a>
-              </div>
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span> LP Bravo Brasil </span>
             </div>
 
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span> LP Promoland </span>
-              </div>
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/bravo-devices.png" alt="LP Bravo" />
+            </div>
 
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/promoland_devices.png"
-                  alt="Promoland"
-                />
-              </div>
+            <div class="descricao_projeto">
+              <p>
+                Landing pages desenvolvidas em HTML com jQuery à Bravo Brasil Corretora.
+              </p>
+            </div>
 
-              <div class="descricao_projeto">
-                <p>
-                  Landing page para um serviço de descontos em e-commerce de marcas parceiras. Desenvolvi em React e utilizei o Firebase como database para autenticação e consumo de dados.
-                  Link de acesso indisponível.
-                </p>
-              </div>
+            <div class="links_projeto link-myWork">
+              <a href="https://www.bravobrasil.com.br" class="acessarProjeto" target="_blank">
+                LP Institucional
+              </a>
 
-              <!-- <div class="links_projeto link-myWork">
+              <a href="https://www.bravobrasil.com.br/rcpm.html" class="acessarProjeto" target="_blank">
+                LP RCPM
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span> RCPM Bravo Brasil </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/rcpm-devices.png" alt="RCPM Bravo" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                Sistema de cotação de seguro RCPM da Bravo Brasil Corretora, desenvolvido em equipe colaborativa,
+                onde desenvolvi o front da aplicação.
+              </p>
+            </div>
+
+            <div class="links_projeto link-myWork">
+              <a href="https://cliente.bravobrasil.com.br/rcpm" class="acessarProjeto" target="_blank"
+                style="width: 80%;">
+                RCPM Bravo Brasil
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span> LP Promoland </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/promoland_devices.png" alt="Promoland" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                Landing page para um serviço de descontos em e-commerce de marcas parceiras. Desenvolvi em React e
+                utilizei o Firebase como database para autenticação e consumo de dados.
+                Link de acesso indisponível.
+              </p>
+            </div>
+
+            <!-- <div class="links_projeto link-myWork">
                 <a
                   href="https://promoland.clustfy.com"
                   class="acessarProjeto"
@@ -869,274 +479,413 @@
                   LP Promoland
                 </a>
               </div> -->
-            </div>
-
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span> Saints FA </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/saints-devices.png"
-                  alt="Saints FA"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Projeto de UI para um time goiano de futebol americano, desenvolvido no Figma e disponibilizado para o cliente.
-                </p>
-              </div>
-
-              <div class="links_projeto link-myWork">
-                <a
-                  href="./assets/documents/saints.pdf"
-                  class="acessarProjeto"
-                  target="_blank"
-                  style="width: 80%;"
-                >
-                  Protótipo Saints FA
-                </a>
-              </div>
-            </div>
-
-            <div class="card_projeto">
-              <div class="titulo_projeto">
-                <span> AGUARDANDO POR VOCÊ </span>
-              </div>
-
-              <div class="imagem_projeto">
-                <img
-                  src="assets/img/Projetos/modelo/seu-projeto.png"
-                  alt="Seu projeto"
-                />
-              </div>
-
-              <div class="descricao_projeto">
-                <p>
-                  Este é o seu cantinho! <br/> Entre em contato comigo para tirarmos sua ideia do papel. 👇😀
-                </p>
-              </div>
-
-              <div class="links_projeto link-myWork">
-                <a
-                  class="acessarProjeto"
-                  style="width: 80%;"
-                  onclick="scrollar('#contact')"
-                >
-                 É pra já!
-                </a>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Section 06: Contato -->
-      <section class="section6 contact" id="contact">
-        <div class="title-section title-contact">
-          <h5>Contato</h5>
-          <img
-            src="assets/img/gifs/contact.gif"
-            style="max-width: 50px"
-            id="image-title-contact"
-          />
-        </div>
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span> Saints FA </span>
+            </div>
 
-        <div class="contact-container">
-          <div class="infos-contact">
-            <div>
-              <span> Entre em contato </span>
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/saints-devices.png" alt="Saints FA" />
+            </div>
 
+            <div class="descricao_projeto">
               <p>
-                Prometo responder o mais rápido possível
-                <img
-                  src="https://img.icons8.com/fluency/48/000000/double-tick.png"
-                  id="checked-icon"
-                />
+                Projeto de UI para um time goiano de futebol americano, desenvolvido no Figma e disponibilizado para o
+                cliente.
               </p>
+            </div>
 
-              <ul>
-                <li id="info-linkedin">
-                  <a
-                    href="https://www.linkedin.com/in/carol-frazao/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-linkedin"></i>
-                    Carol Frazão
-                  </a>
-                </li>
-
-                <li id="info-wpp">
-                  <a href="https://wa.me/5511976070718" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    (11) 97607-0718
-                  </a>
-                </li>
-
-                <li id="info-mail">
-                  <a href="mailto:anacf04@outlook.com" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                    anacf04@outlook.com
-                  </a>
-                </li>
-              </ul>
+            <div class="links_projeto link-myWork">
+              <a href="./assets/documents/saints.pdf" class="acessarProjeto" target="_blank" style="width: 80%;">
+                Protótipo Saints FA
+              </a>
             </div>
           </div>
 
-          <div class="send-message">
-            <form
-              action="https://formspree.io/f/xyyvzbkv"
-              method="POST"
-              id="form"
-              name="form"
-            >
-              <div class="input-nome label-float">
-                <input
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  placeholder=" "
-                  class="input-form"
-                  onblur="hideFeedback()"
-                  required
-                />
-                <label for="nome"> Nome </label>
-                <i class="inputFeedback" id="nameFeedback"></i>
-              </div>
+          <div class="card_projeto">
+            <div class="titulo_projeto">
+              <span> AGUARDANDO POR VOCÊ </span>
+            </div>
 
-              <div class="input-email label-float">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder=" "
-                  class="input-form"
-                  onblur="hideFeedback()"
-                  required
-                />
-                <label for="email"> E-mail </label>
-                <i class="inputFeedback" id="emailFeedback"></i>
-              </div>
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/modelo/seu-projeto.png" alt="Seu projeto" />
+            </div>
 
-              <div class="input-assunto label-float">
-                <input
-                  type="text"
-                  name="assunto"
-                  id="assunto"
-                  placeholder=" "
-                  class="input-form"
-                  onblur="hideFeedback()"
-                  required
-                />
-                <label for="assunto"> Assunto </label>
-                <i class="inputFeedback" id="assuntoFeedback"></i>
-              </div>
+            <div class="descricao_projeto">
+              <p>
+                Este é o seu cantinho! <br /> Entre em contato comigo para tirarmos sua ideia do papel. 👇😀
+              </p>
+            </div>
 
-              <div class="input-mensagem label-float">
-                <textarea
-                  name="mensagem"
-                  id="mensagem"
-                  cols="30"
-                  rows="10"
-                  placeholder=" "
-                  onblur="hideFeedback()"
-                  required
-                ></textarea>
-                <label for="mensagem" class="label-msg"> Mensagem </label>
-                <i class="inputFeedback" id="mensagemFeedback"></i>
-              </div>
-
-              <button type="submit" id="btn-submit" onclick="validaCampo()">
-                Enviar
-              </button>
-
-            </form>
+            <div class="links_projeto link-myWork">
+              <a class="acessarProjeto" style="width: 80%;" onclick="scrollar('#contact')">
+                É pra já!
+              </a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div class="floats-networks">
-        <ul>
-          <li>
-            <a
-              href="https://linkedin.com/in/carol-frazao"
-              target="_blank"
-              id="linkedin-float"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
+    <!--- Meus projetos --->
+    <section class="projects" id="projects">
+      <div class="projetos_container">
+        <div class="title-section">
+          <h4>Projetos de estudo</h4>
+          <img src="assets/img/gifs/seta-gif.gif" id="image-title-projects" style="max-width: 50px" />
+        </div>
 
-          <li>
-            <a
-              href="https://github.com/carol-frazao"
-              target="_blank"
-              id="github-float"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
+        <div class="cards">
+          <div class="card_projeto portfolio">
+            <div class="titulo_projeto">
+              <span> Meu portfólio </span>
+            </div>
 
-          <li>
-            <a
-              href="https://wa.me/5511976070718"
-              id="wpp-float"
-              target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/porfolio_devices.png" alt="Meu portólio" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                Este é meu portfólio, onde disponibilizo meus
+                projetos e algumas informações pessoais. Desenvolvi utilizando HTML, pré-processador Sass e
+                Javascript. Todos os meus projetos futuros serão publicados aqui.
+              </p>
+            </div>
+
+            <div class="links_projeto link-com-prototipo">
+              <div class="link-group">
+                <a href="https://www.figma.com/proto/ecwVPO34CYVgadFTokgpQL/Meu-portf%C3%B3lio?node-id=105-161&t=x4rDNYhz0zEDBkX6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=105%3A161&device-frame=0&show-proto-sidebar=1"
+                  target="_blank">
+                  Figma Mobile
+                </a>
+                <a href="https://www.figma.com/proto/ecwVPO34CYVgadFTokgpQL/Meu-portf%C3%B3lio?node-id=104-2&t=x4rDNYhz0zEDBkX6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=104%3A2&device-frame=0&show-proto-sidebar=1"
+                  target="_blank">
+                  Figma Desktop
+                </a>
+              </div>
+              <div>
+                <a href="https://carol-frazao.vercel.app" class="acessarProjeto" target="_blank">
+                  Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_projeto app-clima">
+            <div class="titulo_projeto">
+              <span> Weather App </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/weather-app-devices.png" alt="Meu portólio" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                Este é um app de clima simples desenvolvido em React,
+                onde utilizei a API OpenWeatherMap para consumir os dados climáticos.
+                É possível pesquisar por região ou utilizar a geolocalização do dispositivo para obter os dados.
+              </p>
+            </div>
+
+            <div class="links_projeto">
+              <a href="https://github.com/carol-frazao/weather-app" class="repositorio" target="_blank">
+                Repositório
+              </a>
+              <a href="https://weather-app-by-carol.vercel.app/" class="acessarProjeto" target="_blank">
+                Acessar
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto dh-games">
+            <div class="titulo_projeto">
+              <span> DH Games </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/dh_devices.png" alt="DH Games" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                O DH Games é uma proposta de e-commerce. Foi meu primeiro projeto, onde desenvolvi o front e
+                o back utilizando as tecnologias EJS, CSS,
+                Javascript, Node.js, e banco de dados com mySQL (para a
+                listagem de produtos e cadastro de usuários).
+              </p>
+            </div>
+
+            <div class="links_projeto">
+              <a href="https://github.com/carol-frazao/dh-games" class="repositorio" target="_blank">
+                Repositório
+              </a>
+              <a href="https://dh-games.onrender.com/" class="acessarProjeto" target="_blank">
+                Acessar
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto pokedex">
+            <div class="titulo_projeto">
+              <span> Pokédex </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/pokedex_devices.png" alt="Pokedex" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                A pokédex é uma enciclopédia virtual portátil que os
+                treinadores de Pokémon transportam para registrar espécies que
+                encontram em suas viagens. Neste projeto utilizei HTML, CSS,
+                Javascript, e consumi a PokéAPI (interface RESTful API com
+                dados relacionados a Pokémon). 😎
+              </p>
+            </div>
+
+            <div class="links_projeto">
+              <a href="https://github.com/carol-frazao/pokedex" class="repositorio" target="_blank">
+                Repositório
+              </a>
+
+              <a href="https://carol-frazao.github.io/pokedex/" class="acessarProjeto" target="_blank">
+                Acessar
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto calculadora">
+            <div class="titulo_projeto">
+              <span> Calculadora </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/calculadora_devices.png" alt="Calculadora" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                Calculadora simples desenvolvida em HTML, CSS e Javascript.
+                Ela é capaz de realizar operações básicas. 😀
+              </p>
+            </div>
+
+            <div class="links_projeto">
+              <a href="https://github.com/carol-frazao/calculator" class="repositorio" target="_blank">
+                Repositório
+              </a>
+
+              <a href="https://carol-frazao.github.io/calculator/" class="acessarProjeto" target="_blank">
+                Acessar
+              </a>
+            </div>
+          </div>
+
+          <div class="card_projeto big-burguer">
+            <div class="titulo_projeto">
+              <span> Big Burguer </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img src="assets/img/Projetos/bigBurger_devices.png" alt="Big Burguer" />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                O Big Burguer é uma proposta de landing-page para uma
+                hamburgueria. Este é um projeto foi feito em React.
+              </p>
+            </div>
+
+            <div class="links_projeto link-com-prototipo">
+              <div class="link-group">
+                <a class="repositorio" href="https://github.com/carol-frazao/big-burguer" target="_blank">
+                  Repositório
+                </a>
+
+                <a class="acessarPrototipo"
+                  href="https://www.figma.com/file/F71VuC20bWmbkTk3saZOm5/Big-Burguer?node-id=14%3A239&t=PiRUrOUGf63z8eBx-1"
+                  target="_blank">
+                  Protótipo
+                </a>
+              </div>
+              <div>
+                <a class="acessarProjeto" href="https://bigburguer.netlify.app/" target="_blank">
+                  Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="card_projeto star-guide">
+            <div class="titulo_projeto">
+              <span> Star Guide - Em breve </span>
+            </div>
+
+            <div class="imagem_projeto">
+              <img
+                src="assets/img/Projetos/starGuide_devices.png"
+                alt="Star Guide"
+              />
+            </div>
+
+            <div class="descricao_projeto">
+              <p>
+                O Star Guide é uma ideia de guia de filmes e séries, com sinopse, trailer e avaliações da
+                comunidade, a fim de ajudar os usuários a escolher os
+                melhores títulos para maratonar. Este projeto ainda está saindo do papel. 
+                Estou projetando seu layout e logo logo disponilizarei aqui.
+              </p>
+            </div> -->
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contact">
+      <div class="title-section title-contact">
+        <h5>Contato</h5>
+        <img src="assets/img/gifs/contact.gif" style="max-width: 50px" id="image-title-contact" />
       </div>
 
-      <a class="back-to-top" onclick="scrollar('#inicio');"></a>
-    </main>
+      <div class="contact-container">
+        <div class="infos-contact">
+          <div>
+            <span> Entre em contato </span>
 
-    <footer>
-      <div class="footer-container">
-        <img
-          src="assets/img/dev-dots.png"
-          style="max-width: 70px"
-          id="dev-dots-img"
-        />
+            <p>
+              Prometo responder o mais rápido possível
+              <img src="https://img.icons8.com/fluency/48/000000/double-tick.png" id="checked-icon" />
+            </p>
 
-        <strong>Desenvolvido por Carol Frazão</strong>
+            <ul>
+              <li id="info-linkedin">
+                <a href="https://www.linkedin.com/in/carol-frazao/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                  Carol Frazão
+                </a>
+              </li>
 
-        <a href="https://linkedin.com/in/carol-frazao">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
+              <li id="info-wpp">
+                <a href="https://wa.me/5511976070718" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  (11) 97607-0718
+                </a>
+              </li>
 
-        <a href="https://github.com/carol-frazao">
-          <i class="fa-brands fa-github"></i>
-        </a>
+              <li id="info-mail">
+                <a href="mailto:anacf04@outlook.com" target="_blank">
+                  <i class="fa-solid fa-envelope"></i>
+                  anacf04@outlook.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="send-message">
+          <form action="https://formspree.io/f/xyyvzbkv" method="POST" id="form" name="form">
+            <div class="input-nome label-float">
+              <input type="text" name="nome" id="nome" placeholder=" " class="input-form" onblur="hideFeedback()"
+                required />
+              <label for="nome"> Nome </label>
+              <i class="inputFeedback" id="nameFeedback"></i>
+            </div>
+
+            <div class="input-email label-float">
+              <input type="email" name="email" id="email" placeholder=" " class="input-form" onblur="hideFeedback()"
+                required />
+              <label for="email"> E-mail </label>
+              <i class="inputFeedback" id="emailFeedback"></i>
+            </div>
+
+            <div class="input-assunto label-float">
+              <input type="text" name="assunto" id="assunto" placeholder=" " class="input-form" onblur="hideFeedback()"
+                required />
+              <label for="assunto"> Assunto </label>
+              <i class="inputFeedback" id="assuntoFeedback"></i>
+            </div>
+
+            <div class="input-mensagem label-float">
+              <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder=" " onblur="hideFeedback()"
+                required></textarea>
+              <label for="mensagem" class="label-msg"> Mensagem </label>
+              <i class="inputFeedback" id="mensagemFeedback"></i>
+            </div>
+
+            <button type="submit" id="btn-submit" onclick="validaCampo()">
+              Enviar
+            </button>
+
+          </form>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- scripts -->
-    <script type="module" src="assets/scripts/swiper.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/timers.js"></script>
-    <script type="text/javascript" src="assets/scripts/skills.js"></script>
-    <script type="text/javascript" src="assets/scripts/navBar.js"></script>
-    <script type="text/javascript" src="assets/scripts/validations.js"></script>
-    <script type="text/javascript" src="assets/scripts/scroll.js"></script>
-    <script type="text/javascript" src="assets/scripts/hideFeedback.js"></script>
+    <div class="floats-networks">
+      <ul>
+        <li>
+          <a href="https://linkedin.com/in/carol-frazao" target="_blank" id="linkedin-float">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
 
-    <script
-      src="https://unpkg.com/react@17/umd/react.production.min.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
-      crossorigin
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <li>
+          <a href="https://github.com/carol-frazao" target="_blank" id="github-float">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
 
-    <script type="text/javascript">
-      const handleClick = () => alert("Esta função estará disponível em breve");
-    </script>
-    <!---->
-  </body>
+        <li>
+          <a href="https://wa.me/5511976070718" id="wpp-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="back-to-top" onclick="scrollar('#inicio');"></a>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <img src="assets/img/dev-dots.png" style="max-width: 70px" id="dev-dots-img" />
+
+      <strong>Desenvolvido por Carol Frazão</strong>
+
+      <a href="https://linkedin.com/in/carol-frazao">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+
+      <a href="https://github.com/carol-frazao">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script type="module" src="assets/scripts/swiper.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/scripts/timers.js"></script>
+  <script type="text/javascript" src="assets/scripts/skills.js"></script>
+  <script type="text/javascript" src="assets/scripts/navBar.js"></script>
+  <script type="text/javascript" src="assets/scripts/validations.js"></script>
+  <script type="text/javascript" src="assets/scripts/scroll.js"></script>
+  <script type="text/javascript" src="assets/scripts/hideFeedback.js"></script>
+
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/javascript">
+    const handleClick = () => alert("Esta função estará disponível em breve");
+  </script>
+</body>
+
 </html>

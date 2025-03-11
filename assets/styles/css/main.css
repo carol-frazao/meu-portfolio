@@ -777,7 +777,7 @@ section.about .about-container .aboutMe {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   gap: 2em;
   width: 100%;
   transition: 0.17s all;
@@ -957,6 +957,11 @@ section.skills .skillsContainer #skill-js::after {
   border-top: solid 2px rgba(233, 224, 199, 0.445);
   border-bottom: solid 3px rgb(196, 190, 171);
 }
+section.skills .skillsContainer #skill-ts::after {
+  background-color: rgba(43, 81, 137, 0.775);
+  border-top: solid 2px rgba(181, 195, 216, 0.445);
+  border-bottom: solid 3px rgb(164, 167, 186);
+}
 section.skills .skillsContainer #skill-sass::after {
   background-color: rgba(161, 75, 89, 0.673);
   border-top: solid 2px rgba(239, 192, 200, 0.508);
@@ -967,8 +972,18 @@ section.skills .skillsContainer #skill-reactjs::after {
   border-top: solid 2px rgba(181, 195, 216, 0.445);
   border-bottom: solid 3px rgb(164, 167, 186);
 }
-section.skills .skillsContainer #skill-redux::after {
+section.skills .skillsContainer #skill-nextjs::after {
+  background-color: rgba(41, 41, 41, 0.626);
+  border-top: solid 2px rgba(170, 170, 170, 0.459);
+  border-bottom: solid 3px rgb(161, 161, 161);
+}
+section.skills .skillsContainer #skill-gatsby::after {
   background-color: rgba(104, 43, 137, 0.775);
+  border-top: solid 2px rgba(181, 195, 216, 0.445);
+  border-bottom: solid 3px rgb(164, 167, 186);
+}
+section.skills .skillsContainer #skill-redux::after {
+  background-color: rgba(125, 69, 155, 0.775);
   border-top: solid 2px rgba(181, 195, 216, 0.445);
   border-bottom: solid 3px rgb(164, 167, 186);
 }
@@ -1060,13 +1075,16 @@ section.projects {
   font-family: "Catamaran", sans-serif;
   text-align: center;
 }
+section.projects .meus_trabalhos {
+  padding: 3rem 2rem 2rem !important;
+}
 section.projects .projetos_container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 section.projects .projetos_container #image-title-projects {
   width: 30px;
@@ -1153,9 +1171,6 @@ section.projects .projetos_container .cards .card_projeto .link-com-prototipo .l
 section.projects .projetos_container .cards .card_projeto .link-com-prototipo .acessarProjeto {
   display: inline-block;
   width: 100%;
-}
-section.projects .meus_trabalhos {
-  padding: 0 2rem 4rem !important;
 }
 section.projects .link-myWork {
   justify-content: center;

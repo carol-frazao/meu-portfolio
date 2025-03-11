@@ -16,7 +16,7 @@ section.about {
 
         .aboutMe {
             @include displayFlex(center, center, column);
-            padding: 1.5rem 2rem;
+            padding: 2rem;
             gap: 2em;
             width: 100%;
             transition: .17s all;
