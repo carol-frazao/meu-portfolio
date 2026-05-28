@@ -18,6 +18,9 @@
     "url": "https://github.com/carol-frazao/meu-portfolio/issues"
   },
   "homepage": "https://github.com/carol-frazao/meu-portfolio#readme",
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
